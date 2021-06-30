@@ -1,11 +1,8 @@
 import express from 'express'
 import mongoose from 'mongoose'
+import { port, dbURI } from './config/environment.js'
 
 const app = express()
-
-const port = 4000
-
-const dbURI = 'mongodb://localhost/godpilot-db-api'
 
 
 const startServer = async () => {
