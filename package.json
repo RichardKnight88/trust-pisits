@@ -1,0 +1,16 @@
+{
+  "name": "project-3-godpilot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bulma": "^0.9.3",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.0"
+  }, 
+  "type": "module", 
+  "scripts": {
+    "serve": "npx nodemon index.js"
+  }
+}

@@ -1,5 +1,5 @@
 # project-3
 
-Vanja 😎
-Adrian 🧙‍♂️
+Vanja 😎 
+Adrian 🧙‍♂️ 
 Richard 🏴󠁧󠁢󠁳󠁣󠁴󠁿
