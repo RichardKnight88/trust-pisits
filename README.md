@@ -1,4 +1,4 @@
 # project-3
 
-Vanja
+Vanja 😎
 Richard
