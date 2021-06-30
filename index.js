@@ -1,10 +1,9 @@
 import express from 'express'
 import mongoose from 'mongoose'
 import { port, dbURI } from './config/environment.js'
+import router from './config/router.js'
 
 const app = express()
-
-const router = express.Router()
 
 const startServer = async () => {
 
@@ -12,6 +11,8 @@ const startServer = async () => {
 
     //await connecting to db
     await mongoose.connect(dbURI, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true })
+
+    console.log('🏛 DB CONNECTED SUCCESSFULLY')
 
 
     app.use((req, _res, next) => {
@@ -22,7 +23,8 @@ const startServer = async () => {
     //convert incoming data to javascript
     app.use(express.json())
 
-    console.log('🏛 DB CONNECTED SUCCESSFULLY')
+    app.use(router)
+
 
     //listen for express connecting to port
     app.listen(port, () => console.log(`🏛 Express is up and running on port ${port}`))
