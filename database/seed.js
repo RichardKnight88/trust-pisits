@@ -1,7 +1,9 @@
 import mongoose from 'mongoose'
 import { dbURI } from '../config/environment.js'
 import usersSeed from './seedData/usersSeed.js'
+import godsSeed from './seedData/godsSeed.js'
 import User from '../models/user.js'
+import God from '../models/gods.js'
 
 const seedDatabase = async () => {
 
@@ -13,13 +15,19 @@ const seedDatabase = async () => {
     await mongoose.connection.db.dropDatabase()
     console.log('⬇️ DATABASE DROPPED')
 
-    //add as a variable
-    await User.create(usersSeed)
-    console.log('🌱 DATABASE SEEDED WITH USER')
-    // console.log(usersSeed[0].username)
+
+    const users = await User.create(usersSeed)
     // need to add array method when we have multiple users seeding
 
-    //create gods vis GodsSchema
+    
+    const godsWithOwner = godsSeed.map(god => {
+      return { ...god, owner: users[0]._id }
+    })
+
+    const gods = await God.create(godsWithOwner)
+    console.log(`🌱 DATABASE SEEDED WITH USER and ${gods.length} gods`)
+
+
 
     await mongoose.connection.close()
     console.log('🚪 CONNECTION CLOSED')
