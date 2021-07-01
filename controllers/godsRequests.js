@@ -1,27 +1,25 @@
 import God from '../models/gods.js'
 import { caseInsensitiveName } from '../config/environment.js'
 
+// ! GET ALL GODS
 export const getAllGods = async (_req, res) => {
   const gods = await God.find()
 
   return res.status(200).json(gods)
 }
 
+// ! GET ONE GOD
 export const getOneGod = async (req, res) => {
 
   try {
     const { name } = req.params
 
-    // const caseInsensitiveName = new RegExp(`^${name}$`, 'i')
-
     const singleGod = await God.find({ name: caseInsensitiveName(name) }).populate('owner').populate('comments.owner')
-
-    
 
     if (!singleGod) throw new Error()
 
-    console.log('SINGLE GOD', singleGod)
-    console.log('SINGLE GOD.COMMENTS', singleGod[0].comments)
+    // console.log('SINGLE GOD', singleGod)
+    // console.log('SINGLE GOD.COMMENTS', singleGod[0].comments)
     return res.status(200).json(singleGod)
 
   } catch (err) {
@@ -30,6 +28,19 @@ export const getOneGod = async (req, res) => {
   }
 
 }
+
+// ! CREATE GOD
+export const addGod = async (req, res) => {
+  try {
+    const godWithOwner = { ...req.body, owner: req.currentUser._id }
+    const newGod = await God.create(godWithOwner)
+    return res.status(201).json(newGod)
+  } catch (err) {
+    console.log(err)
+    return res.status(422).json(err)
+  }
+}
+
 
 // ! ADDING COMMENT
 export const addComment = async (req, res) => {
@@ -65,22 +76,12 @@ export const editComment = async (req, res) => {
     const { name, commentId } = req.params
 
     const godToEditComment = await God.find({ name: caseInsensitiveName(name) })
-    // console.log('godToEditComment >>', godToEditComment)
     if (!godToEditComment) throw new Error()
 
-    // const updatedComment = { owner: godToEditComment[0]._id, ...req.body, ...commentToEdit }
-    // console.log('updatedComment >>', updatedComment)
-
     const commentToEdit = godToEditComment[0].comments.id(commentId)
-    // const commentToEdit = God.findOneAndUpdate({ name: caseInsensitiveName(name) }, { ...req.body }, { new: true })
-    console.log('commentToEdit >>', commentToEdit)
-    // console.log('commentToEdit >>', commentToEdit)
-
     if (!commentToEdit) throw new Error()
 
-    const updatedComment = { owner: commentToEdit.owner._id, ...commentToEdit, ...req.body,  _id: commentToEdit._id }
-
-  
+    const updatedComment = { owner: commentToEdit.owner._id, ...commentToEdit, ...req.body,  _id: commentToEdit._id } 
     if (updatedComment.owner === req.currentUser._id || req.currentUser.username === 'Admin' ) {
       console.log('authorization')
     } else {
@@ -88,7 +89,6 @@ export const editComment = async (req, res) => {
     }
 
     const indexOfCommentToEdit = godToEditComment[0].comments.indexOf(commentToEdit)
-    // console.log('indexOfCommentToEdit >>', indexOfCommentToEdit)
 
     godToEditComment[0].comments.splice(indexOfCommentToEdit, 1, updatedComment)
     

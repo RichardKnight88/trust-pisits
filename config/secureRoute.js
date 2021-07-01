@@ -26,3 +26,17 @@ export const secureRoute = async (req, res, next) => {
     return res.status(401).json({ message: 'Unauthorized' })
   }
 }
+
+export const deusRoute = async (req, res, next) => {
+  try {
+    if (!req.currentUser.isDeusUser) throw new Error()
+    next()
+  } catch (err) {
+    console.log(err)
+    return res.status(401).json({ message: 'Unauthorized' })
+  }
+}
+
+// export const deusRoute = 
+//if (req.currentUser.isDeusUser) 
+// next() 
