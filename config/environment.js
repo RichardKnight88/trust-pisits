@@ -6,3 +6,5 @@ export const caseInsensitiveName = (variable) => {
   return new RegExp(`^${variable}$`, 'i')
 }
 
+export const secret = 'ldn-56-supergroup'
+

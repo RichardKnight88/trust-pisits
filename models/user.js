@@ -1,5 +1,5 @@
 import mongoose from 'mongoose'
-//import bcrypt when doing password encryption
+import bcrypt from 'bcrypt'
 
 const userSchema = new mongoose.Schema({
   username: { type: String, required: true, unique: true, maxLength: 30 },
@@ -18,5 +18,24 @@ userSchema
     this._passwordConfirmation = passwordConfirmation
   })
 
+userSchema
+  .pre('validate', function(next) {
+    if (this.isModified('password') && this.password !== this._passwordConfirmation) {
+      this.invalidate('passwordConfirmation', 'Password does not match')
+    }
+    next()
+  })
+
+userSchema
+  .pre('save', function(next) {
+    if (this.isModified('password')) {
+      this.password = bcrypt.hashSync(this.password, bcrypt.genSaltSync())
+    }
+    next()
+  })
+
+userSchema.methods.validatePassword = function(password) {
+  return bcrypt.compareSync(password, this.password)
+}
 
 export default mongoose.model('User', userSchema)
