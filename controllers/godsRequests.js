@@ -72,10 +72,10 @@ export const editComment = async (req, res) => {
     // const commentToEdit = God.findOneAndUpdate({ name: caseInsensitiveName(name) }, { ...req.body }, { new: true })
     console.log('commentToEdit >>', commentToEdit)
     // console.log('commentToEdit >>', commentToEdit)
+
     if (!commentToEdit) throw new Error()
 
     const updatedComment = { owner: godToEditComment[0]._id, ...commentToEdit, ...req.body,  _id: commentToEdit._id }
-
 
     const indexOfCommentToEdit = godToEditComment[0].comments.indexOf(commentToEdit)
     // console.log('indexOfCommentToEdit >>', indexOfCommentToEdit)
@@ -90,10 +90,24 @@ export const editComment = async (req, res) => {
   }
 }
 
-// const godToUpdate = await God.findOneAndUpdate({ _id: id }, { ...req.body }, { new: true })
-// if (!godToUpdate) throw new Error()
-// return res.status(200).json(godToUpdate)
+// ! DELETE COMMENT
+export const deleteComment = async (req, res) => {
+  try {
+    const { name, commentId } = req.params
 
-// const indexOfCommentToEdit = godToEditComment[0].comments.indexOf(commentToEdit)
+    const godToDeleteComment = await God.find({ name: caseInsensitiveName(name) })
+    if (!godToDeleteComment) throw new Error()
 
-// godToEditComment[0].comments.splice(indexOfCommentToEdit, 1, updatedComment)
+    const commentToDelete = godToDeleteComment[0].comments.id(commentId)
+    if (!commentToDelete) throw new Error()
+
+    await commentToDelete.remove()
+
+    await godToDeleteComment[0].save()
+
+    return res.status(202).json(godToDeleteComment)
+  } catch (err) {
+    console.log(err)
+    return res.status(404).json(err.message)
+  }
+}

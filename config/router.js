@@ -1,6 +1,6 @@
 import express from 'express'
 import { getAllUsers } from '../controllers/usersRequests.js'
-import { getAllGods, getOneGod, addComment, editComment } from '../controllers/godsRequests.js'
+import { getAllGods, getOneGod, addComment, editComment, deleteComment } from '../controllers/godsRequests.js'
 
 const router = express.Router()
 
@@ -18,6 +18,9 @@ router.route('/gods/:name/comments')
 
 router.route('/gods/:name/comments/:commentId')
   .put(editComment)
+  .delete(deleteComment)
+
+
 
 export default router
 
