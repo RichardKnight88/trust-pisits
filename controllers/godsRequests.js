@@ -69,6 +69,30 @@ export const deleteGod = async (req, res) => {
 }
 
 
+// ! UPDATE GOD
+export const updateGod = async (req, res) => {
+  try {
+    const { name } = req.params
+
+    const godToUpdate = await God.findOne({ name: caseInsensitiveName(name) })
+    if (!godToUpdate) throw new Error()
+
+    if (godToUpdate.owner.equals(req.currentUser._id) || req.currentUser.username === 'Admin') {
+      console.log('AUTHORISED')
+    } else {
+      throw new Error('Unauthorised')
+    }
+
+    const updatedGod = await God.findOneAndUpdate({ name: caseInsensitiveName(name) }, { ...req.body }, { new: true }) 
+  
+    return res.status(202).json({ message: updatedGod })
+  } catch (err) {
+    console.log(err)
+    return res.status(404).json(err.message)
+  }
+}
+
+
 // ! ADDING COMMENT
 export const addComment = async (req, res) => {
 
