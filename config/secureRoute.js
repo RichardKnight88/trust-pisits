@@ -36,7 +36,3 @@ export const deusRoute = async (req, res, next) => {
     return res.status(401).json({ message: 'Unauthorized' })
   }
 }
-
-// export const deusRoute = 
-//if (req.currentUser.isDeusUser) 
-// next() 

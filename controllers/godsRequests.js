@@ -42,6 +42,33 @@ export const addGod = async (req, res) => {
 }
 
 
+// ! DELETE GOD
+export const deleteGod = async (req, res) => {
+  try {
+    const { name } = req.params
+    const godToDelete = await God.findOne({ name: caseInsensitiveName(name) })
+    if (!godToDelete) throw new Error()
+    console.log('godToDelete >>', godToDelete)
+    console.log('godToDelete.owner >>', godToDelete.owner)
+    console.log('req.currentUser._id >>', req.currentUser._id)
+    console.log('req.currentUser.username >>', req.currentUser.username)
+
+    if (godToDelete.owner.equals(req.currentUser._id) || req.currentUser.username === 'Admin') {
+      console.log('AUTHORISED')
+    } else {
+      throw new Error('Unauthorised')
+    }
+
+    await godToDelete.remove()
+    return res.sendStatus(204)
+    
+  } catch (err) {
+    console.log(err)
+    return res.status(404).json({ message: err.message })
+  }
+}
+
+
 // ! ADDING COMMENT
 export const addComment = async (req, res) => {
 
