@@ -8,9 +8,10 @@
     "bulma": "^0.9.3",
     "express": "^4.17.1",
     "mongoose": "^5.13.0"
-  }, 
-  "type": "module", 
+  },
+  "type": "module",
   "scripts": {
-    "serve": "npx nodemon index.js", "seed": "node database/seed.js"
+    "serve": "npx nodemon index.js",
+    "seed": "node database/seed.js"
   }
 }

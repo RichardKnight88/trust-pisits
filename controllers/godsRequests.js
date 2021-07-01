@@ -28,6 +28,7 @@ export const getOneGod = async (req, res) => {
 
 }
 
+// ! ADDING COMMENT
 export const addComment = async (req, res) => {
 
   try {
@@ -54,3 +55,45 @@ export const addComment = async (req, res) => {
     return res.status(401).json(err.message)
   }
 }
+
+// ! UPDATING COMMENT 
+export const editComment = async (req, res) => {
+  try {
+    const { name, commentId } = req.params
+
+    const godToEditComment = await God.find({ name: caseInsensitiveName(name) })
+    // console.log('godToEditComment >>', godToEditComment)
+    if (!godToEditComment) throw new Error()
+
+    // const updatedComment = { owner: godToEditComment[0]._id, ...req.body, ...commentToEdit }
+    // console.log('updatedComment >>', updatedComment)
+
+    const commentToEdit = godToEditComment[0].comments.id(commentId)
+    // const commentToEdit = God.findOneAndUpdate({ name: caseInsensitiveName(name) }, { ...req.body }, { new: true })
+    console.log('commentToEdit >>', commentToEdit)
+    // console.log('commentToEdit >>', commentToEdit)
+    if (!commentToEdit) throw new Error()
+
+    const updatedComment = { owner: godToEditComment[0]._id, ...commentToEdit, ...req.body,  _id: commentToEdit._id }
+
+
+    const indexOfCommentToEdit = godToEditComment[0].comments.indexOf(commentToEdit)
+    // console.log('indexOfCommentToEdit >>', indexOfCommentToEdit)
+
+    godToEditComment[0].comments.splice(indexOfCommentToEdit, 1, updatedComment)
+    
+    await godToEditComment[0].save()
+    return res.status(200).json(godToEditComment[0])
+  } catch (err) {
+    console.log(err)
+    return res.status(404).json(err.message)
+  }
+}
+
+// const godToUpdate = await God.findOneAndUpdate({ _id: id }, { ...req.body }, { new: true })
+// if (!godToUpdate) throw new Error()
+// return res.status(200).json(godToUpdate)
+
+// const indexOfCommentToEdit = godToEditComment[0].comments.indexOf(commentToEdit)
+
+// godToEditComment[0].comments.splice(indexOfCommentToEdit, 1, updatedComment)
