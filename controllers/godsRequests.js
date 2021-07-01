@@ -16,9 +16,12 @@ export const getOneGod = async (req, res) => {
 
     const singleGod = await God.find({ name: caseInsensitiveName(name) }).populate('owner').populate('comments.owner')
 
+    
+
     if (!singleGod) throw new Error()
 
     console.log('SINGLE GOD', singleGod)
+    console.log('SINGLE GOD.COMMENTS', singleGod[0].comments)
     return res.status(200).json(singleGod)
 
   } catch (err) {
@@ -38,7 +41,7 @@ export const addComment = async (req, res) => {
     if (!godToAddComment) throw new Error('God does not exist')
     console.log('GOD ', godToAddComment)
 
-    const commentToAdd = { ...req.body, owner: godToAddComment[0]._id }
+    const commentToAdd = { ...req.body, owner: req.currentUser._id }
     // maybe add picture?
     console.log('COMMENT TO ADD', commentToAdd)
     console.log('GOD COMMENTS', godToAddComment[0].comments)
@@ -75,7 +78,14 @@ export const editComment = async (req, res) => {
 
     if (!commentToEdit) throw new Error()
 
-    const updatedComment = { owner: godToEditComment[0]._id, ...commentToEdit, ...req.body,  _id: commentToEdit._id }
+    const updatedComment = { owner: commentToEdit.owner._id, ...commentToEdit, ...req.body,  _id: commentToEdit._id }
+
+  
+    if (updatedComment.owner === req.currentUser._id || req.currentUser.username === 'Admin' ) {
+      console.log('authorization')
+    } else {
+      throw new Error('Unauthorized')
+    }
 
     const indexOfCommentToEdit = godToEditComment[0].comments.indexOf(commentToEdit)
     // console.log('indexOfCommentToEdit >>', indexOfCommentToEdit)
@@ -100,6 +110,7 @@ export const deleteComment = async (req, res) => {
 
     const commentToDelete = godToDeleteComment[0].comments.id(commentId)
     if (!commentToDelete) throw new Error()
+    if (commentToDelete.owner !== req.currentUser._id) throw new Error()
 
     await commentToDelete.remove()
 
