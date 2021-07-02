@@ -1,9 +1,9 @@
 import React from 'react'
 
-const FilteredGods = () => {
+const FilteredGodsByCategory = () => {
 
   return (
-    <h1>Filtered Gods</h1>
+    <h1>Filtering gods to display gods based on category</h1>
   )
 }
-export default FilteredGods
+export default FilteredGodsByCategory

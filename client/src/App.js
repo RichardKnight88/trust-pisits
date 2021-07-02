@@ -5,7 +5,7 @@ import Home from './Components/Home'
 import ShowAllGods from './Components/ShowAllGods'
 import Navbar from './Components/Navbar'
 import Categories from './Components/Categories'
-import FilteredGods from './Components/FilteredGods'
+import FilteredGodsByCategory from './Components/FilteredGods'
 import DeusRegister from './Components/DeusRegister'
 import StandardRegister from './Components/StandardRegister'
 import Login from './Components/Login'
@@ -23,7 +23,7 @@ const App = () => {
       <Switch>
 
         <Route path="/categories/:category_name">
-          <FilteredGods />
+          <FilteredGodsByCategory />
         </Route>
 
         <Route path="/gods/:name">
@@ -61,7 +61,6 @@ const App = () => {
         <Route path="/about">
           <About />
         </Route>
-
 
         <Route path="/">
           <LandingPage />
