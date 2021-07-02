@@ -1,0 +1,107 @@
+
+
+
+
+body{ 
+  background: rgb(243, 243, 225);
+}
+
+.wrapper{ 
+  position:absolute;
+  left:50%;
+  top:50%;
+  perspective: 2000px;
+}
+
+.cube-area{
+  position:relative;
+  transform-style: preserve-3d;
+  animation-name: rotate;
+  animation-duration:20s;
+  animation-timing-function:linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+  0%{
+    transform: rotate3d(0,0,0,0,);
+  }
+  25%{
+    transform: rotate3d(2,1,3,90deg);
+  }
+  50% {
+    transform: rotate3d(0,1,0,180deg);
+  }
+  75%{
+    transform: rotate3d(0,2,4,270deg);
+  }
+  100%{
+    transform: rotate3d(0,1,0,360deg);
+  }
+}
+
+
+.box{
+  position:absolute;
+  width: 350px;
+  height:350px;
+  border:1px thing #374e49;
+  border-radius:33%;
+  box-shadow: rgb(97, 96, 96) 1px 1px 1px 1px; 
+  opacity: 0.5;
+  margin:0;
+}
+
+.god{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-front{
+  transform: translateX(-200px) translateY(-200px) translateZ(200px);
+  background:url('../Images/gods/Zeus.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.box-back{
+  transform: translateX(-200px) translateY(-200px) translateZ(-200px) rotateY(180deg);
+  background:url('../Images/gods/Poseidon.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.box-right{
+  transform: translateY(-200px) rotateY(90deg);
+  background:url('../Images/gods/Hestia.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.box-left{
+  transform: translateY(-200px) translateX(-400px) rotateY(270deg);
+  background:url('../Images/gods/Apollo.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.box-top{
+  transform: translateX(-200px) translateY(-400px) rotateX(90deg);
+  background:url('../Images/gods/Hades.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.box-bottom{
+  transform: translateX(-200px) rotateX(90deg);
+  background:url('../Images/gods/Athena.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.box-area{
+  transform: rotateX(90deg) rotateY(90deg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
