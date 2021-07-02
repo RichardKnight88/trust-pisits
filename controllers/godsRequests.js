@@ -14,7 +14,7 @@ export const getOneGod = async (req, res) => {
   try {
     const { name } = req.params
 
-    const singleGod = await God.find({ name: caseInsensitiveName(name) }).populate('owner').populate('comments.owner')
+    const singleGod = await God.findOne({ name: caseInsensitiveName(name) }).populate('owner').populate('comments.owner')
 
     if (!singleGod) throw new Error()
 
@@ -98,7 +98,7 @@ export const addComment = async (req, res) => {
 
   try {
     const { name } = req.params
-    const godToAddComment = await God.find({ name: caseInsensitiveName(name) })
+    const godToAddComment = await God.findOne({ name: caseInsensitiveName(name) })
 
     if (!godToAddComment) throw new Error('God does not exist')
     console.log('GOD ', godToAddComment)
@@ -106,12 +106,12 @@ export const addComment = async (req, res) => {
     const commentToAdd = { ...req.body, owner: req.currentUser._id }
     // maybe add picture?
     console.log('COMMENT TO ADD', commentToAdd)
-    console.log('GOD COMMENTS', godToAddComment[0].comments)
-    console.log('GENDER', godToAddComment[0].gender)
+    console.log('GOD COMMENTS', godToAddComment.comments)
+    console.log('GENDER', godToAddComment.gender)
 
-    godToAddComment[0].comments.push(commentToAdd)
+    godToAddComment.comments.push(commentToAdd)
 
-    await godToAddComment[0].save()
+    await godToAddComment.save()
 
     return res.status(202).json(godToAddComment)
 
@@ -126,25 +126,27 @@ export const editComment = async (req, res) => {
   try {
     const { name, commentId } = req.params
 
-    const godToEditComment = await God.find({ name: caseInsensitiveName(name) })
+    const godToEditComment = await God.findOne({ name: caseInsensitiveName(name) })
     if (!godToEditComment) throw new Error()
 
-    const commentToEdit = godToEditComment[0].comments.id(commentId)
+    const commentToEdit = godToEditComment.comments.id(commentId)
     if (!commentToEdit) throw new Error()
 
     const updatedComment = { owner: commentToEdit.owner._id, ...commentToEdit, ...req.body,  _id: commentToEdit._id } 
-    if (updatedComment.owner === req.currentUser._id || req.currentUser.username === 'Admin' ) {
-      console.log('authorization')
+
+    if (updatedComment.owner.equals(req.currentUser._id) || req.currentUser.username === 'Admin') {
+      console.log('AUTHORISED')
     } else {
-      throw new Error('Unauthorized')
+      throw new Error('Unauthorised')
     }
 
-    const indexOfCommentToEdit = godToEditComment[0].comments.indexOf(commentToEdit)
 
-    godToEditComment[0].comments.splice(indexOfCommentToEdit, 1, updatedComment)
+    const indexOfCommentToEdit = godToEditComment.comments.indexOf(commentToEdit)
+
+    godToEditComment.comments.splice(indexOfCommentToEdit, 1, updatedComment)
     
-    await godToEditComment[0].save()
-    return res.status(200).json(godToEditComment[0])
+    await godToEditComment.save()
+    return res.status(200).json(godToEditComment)
   } catch (err) {
     console.log(err)
     return res.status(404).json(err.message)
@@ -156,18 +158,26 @@ export const deleteComment = async (req, res) => {
   try {
     const { name, commentId } = req.params
 
-    const godToDeleteComment = await God.find({ name: caseInsensitiveName(name) })
+    const godToDeleteComment = await God.findOne({ name: caseInsensitiveName(name) })
     if (!godToDeleteComment) throw new Error()
+    console.log('God to delete comment', godToDeleteComment)
 
-    const commentToDelete = godToDeleteComment[0].comments.id(commentId)
+    const commentToDelete = godToDeleteComment.comments.id(commentId)
     if (!commentToDelete) throw new Error()
-    if (commentToDelete.owner !== req.currentUser._id) throw new Error()
+    console.log('comment to delete', commentToDelete)
+
+    if (commentToDelete.owner.equals(req.currentUser._id) || req.currentUser.username === 'Admin') {
+      console.log('AUTHORISED')
+    } else {
+      throw new Error('Unauthorised')
+    }
 
     await commentToDelete.remove()
 
-    await godToDeleteComment[0].save()
+    await godToDeleteComment.save()
 
     return res.status(202).json(godToDeleteComment)
+    
   } catch (err) {
     console.log(err)
     return res.status(404).json(err.message)
