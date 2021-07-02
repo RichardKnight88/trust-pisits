@@ -8,6 +8,12 @@ const userSchema = new mongoose.Schema({
   isDeusUser: { type: Boolean, required: true }
 })
 
+userSchema.virtual('userComments', {
+  ref: 'God', 
+  localField: '_id',
+  foreignField: 'comments.owner'
+})
+
 userSchema.set('toJSON', {
   virtuals: true,
   transform(_doc, json) {
@@ -15,6 +21,8 @@ userSchema.set('toJSON', {
     return json
   }
 })
+
+
 
 userSchema
   //create virtual field called passwordConfirmation
