@@ -1,12 +1,19 @@
 import express from 'express'
-import { getAllUsers } from '../controllers/usersRequests.js'
+import { getAllUsers, deleteUser, getOneUser } from '../controllers/usersRequests.js'
 import { getAllGods, getOneGod, addComment, editComment, deleteComment, addGod, deleteGod, updateGod } from '../controllers/godsRequests.js'
 import { registerUser, loginUser } from '../controllers/auth.js'
 import { secureRoute, deusRoute } from './secureRoute.js'
 
 const router = express.Router()
 
-router.route('/users').get(getAllUsers)
+router.route('/users')
+  .get(getAllUsers)
+
+router.route('/users/:id')
+  .delete(secureRoute, deleteUser)
+
+router.route('/profile')
+  .get(secureRoute, getOneUser)
 
 router.route('/gods')
   .get(getAllGods)
@@ -32,6 +39,8 @@ router.route('/register')
 
 router.route('/login')
   .post(loginUser)
+
+
 
 export default router
 
