@@ -23,7 +23,7 @@ const startServer = async () => {
     //convert incoming data to javascript
     app.use(express.json())
 
-    app.use(router)
+    app.use('/api', router)
 
 
     //listen for express connecting to port
