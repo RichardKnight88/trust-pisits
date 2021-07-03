@@ -44,6 +44,10 @@ const Navbar = () => {
           <Link to="/categories/:category_name" className="navbar-item">Gods filtered by category</Link>
         </div>
 
+        <div className="navbar-brand">
+          <Link to="/about" className="navbar-item">This is the about page</Link>
+        </div>
+
       </div>
     </nav>
 

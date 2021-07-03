@@ -1,5 +1,5 @@
 
-
+// Landing Page Start
 .landingPage-body{ 
   width: 100vw;
   height:100vh;
@@ -164,7 +164,157 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-////////////////////////////////////////////////////////////////////@at-root
+
+// Landing Page END
+
+// About Page START 
+.aboutPage-body{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+background-image: url('../Images/Developers/about-image.jpeg');
+width: 100vw;
+height:100vh;
+}
+
+// section{
+//   position:relative;
+// } 
+// section::before{
+//   content:'';
+//   position: absolute;
+//   top:0;
+//   left:0;
+//   width: 100%;
+//   height:100%;
+// } 
+
+// section::after{
+//   content:'';
+//   position: absolute;
+//   top:0;
+//   left:0;
+//   width: 100%;
+//   height:100%;
+// }
+
+.container-about{
+  position: relative;
+  z-index:1;
+  margin-left: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  // margin: 40px 0;
+} 
+
+.container-about .card-about {
+  position: relative;
+  width: 250px;
+  height:350px;
+  margin: 20px;
+  // background: #c5bd53;
+  box-shadow: 10px 1px 35px rgba(1, 238, 255, 0.2);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-about .card-about .content-about{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity:0.7;
+  transition: 0.2s;
+  transform: translateZ(20px)
+} 
+
+.container-about .card-about:hover .content-about {
+  opacity: 1;
+  transform: translateY(-20px);
+}
+
+.container-about .card-about .content-about .imgBx-about{
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border:5px solid rgb(209, 196, 178) 
+}
+
+.container-about .card-about .content-about .imgBx-about img{
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} 
+
+.container-about .card-about .content-about .contentBx-about h3{
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  margin: 20px 0 10px;
+  line-height: 1.1em;
+}
+
+.container-about .card-about .content-about .contentBx-about h3 span{
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: initial;
+} 
+
+.container-about .card-about .sci-about{
+  position: absolute;
+  bottom:30px;
+  display: flex;
+}
+
+.container-about .card-about .sci-about li{
+  list-style: none;
+  margin: 0 10px;
+  transform: translateY(40px);
+  transition: 0.5s;
+  opacity: 0;
+  transition-delay: calc(0.1s * var(--i));
+} 
+
+.container-about .card-about:hover .sci-about li {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.container-about .card-about .sci-about li a{
+  color: rgb(112, 19, 12);
+  font-size: 24px;
+} 
+
+.linkedin {
+  color:rgb(40,103,178)
+}
+.github{
+  color:rgb(255, 255, 255);
+  background:rgb(22, 22, 22);
+  border-radius: 2px;
+}
+
+.twitter{
+  color: rgb(29, 161, 242);
+} 
+
+
+// About Page END
+
 
 .hero-container {
   width: 100vw;
