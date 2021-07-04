@@ -12,7 +12,7 @@ const godsSchema = new mongoose.Schema({
   name: { type: String, required: true, unique: true },
   gender: { type: String, required: true },
   species: { type: String, required: true },
-  logo: { type: String, required: true },
+  logo: { type: String },
   image: { type: String },
   website: { type: String },
   godOf: [{ type: String, required: true }],
