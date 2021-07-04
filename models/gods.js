@@ -16,10 +16,7 @@ const godsSchema = new mongoose.Schema({
   description: { type: String, required: true, maxlength: 300 },
   symbol: [{ type: String, required: true }],
   sacredAnimals: [{ type: String }],
-  location: {
-    name: { type: String, required: true },
-    url: { type: String, required: true }
-  },
+  locationName: { type: String, required: true },
   family: {
     parents: [{ type: String, required: true }],
     siblings: [{ type: String, required: true }],
