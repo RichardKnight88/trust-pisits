@@ -1,12 +1,24 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 /* eslint-disable no-unused-vars */
 import axios from 'axios'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
+import { definedRating } from '../sematinicElements/ratings.js'
+
 
 
 const Home = () => {
 
   const [comments, setComments] = useState([])
   const [errors, setErrors] = useState(false)
+
+  const inputRef = useRef()
+
+  console.log('INPUTREF', inputRef)
+
+  // const { offsetLeft } = inputRef.current
+
+  // console.log('offsetLeft', offsetLeft)
+
 
 
   useEffect(() => {
@@ -77,8 +89,35 @@ const Home = () => {
           </div>
 
         </div>
-        {/* {comments && comments.map(item => item.name)} */}
-        {comments && comments.map(item => <h4 key={item._id}>{item.text} {item.rating}</h4>)}
+
+        {comments &&
+
+          <div className='scrolling-comments-container'>
+            {comments.map(item =>
+              <>
+                <div key={item._id} className="comment-div">
+                  {/* {console.log('POSITION', item.getBoundingClientRect())} */}
+                  <>
+                    {/* {const {offsetLeft} = inputRef.current} */}
+                    {/* {console.log('OFFSET LEFT', offsetLeft)} */}
+                  </>
+                  <div className="comment-header">
+                    <div className="comment-profile-pic "></div>
+                    <div className="comment-rating">{definedRating(item.rating)}</div>
+                  </div>
+                  <div className="engraved comment-owner-text">
+                    <p>
+                      <span className="bold">Person </span>  reviewed  <span className="bold">God</span>
+                    </p>
+                  </div>
+
+                  <h4 className="engraved">{item.text}</h4>
+
+                </div>
+              </>
+            )}
+          </div>
+        }
       </>
     </>
   )
