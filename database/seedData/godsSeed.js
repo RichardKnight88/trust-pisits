@@ -2,7 +2,10 @@ export default [
   {
     name: 'Zeus',
     gender: 'Male',
+    species: 'Olympians',
+    logo: '',
     image: 'https://static.wikia.nocookie.net/olympians/images/3/3c/Zeus.png',
+    website: 'https://en.wikipedia.org/wiki/Zeus',
     godOf: ['The Sky', 'Thunder', 'Lightning', 'Storms', 'Air', 'Winds', 'Clouds', 'Wheather', 'Law', 'Justice', 'Destiny', 'Fate and Honor', 'Patron of Humans'],
     description: 'The King of the Olympians and God of the Sky, Weather, Thunderstorms, Lightning bolts, Winds and Clouds. He is also the God of Law, Order, Justice, Power, Human Fate and the Human Race.',
     symbol: ['thunderbolt', 'aegis', 'scales'],
@@ -24,6 +27,9 @@ export default [
   {
     name: 'Hera',
     gender: 'Female',
+    species: 'Olympians',
+    logo: '',
+    website: 'https://en.wikipedia.org/wiki/Hera',
     image: 'https://static.wikia.nocookie.net/olympians/images/0/07/Hera.jpg/revision/latest?cb=20180719153503',
     godOf: ['Women', 'Marriage', 'Family', 'Childbirth', 'Sky', 'Air', 'Queenship', 'Starry Heaven'],
     description: 'The Greek goddess of women, marriage, childbirth, sky, air, queenship, and starry heaven.',
@@ -43,6 +49,9 @@ export default [
   {
     name: 'Poseidon',
     gender: 'Male',
+    species: 'Olympians',
+    logo: '',
+    website: 'https://en.wikipedia.org/wiki/Poseidon',
     image: 'https://static.wikia.nocookie.net/olympians/images/7/79/Poseidon.jpg',
     godOf: ['The Sea', 'Water', 'Earthquakes', 'Islands'],
     description: 'The Greek god of the sea, earthquakes, droughts, floods, water, aquatic creatures, marine weather and horses.',
@@ -62,6 +71,9 @@ export default [
   {
     name: 'Demeter',
     gender: 'Female',
+    species: 'Olympians',
+    logo: '',
+    website: 'https://en.wikipedia.org/wiki/Demeter',
     image: 'https://static.wikia.nocookie.net/olympians/images/c/c2/Demeter-Viria.png',
     godOf: ['Agriculture', 'Fertility', 'the Seasons', 'Nature', 'the Harvest', 'Nourishment', 'Grain'],
     description: 'The Greek goddess of agriculture, grain, and bread, the prime sustenance of mankind.',
@@ -81,6 +93,9 @@ export default [
   {
     name: 'Athena',
     gender: 'Female',
+    species: 'Olympians',
+    logo: '',
+    website: 'https://en.wikipedia.org/wiki/Aphrodite',
     image: 'https://static.wikia.nocookie.net/olympians/images/8/83/Athena.jpg',
     godOf: ['War', 'Wisdom', 'Crafts', 'Battle strategies'],
     description: 'The Greek goddess of wisdom, mathematics, civilization, the arts, reason, skill, and war.',
@@ -100,6 +115,9 @@ export default [
   {
     name: 'Apollo',
     gender: 'Male',
+    species: 'Olympians',
+    logo: '',
+    website: 'https://en.wikipedia.org/wiki/Apollo',
     image: 'https://static.wikia.nocookie.net/olympians/images/5/54/Apollo_Viria.jpg',
     godOf: ['music', 'intelligence', 'civilization', 'truth', 'logic', 'reason', 'prophecy', 'purification', 'poetry', 'plague', 'oracles', 'sun', 'healing', 'archery', 'light', 'medicine'],
     description: 'The Greek God of the arts, music, healing, purification, prophecy, oracles, plague, poetry, civilization, the sun, truth, intelligence, logic, reason, and archery, he also showed men the art of medicine.',
@@ -119,6 +137,9 @@ export default [
   {
     name: 'Artemis',
     gender: 'Female',
+    species: 'Olympians',
+    logo: '',
+    website: 'https://en.wikipedia.org/wiki/Artemis',
     image: 'https://static.wikia.nocookie.net/olympians/images/e/e9/ArtemisGG.png',
     godOf: ['Hunt', 'Wilderness', 'Wild animals', 'the Moon', 'Archery', 'Maidenhood', 'Childbirth'],
     description: 'The Greek virgin goddess of the hunt, archery, wilderness, forests, the Moon, radiance, maidenhood, and childbirth. She and her twin brother Apollo are known as the \'Twin Archers\'.',
