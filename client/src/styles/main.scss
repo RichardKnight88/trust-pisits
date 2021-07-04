@@ -109,7 +109,7 @@ body{
 
 .hero-container {
   width: 100vw;
-  height: 50vh;
+  height: 600px;
   background-image: url(../Images/hero-cracked-marble.jpg); 
   // background-position: right;
   background-position: right;
@@ -138,7 +138,6 @@ body{
 
 .searchBar-container {
   width: 650px;
-
 }
 
 .home-searchbar {
@@ -182,6 +181,47 @@ body{
   }
 }
 
+.categories-continer {
+  width: 100%
+}
+
+.categories-tagline {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin: 32px 0 18px;
+}
+
+.categories-button-container {
+  display: flex;
+}
+
+.category-button {
+  width: 105px;
+  height: 105px;
+  border-radius: 3px;
+  background-color: #ffe6cc;
+  color: #664400;
+  margin-right: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    cursor: pointer;
+    bottom: -4px;
+    box-shadow: 3px 3px 5px 1px rgba(102, 51, 0, 0.6);
+    transform: translateY(4px);
+  }
+}
+
+.comments-container-heading{
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 30px 0 30px;
+  text-align: center;
+}
+
 .scrolling-comments-container {
   width: 100vw;
   height:450px;
@@ -200,7 +240,7 @@ body{
   flex-direction: column;
   padding: 24px;
   border-radius: 10% 15% 6% 8%;
-  box-shadow: inset -5px -2px 5px rgba(102, 51, 0, 0.6), inset 5px 8px 10px lighten(#ffe6cc, 5%), 3px 3px 5px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: inset -5px -2px 5px rgba(102, 51, 0, 0.6), inset 5px 8px 10px lighten(#ffe6cc, 5%), 3px 3px 5px 1px rgba(71, 67, 67, 0.2);
   background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../Images/marbleBackground.png);
   background-size: cover;
   .ui.rating .active.icon {

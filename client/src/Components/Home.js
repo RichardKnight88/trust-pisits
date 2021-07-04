@@ -2,6 +2,7 @@
 /* eslint-disable no-unused-vars */
 import axios from 'axios'
 import React, { useState, useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import { definedRating } from '../sematinicElements/ratings.js'
 
 
@@ -84,15 +85,58 @@ const Home = () => {
                 </form>
               </div>
 
+
+              <div className="categories-continer">
+
+                <div className="categories-tagline">
+                  Browse gods by category
+                </div>
+
+                <div className="categories-button-container">
+
+                  <Link to="/categories">
+                    <div className="category-button">
+                      Primordial
+                    </div>
+                  </Link>
+
+                  <Link to="/categories">
+                    <div className="category-button">
+                      Olympian
+                    </div>
+                  </Link>
+
+                  <Link to="/categories">
+                    <div className="category-button">
+                      Titan
+                    </div>
+                  </Link>
+
+                  <Link to="/categories">
+                    <div className="category-button">
+                      Giant
+                    </div>
+                  </Link>
+
+
+                </div>
+
+              </div>
+
             </div>
 
           </div>
 
         </div>
 
+        <div className="comments-container-heading">
+          Recent reviews
+        </div>
+        
         {comments &&
 
           <div className='scrolling-comments-container'>
+
             {comments.map(item =>
               <>
                 <div key={item._id} className="comment-div">
