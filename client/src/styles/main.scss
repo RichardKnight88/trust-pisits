@@ -1,9 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&display=swap');
 
 // Landing Page Start
 .landingPage-body{ 
   width: 100vw;
   height:100vh;
   background-image: radial-gradient(beige, rgb(58, 51, 51));
+}
+
+body{ 
+  background: rgb(243, 243, 225);
+  // background: #ffd9b3;
+  // background: #ffe6cc;
+  height: 100%;
 }
 
 .wrapper{ 
@@ -318,8 +326,8 @@ height:100vh;
 
 .hero-container {
   width: 100vw;
-  height: 50vh;
-  background-image: url(../Images/home-hero-screenshot.png); 
+  height: 600px;
+  background-image: url(../Images/hero-cracked-marble.jpg); 
   // background-position: right;
   background-position: right;
   background-size: cover;
@@ -347,7 +355,6 @@ height:100vh;
 
 .searchBar-container {
   width: 650px;
-
 }
 
 .home-searchbar {
@@ -389,4 +396,130 @@ height:100vh;
     background-color: darken(#ffe6cc, 5%);
     cursor: pointer;
   }
+}
+
+.categories-continer {
+  width: 100%
+}
+
+.categories-tagline {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin: 32px 0 18px;
+}
+
+.categories-button-container {
+  display: flex;
+}
+
+.category-button {
+  width: 105px;
+  height: 105px;
+  border-radius: 3px;
+  background-color: #ffe6cc;
+  color: #664400;
+  margin-right: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    cursor: pointer;
+    bottom: -4px;
+    box-shadow: 3px 3px 5px 1px rgba(102, 51, 0, 0.6);
+    transform: translateY(4px);
+  }
+}
+
+.comments-container-heading{
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 30px 0 30px;
+  text-align: center;
+}
+
+.scrolling-comments-container {
+  width: 100vw;
+  height:450px;
+  display: flex;
+  // flex-wrap: wrap;
+
+}
+
+.comment-div {
+  display: flex;
+  flex-wrap: wrap;
+  width: 20vw;
+  margin: 10px;
+  background-color: #ffe6cc;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  border-radius: 10% 15% 6% 8%;
+  box-shadow: inset -5px -2px 5px rgba(102, 51, 0, 0.6), inset 5px 8px 10px lighten(#ffe6cc, 5%), 3px 3px 5px 1px rgba(71, 67, 67, 0.2);
+  background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../Images/marbleBackground.png);
+  background-size: cover;
+  .ui.rating .active.icon {
+    background-color: #ffae00;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 1px 1px 1px hsla(0,0%,255%,0.4);
+  }
+  .ui.rating .icon {
+    background-color: rgba(102, 51, 0, 0.6);
+    // background-color: rgba(153, 77, 0, 0.6);
+    // background-color: rgb(153, 77, 0);
+    background-clip: text;
+    color: transparent;
+    text-shadow: 1px 1px 1px hsla(0,0%,255%,0.6);
+  }
+  transform: translate();
+}
+
+.comment-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.comment-profile-pic {
+  height: 50px;
+  width: 50px;
+  background-color: sandybrown;
+  border-radius: 30px;
+}
+
+h4 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+  // text-transform: uppercase;
+  // background-color: rgba(102, 51, 0, 0.6);
+  // // background-color: rgba(153, 77, 0, 0.6);
+  // color: transparent;
+  //   background-clip: text;
+  // margin-left: 3;
+  // text-shadow: 1px 1px 1px hsla(0,0%,255%,0.6);
+
+}
+
+.engraved {
+  text-transform: uppercase;
+  background-color: rgba(102, 51, 0, 0.6);
+  // background-color: rgba(153, 77, 0, 0.6);
+  color: transparent;
+    background-clip: text;
+  margin-left: 3;
+  text-shadow: 1px 1px 1px hsla(0,0%,255%,0.6);
+  p {
+    font-size: 1em;
+    .bold {
+      font-size: 1.2em;
+      font-weight: 700;
+    }
+  }
+}
+
+.comment-owner-text {
+  margin: 10px 0;
 }
