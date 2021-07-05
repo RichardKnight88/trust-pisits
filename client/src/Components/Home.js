@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 /* eslint-disable no-unused-vars */
 import axios from 'axios'
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { definedRating } from '../sematinicElements/ratings.js'
 
@@ -11,15 +11,6 @@ const Home = () => {
 
   const [comments, setComments] = useState([])
   const [errors, setErrors] = useState(false)
-
-  const inputRef = useRef()
-
-  console.log('INPUTREF', inputRef)
-
-  // const { offsetLeft } = inputRef.current
-
-  // console.log('offsetLeft', offsetLeft)
-
 
 
   useEffect(() => {
@@ -142,11 +133,7 @@ const Home = () => {
               {comments.map(item =>
                 <>
                   <div key={item._id} className="comment-div">
-                    {/* {console.log('POSITION', item.getBoundingClientRect())} */}
-                    <>
-                      {/* {const {offsetLeft} = inputRef.current} */}
-                      {/* {console.log('OFFSET LEFT', offsetLeft)} */}
-                    </>
+                    
                     <div className="comment-header">
                       <div className="comment-profile-pic "></div>
                       <div className="comment-rating">{definedRating(item.rating)}</div>
@@ -199,6 +186,13 @@ const Home = () => {
             </div>
 
           </div>
+
+        </section>
+
+        <section className="personal-stories">
+
+          
+
 
         </section>
 
