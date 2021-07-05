@@ -4,6 +4,7 @@ import axios from 'axios'
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { definedRating } from '../sematinicElements/ratings.js'
+import prometheus from '../Images/prometheus.jpg'
 
 
 
@@ -133,7 +134,7 @@ const Home = () => {
               {comments.map(item =>
                 <>
                   <div key={item._id} className="comment-div">
-                    
+
                     <div className="comment-header">
                       <div className="comment-profile-pic "></div>
                       <div className="comment-rating">{definedRating(item.rating)}</div>
@@ -191,7 +192,33 @@ const Home = () => {
 
         <section className="personal-stories">
 
-          
+          <div className="comments-container-heading">
+            Your stories
+          </div>
+          <div className="homepage-tagline">
+            <h2 className="search-header">Each review has a personal story</h2>
+          </div>
+
+          <div className="stories-figure">
+
+            <div className="stories-image" alt="Prometheus">
+              {/* <img className="stories-image" src={prometheus} alt="Prometheus" /> */}
+
+              <div className="review-card">
+
+                <div className="review-content">
+                  <div className="review-rating">
+                    {definedRating(1)}
+                  </div>
+
+                  <div className="review-text">He chained me to a rock to have an eagle eat my liver for eternity because I gave fire to humans.</div>
+                  <div className="review-owner-text"><span className="bold">Prometheus </span> experienced <span className="bold"> Zeus</span></div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
 
 
         </section>

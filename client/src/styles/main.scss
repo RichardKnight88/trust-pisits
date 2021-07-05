@@ -108,6 +108,7 @@ body{
 }
 
 .hero-container {
+  color: #664400;
   width: 100vw;
   height: 600px;
   background-image: url(../Images/hero-cracked-marble.jpg); 
@@ -216,6 +217,7 @@ body{
 }
 
 .comments-container-heading{
+  color: #664400;
   font-size: 1.5rem;
   font-weight: 700;
   margin: 30px 0 30px;
@@ -301,8 +303,6 @@ body{
   border-radius: 30px;
 }
 
-
-
 .engraved {
   text-transform: uppercase;
   background-color: rgba(102, 51, 0, 0.6);
@@ -319,6 +319,11 @@ body{
       font-weight: 700;
     }
   }
+}
+
+.bold {
+  font-size: 1.2em;
+  font-weight: 700;
 }
 
 .comment-owner-text {
@@ -374,8 +379,61 @@ body{
   background-size: cover;
   background-position: bottom;
   height: 400px;
-  margin-top: calc(-1 * (24px + 48px));
+  margin-top: -72px;
   box-shadow: 1px -3px 5px rgba(102, 51, 0, 0.2);
+}
+
+.personal-stories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #664400;
+  margin-bottom: 50px;
+  height: fit-content;
+
+
+  .homepage-tagline h2 {
+    margin-bottom: 100px;
+    text-align: center;
+  }
+
+  .stories-figure {
+    display: flex;
+    align-items: center;
+  }
+
+  .stories-image {
+    background-image: url('../Images/prometheus.jpg');
+    background-size: cover;
+    background-position: left;
+    width: 90vw;
+    height: 700px;
+  }
+
+  .review-card {
+    width: 300px;
+    height: 300px;
+    background-color: #ffe6cc;
+    margin-top: -50px;
+    margin-left: 20px;
+    box-shadow: 1px -3px 5px rgba(102, 51, 0, 0.2);
+
+    .ui.rating .active.icon {
+      background-color: #ffae00;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 1px 1px 1px hsla(0,0%,255%,0.4);
+    }
+  }
+
+  .review-rating, .review-text {
+    margin-bottom: 30px;
+  }
+  
+  .review-content {
+    padding: 56px 40px;
+    font-size: larger;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -440,4 +498,21 @@ body{
       }
     }
   }
+
+  .stories-figure {
+    
+
+    .stories-image {
+      height: 400px;
+      width: 90vh;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .review-card {
+        margin: 380px 0 ;
+        padding: 0;
+      }
+    }
+}
 }
