@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
-import { Divider, Grid, Image, Segment, Icon, List, Popup } from 'semantic-ui-react'
+import { Divider, Grid, Image, Segment, Icon, List, Popup, Label } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 import { definedRating } from '../sematinicElements/ratings.js'
 
@@ -14,7 +14,9 @@ const GodsInfoPage = () => {
   const [theosToLowerCase, setTheosToLowerCase] = useState()
   const [theosCommentsLength, setTheosCommentsLength] = useState([])
   const [theosComments, setTheosComments] = useState([])
+  const [jobs, setJobs] = useState([])
   const [hasError, setHasError] = useState(false)
+
   const { name } = useParams()
 
   useEffect(() => {
@@ -28,6 +30,8 @@ const GodsInfoPage = () => {
         setTheosCommentsLength(data.comments.length)              // For styling purposes, not for semantic purpose. To see how many reviews are there.
         
         setTheosComments(data.comments)
+
+        setJobs(data.godOf)
 
       } catch (err) {
         setHasError(true)
@@ -53,29 +57,36 @@ const GodsInfoPage = () => {
             <Grid.Column>
               <Segment className='getting-rid-of-border'>
                 <Grid columns={2} relaxed='very'>
+
                   <Grid.Column className='inner-divider-width-one'>
                     <Image src={theos.logo} />
                   </Grid.Column>
+
                   <Grid.Column className='inner-divider-width-two'>
                     <div className='content-towards-logo'>
                       <h1>{theos.name}</h1>
                       <p>Reviews {theosCommentsLength}</p>
-                      <div>
+
+                      <>
                         {theos.avgRating && 
-                        // {console.log('AVRAGE RATING >>>', theos.avgRating)}
-                        <div>
-                          <p> {definedRating(Math.round(theos.avgRating))}</p>
-                          <p>{theos.avgRating}</p>
+                        <div className='start-rating-info-positioning'>
+                          <div className='start-rating-info-positioning-padding'>{definedRating(Math.round(theos.avgRating))}</div>
+                          <div className='start-rating-info-positioning-padding'>{theos.avgRating}</div>
+                          <div className='start-rating-info-positioning-padding'>
+                            <Popup trigger={<Icon name='info circle' />}>
+                              <span className='popup-information-style engraved'>
+                          The TheoiScore isn&apos;t just a simple average of all reviews. It&apos;s based on multiple factors like the age and number of reviews. Whether or not a business activelly asks customers to write reviews also impacts the TheoiScore.
+                              </span>
+                            </Popup>
+                          </div>
                         </div>
                         }
-                        <Popup trigger={<Icon name='info circle' />}>
-                          <span className='popup-information-style engraved'>
-                          The TheoiScore isn&apos;t just a simple average of all reviews. It&apos;s based on multiple factors like the age and number of reviews. Whether or not a business activelly asks customers to write reviews also impacts the TheoiScore.
-                          </span>
-                        </Popup>
-                      </div>
+
+                      </>
+
                     </div>
                   </Grid.Column>
+
                 </Grid>
               </Segment>
             </Grid.Column>
@@ -130,7 +141,20 @@ const GodsInfoPage = () => {
                 </Grid.Column>
           
                 <Grid.Column className='info-page-width-two'>
-                  <Segment>Business Transparency</Segment>
+                  <Segment>Specialised in
+                    <div className='flexing-jobs-board'>
+                      {jobs.map(job => {
+                        return (
+                          
+                          <Label key={job} className='positioning-job-tags'>
+                            <p>{job}</p>
+                          </Label>
+                        
+                        )
+                      })}
+                    </div>
+                  </Segment>
+
                   <Segment>{theos.name}
                     <br />
                     <Segment>
