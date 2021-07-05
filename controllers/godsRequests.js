@@ -1,4 +1,5 @@
 import God from '../models/gods.js'
+import Comment from '../models/comments.js'
 import { caseInsensitiveName } from '../config/environment.js'
 
 // ! GET ALL GODS
@@ -14,7 +15,7 @@ export const getOneGod = async (req, res) => {
   try {
     const { name } = req.params
 
-    const singleGod = await God.findOne({ name: caseInsensitiveName(name) }).populate('owner').populate('comments.owner')
+    const singleGod = await God.findOne({ name: caseInsensitiveName(name) }).populate('owner')
 
     if (!singleGod) throw new Error()
 
@@ -103,13 +104,15 @@ export const addComment = async (req, res) => {
     if (!godToAddComment) throw new Error('God does not exist')
     console.log('GOD ', godToAddComment)
 
-    const commentToAdd = { ...req.body, owner: req.currentUser._id }
+    const commentToAdd = { ...req.body, owner: req.currentUser._id, ownerUsername: req.currentUser.username }
+
+    const newComment = await Comment.create(commentToAdd)
     // maybe add picture?
     console.log('COMMENT TO ADD', commentToAdd)
     console.log('GOD COMMENTS', godToAddComment.comments)
     console.log('GENDER', godToAddComment.gender)
 
-    godToAddComment.comments.push(commentToAdd)
+    godToAddComment.comments.push(newComment)
 
     await godToAddComment.save()
 

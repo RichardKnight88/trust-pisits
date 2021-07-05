@@ -22,7 +22,8 @@ export default [
       norseEquivalent: 'Thor',
       slavicEquivalent: 'Perun',
       hinduEquivalent: 'Indra'
-    }
+    }, 
+    comments: []
   },
   {
     name: 'Hera',
@@ -44,7 +45,8 @@ export default [
     },
     otherEquivalents: {
       romanEquivalent: 'Juno'
-    }
+    }, 
+    comments: []
   },
   {
     name: 'Poseidon',
@@ -66,7 +68,8 @@ export default [
     },
     otherEquivalents: {
       romanEquivalent: 'Neptune'
-    }
+    }, 
+    comments: []
   },
   {
     name: 'Demeter',
@@ -88,7 +91,8 @@ export default [
     },
     otherEquivalents: {
       romanEquivalent: 'Ceres'
-    }
+    }, 
+    comments: []
   },
   {
     name: 'Athena',
@@ -110,7 +114,8 @@ export default [
     },
     otherEquivalents: {
       romanEquivalent: 'Minerva'
-    }
+    }, 
+    comments: []
   },
   {
     name: 'Apollo',
@@ -132,7 +137,8 @@ export default [
     },
     otherEquivalents: {
       romanEquivalent: 'Apollo'
-    }
+    }, 
+    comments: []
   },
   {
     name: 'Artemis',
@@ -154,6 +160,7 @@ export default [
     },
     otherEquivalents: {
       romanEquivalent: 'Diana'
-    }
+    }, 
+    comments: []
   }
 ]

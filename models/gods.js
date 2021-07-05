@@ -1,12 +1,5 @@
 import mongoose from 'mongoose'
 
-const commentSchema = new mongoose.Schema({
-  text: { type: String, required: true, maxLength: 300 },
-  rating: { type: Number, required: true, min: 1, max: 5 },
-  owner: { type: mongoose.Schema.ObjectId, ref: 'User', required: true }
-}, {
-  timestamps: true
-})
 
 const godsSchema = new mongoose.Schema({
   name: { type: String, required: true, unique: true },
@@ -33,7 +26,7 @@ const godsSchema = new mongoose.Schema({
     hinduEquivalent: { type: String }
   },
   owner: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
-  comments: [commentSchema]
+  comments: []
 })
 
 

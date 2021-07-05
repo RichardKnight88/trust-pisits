@@ -141,7 +141,7 @@ const Home = () => {
                     </div>
                     <div className="engraved comment-owner-text">
                       <p>
-                        <span className="bold">Person </span>  reviewed  <span className="bold">God</span>
+                        <span className="bold">{item.ownerUsername} </span>  reviewed  <span className="bold">{item.placeholderAboutGod}</span>
                       </p>
                     </div>
 
