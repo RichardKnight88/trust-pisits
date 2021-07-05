@@ -4,7 +4,7 @@ const LandingPage = () => {
 
   return (
     <>
-      <body className="landingPage-body">
+      <section className="landingPage-body">
         <div className="wrapper">
           <div className="cube-area">
             <div className="second-box second-box-front"></div>
@@ -21,7 +21,7 @@ const LandingPage = () => {
             <div className="box box-bottom god"></div>
           </div>
         </div>
-      </body>
+      </section>
     </>
   )
 }
