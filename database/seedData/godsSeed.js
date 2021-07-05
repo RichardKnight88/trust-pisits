@@ -2,15 +2,15 @@ export default [
   {
     name: 'Zeus',
     gender: 'Male',
+    species: 'Olympians',
+    logo: 'https://i.ibb.co/xsDCqfx/zeus-copy.png',
     image: 'https://static.wikia.nocookie.net/olympians/images/3/3c/Zeus.png',
+    website: 'https://en.wikipedia.org/wiki/Zeus',
     godOf: ['The Sky', 'Thunder', 'Lightning', 'Storms', 'Air', 'Winds', 'Clouds', 'Wheather', 'Law', 'Justice', 'Destiny', 'Fate and Honor', 'Patron of Humans'],
     description: 'The King of the Olympians and God of the Sky, Weather, Thunderstorms, Lightning bolts, Winds and Clouds. He is also the God of Law, Order, Justice, Power, Human Fate and the Human Race.',
     symbol: ['thunderbolt', 'aegis', 'scales'],
     sacredAnimals: ['eagle', 'wolf', 'woodpecker', 'lion', 'bull', 'swan', 'puma', 'mountain lion', 'cougar'],
-    location: {
-      name: 'Mount Olympus',
-      url: 'https://mythologyexplained.com/wp-content/uploads/2021/03/Mount-Olympus-of-Greek-Mythology-—-Home-of-Zeus-and-the-Gods-101.jpeg'
-    },
+    locationName: 'Mount Olympus',
     family: {
       parents: ['Cronus', 'Rea'],
       siblings: ['Hestia', 'Hades', 'Hera', 'Poseidon', 'Demeter', 'Chiron'],
@@ -27,15 +27,15 @@ export default [
   {
     name: 'Hera',
     gender: 'Female',
+    species: 'Olympians',
+    logo: 'https://i.ibb.co/d2Bjg9P/198e4ca45506c6c52baaf2c0db512a54.jpg',
+    website: 'https://en.wikipedia.org/wiki/Hera',
     image: 'https://static.wikia.nocookie.net/olympians/images/0/07/Hera.jpg/revision/latest?cb=20180719153503',
     godOf: ['Women', 'Marriage', 'Family', 'Childbirth', 'Sky', 'Air', 'Queenship', 'Starry Heaven'],
     description: 'The Greek goddess of women, marriage, childbirth, sky, air, queenship, and starry heaven.',
     symbol: ['Pomegranate', 'Diadem', 'Lotus-tipped staff'],
     sacredAnimals: ['Heifer', 'Peacock', 'Cuckoo', 'Lion', 'Panther'],
-    location: {
-      name: 'Mount Olympus',
-      url: 'https://mythologyexplained.com/wp-content/uploads/2021/03/Mount-Olympus-of-Greek-Mythology-—-Home-of-Zeus-and-the-Gods-101.jpeg'
-    },
+    locationName: 'Mount Olympus',
     family: {
       parents: ['Cronus', 'Rea'],
       siblings: ['Poseidon', 'Hades', 'Demeter', 'Hestia', 'Zeus', 'Chiron'],
@@ -49,15 +49,15 @@ export default [
   {
     name: 'Poseidon',
     gender: 'Male',
+    species: 'Olympians',
+    logo: 'https://i.ibb.co/nj4v74Z/poseidon.jpg',
+    website: 'https://en.wikipedia.org/wiki/Poseidon',
     image: 'https://static.wikia.nocookie.net/olympians/images/7/79/Poseidon.jpg',
     godOf: ['The Sea', 'Water', 'Earthquakes', 'Islands'],
     description: 'The Greek god of the sea, earthquakes, droughts, floods, water, aquatic creatures, marine weather and horses.',
     symbol: ['Trident', 'Dophin', 'Horse', 'Turquoise', 'Ash tree', 'White pine tree'],
     sacredAnimals: ['Horse', 'Dophin', 'Fish', 'Bull', 'Ram'],
-    location: {
-      name: 'Mount Olympus',
-      url: 'https://mythologyexplained.com/wp-content/uploads/2021/03/Mount-Olympus-of-Greek-Mythology-—-Home-of-Zeus-and-the-Gods-101.jpeg'
-    },
+    locationName: 'Mount Olympus',
     family: {
       parents: ['Cronus', 'Rea'],
       siblings: ['Hades', 'Demeter', 'Hestia', 'Hera', 'Zeus', 'Chiron'],
@@ -71,15 +71,15 @@ export default [
   {
     name: 'Demeter',
     gender: 'Female',
+    species: 'Olympians',
+    logo: 'https://i.ibb.co/hDM7Sh7/demeter-horn-logo.png',
+    website: 'https://en.wikipedia.org/wiki/Demeter',
     image: 'https://static.wikia.nocookie.net/olympians/images/c/c2/Demeter-Viria.png',
     godOf: ['Agriculture', 'Fertility', 'the Seasons', 'Nature', 'the Harvest', 'Nourishment', 'Grain'],
     description: 'The Greek goddess of agriculture, grain, and bread, the prime sustenance of mankind.',
     symbol: ['Cornucopia', 'Wheat', 'Winged Serpent', 'Gecko', 'Swine', 'Poppy'],
     sacredAnimals: [],
-    location: {
-      name: 'Mount Olympus',
-      url: 'https://mythologyexplained.com/wp-content/uploads/2021/03/Mount-Olympus-of-Greek-Mythology-—-Home-of-Zeus-and-the-Gods-101.jpeg'
-    },
+    locationName: 'Mount Olympus',
     family: {
       parents: ['Cronus', 'Rea'],
       siblings: ['Hestia', 'Hera', 'Hades', 'Poseidon', 'Zeus', 'Chiron'],
@@ -93,15 +93,15 @@ export default [
   {
     name: 'Athena',
     gender: 'Female',
+    species: 'Olympians',
+    logo: 'https://i.ibb.co/vP4WhKX/Athena-Logo-Profile.png',
+    website: 'https://en.wikipedia.org/wiki/Aphrodite',
     image: 'https://static.wikia.nocookie.net/olympians/images/8/83/Athena.jpg',
     godOf: ['War', 'Wisdom', 'Crafts', 'Battle strategies'],
     description: 'The Greek goddess of wisdom, mathematics, civilization, the arts, reason, skill, and war.',
     symbol: ['Owls', 'Olive trees', 'Snakes', 'Aegis', 'Armour', 'Helmets', 'Spears', 'Gorgoneion'],
     sacredAnimals: [],
-    location: {
-      name: 'Mount Olympus',
-      url: 'https://mythologyexplained.com/wp-content/uploads/2021/03/Mount-Olympus-of-Greek-Mythology-—-Home-of-Zeus-and-the-Gods-101.jpeg'
-    },
+    locationName: 'Mount Olympus',
     family: {
       parents: ['Zeus', 'Metis (?)'],
       siblings: ['Aeacus', 'Angelos', 'Aphrodite', 'Apollo', 'Ares', 'Artemis', 'Dionysus', 'Eileithyia', 'Enyo', 'Eris', 'Ersa', 'Hebe', 'Helen of Troy', 'Hephaestus', 'Heracles', 'Hermes', 'Minos', 'Pandia', 'Persephone', 'Perseus', 'Rhadamanthus', 'the Graces', 'the Horae', 'the Litae', 'the Muses', 'the Moirai'],
@@ -115,15 +115,15 @@ export default [
   {
     name: 'Apollo',
     gender: 'Male',
+    species: 'Olympians',
+    logo: '',
+    website: 'https://en.wikipedia.org/wiki/Apollo',
     image: 'https://static.wikia.nocookie.net/olympians/images/5/54/Apollo_Viria.jpg',
     godOf: ['music', 'intelligence', 'civilization', 'truth', 'logic', 'reason', 'prophecy', 'purification', 'poetry', 'plague', 'oracles', 'sun', 'healing', 'archery', 'light', 'medicine'],
     description: 'The Greek God of the arts, music, healing, purification, prophecy, oracles, plague, poetry, civilization, the sun, truth, intelligence, logic, reason, and archery, he also showed men the art of medicine.',
     symbol: ['Lyre', 'Laurel wreath', 'Bow and Arrows', 'Tripod', 'Myrtle', 'The Sun'],
     sacredAnimals: ['Python', 'Crow', 'Wolf', 'Dolphin', 'Swan', 'Mouse'],
-    location: {
-      name: 'Mount Olympus',
-      url: 'https://mythologyexplained.com/wp-content/uploads/2021/03/Mount-Olympus-of-Greek-Mythology-—-Home-of-Zeus-and-the-Gods-101.jpeg'
-    },
+    locationName: 'Mount Olympus',
     family: {
       parents: ['Zeus', 'Leto'],
       siblings: ['Artemis', 'Aeacus', 'Angelos', 'Aphrodite', 'Ares', 'Athena', 'Dionysus', 'Eileithyia', 'Enyo', 'Eris', 'Ersa', 'Hebe', 'Helen of Troy', 'Hephaestus', 'Heracles', 'Hermes', 'Minos', 'Pandia', 'Persephone', 'Perseus', 'Rhadamanthus', 'the Graces', 'the Horae', 'the Litae', 'the Muses', 'the Moirai'],
@@ -137,15 +137,15 @@ export default [
   {
     name: 'Artemis',
     gender: 'Female',
+    species: 'Olympians',
+    logo: '',
+    website: 'https://en.wikipedia.org/wiki/Artemis',
     image: 'https://static.wikia.nocookie.net/olympians/images/e/e9/ArtemisGG.png',
     godOf: ['Hunt', 'Wilderness', 'Wild animals', 'the Moon', 'Archery', 'Maidenhood', 'Childbirth'],
     description: 'The Greek virgin goddess of the hunt, archery, wilderness, forests, the Moon, radiance, maidenhood, and childbirth. She and her twin brother Apollo are known as the \'Twin Archers\'.',
     symbol: ['Bow', 'Arrow', 'Quiver', 'Hunting knives', 'Moon', 'Deer', 'Cypress'],
     sacredAnimals: ['Stags', 'Deer'],
-    location: {
-      name: 'Mount Olympus',
-      url: 'https://mythologyexplained.com/wp-content/uploads/2021/03/Mount-Olympus-of-Greek-Mythology-—-Home-of-Zeus-and-the-Gods-101.jpeg'
-    },
+    locationName: 'Mount Olympus',
     family: {
       parents: ['Zeus', 'Leto'],
       siblings: ['Apollo', 'Aeacus', 'Angelos', 'Aphrodite', 'Ares', 'Athena', 'Dionysus', 'Eileithyia', 'Enyo', 'Eris', 'Ersa', 'Hebe', 'Helen of Troy', 'Hephaestus', 'Heracles', 'Hermes', 'Minos', 'Pandia', 'Persephone', 'Perseus', 'Rhadamanthus', 'the Graces', 'the Horae', 'the Litae', 'the Muses', 'the Moirai'],

@@ -3,7 +3,7 @@
 // Landing Page Start
 .landingPage-body{ 
   width: 100vw;
-  height:100vh;
+  height: 95.5vh;            // ! Changed by Vania, to sea how to get rid of scrollbar. Original value is height: 100vh;
   background-image: radial-gradient(beige, rgb(58, 51, 51));
 }
 
@@ -182,7 +182,7 @@ align-items: center;
 flex-wrap: wrap;
 background-image: url('../Images/Developers/about-image.jpeg');
 width: 100vw;
-height:100vh;
+height: 100vh;
 }
 
 // section{
@@ -526,3 +526,149 @@ h4 {
 .comment-owner-text {
   margin: 10px 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ! VANIA'S 'QUEENDOOM'
+// ? Sorting single god display page
+
+.info-page-width {
+  width: 1000px;
+}
+
+.info-page-width-two {
+  max-width: 400px;
+}
+
+// .info-page-width-top {
+//   max-width: 600px;
+// }
+
+.body-color{
+  background-color: rgba(175, 175, 175, .2);
+}
+
+
+.inner-divider-width-one {
+  max-width: 35%;
+}
+
+// ? Got rid of predifined border around "company information"
+.ui.segment.getting-rid-of-border {
+  box-shadow: none;
+  border: none;
+}
+
+// ? Centering god/goddess picture on the right side
+.ui.image.god-picture-centered {
+  margin: auto;
+}
+
+.content-towards-logo {
+  margin-left: -3rem;
+}
+
+

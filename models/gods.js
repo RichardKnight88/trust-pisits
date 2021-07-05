@@ -11,15 +11,15 @@ const commentSchema = new mongoose.Schema({
 const godsSchema = new mongoose.Schema({
   name: { type: String, required: true, unique: true },
   gender: { type: String, required: true },
+  species: { type: String, required: true },
+  logo: { type: String },
   image: { type: String },
+  website: { type: String },
   godOf: [{ type: String, required: true }],
   description: { type: String, required: true, maxlength: 300 },
   symbol: [{ type: String, required: true }],
   sacredAnimals: [{ type: String }],
-  location: {
-    name: { type: String, required: true },
-    url: { type: String, required: true }
-  },
+  locationName: { type: String, required: true },
   family: {
     parents: [{ type: String, required: true }],
     siblings: [{ type: String, required: true }],
