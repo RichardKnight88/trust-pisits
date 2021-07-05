@@ -508,3 +508,32 @@ height: 100vh;
   max-width: 400px;
 }
 
+// .info-page-width-top {
+//   max-width: 600px;
+// }
+
+.body-color{
+  background-color: rgba(175, 175, 175, .2);
+}
+
+
+.inner-divider-width-one {
+  max-width: 35%;
+}
+
+// ? Got rid of predifined border around "company information"
+.ui.segment.getting-rid-of-border {
+  box-shadow: none;
+  border: none;
+}
+
+// ? Centering god/goddess picture on the right side
+.ui.image.god-picture-centered {
+  margin: auto;
+}
+
+.content-towards-logo {
+  margin-left: -3rem;
+}
+
+
