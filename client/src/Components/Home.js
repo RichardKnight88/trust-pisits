@@ -1,9 +1,10 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 /* eslint-disable no-unused-vars */
 import axios from 'axios'
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { definedRating } from '../sematinicElements/ratings.js'
+import prometheus from '../Images/prometheus.jpg'
 
 
 
@@ -11,15 +12,6 @@ const Home = () => {
 
   const [comments, setComments] = useState([])
   const [errors, setErrors] = useState(false)
-
-  const inputRef = useRef()
-
-  console.log('INPUTREF', inputRef)
-
-  // const { offsetLeft } = inputRef.current
-
-  // console.log('offsetLeft', offsetLeft)
-
 
 
   useEffect(() => {
@@ -65,7 +57,7 @@ const Home = () => {
   return (
     <>
       <>
-        <div className="hero-container">
+        <section className="hero-container">
 
           <div className='search-container'>
 
@@ -127,43 +119,113 @@ const Home = () => {
 
           </div>
 
-        </div>
+        </section>
 
-        <div className="comments-container-heading">
-          Recent reviews
-        </div>
-        
-        {comments &&
+        <section>
 
-          <div className='scrolling-comments-container'>
-
-            {comments.map(item =>
-              <>
-                <div key={item._id} className="comment-div">
-                  {/* {console.log('POSITION', item.getBoundingClientRect())} */}
-                  <>
-                    {/* {const {offsetLeft} = inputRef.current} */}
-                    {/* {console.log('OFFSET LEFT', offsetLeft)} */}
-                  </>
-                  <div className="comment-header">
-                    <div className="comment-profile-pic "></div>
-                    <div className="comment-rating">{definedRating(item.rating)}</div>
-                  </div>
-                  <div className="engraved comment-owner-text">
-                    <p>
-                      <span className="bold">Person </span>  reviewed  <span className="bold">God</span>
-                    </p>
-                  </div>
-
-                  <h4 className="engraved">{item.text}</h4>
-
-                </div>
-              </>
-            )}
+          <div className="comments-container-heading">
+            Recent reviews
           </div>
-        }
+
+          {comments &&
+
+            <div className='scrolling-comments-container'>
+
+              {comments.map(item =>
+                <>
+                  <div key={item._id} className="comment-div">
+
+                    <div className="comment-header">
+                      <div className="comment-profile-pic "></div>
+                      <div className="comment-rating">{definedRating(item.rating)}</div>
+                    </div>
+                    <div className="engraved comment-owner-text">
+                      <p>
+                        <span className="bold">Person </span>  reviewed  <span className="bold">God</span>
+                      </p>
+                    </div>
+
+                    <h4 className="engraved">{item.text}</h4>
+
+                  </div>
+                </>
+              )}
+            </div>
+          }
+        </section>
+
+        <section className="home-banner">
+
+          <div className="home-banner-inner">
+
+            <div className="home-banner-container">
+
+              <h2>Be heard</h2>
+
+              <p>Trust Pistis is free and open to every god and follower everywhere. Sharing your experiences helps others make better choices and gods up their game.</p>
+
+              <Link to="/about">
+                <div className="banner-button">
+                  What we do
+                </div>
+              </Link>
+
+            </div>
+
+            <div className="home-banner-container trust">
+
+              <h2>We protect and promote trust</h2>
+
+              <p>Trust Pistis is based on Trustpilot</p>
+
+              <a href="https://www.trustpilot.com/">
+                <div className="banner-button">
+                  Take a look
+                </div>
+              </a>
+
+            </div>
+
+          </div>
+
+        </section>
+
+        <section className="personal-stories">
+
+          <div className="comments-container-heading">
+            Your stories
+          </div>
+          <div className="homepage-tagline">
+            <h2 className="search-header">Each review has a personal story</h2>
+          </div>
+
+          <div className="stories-figure">
+
+            <div className="stories-image" alt="Prometheus">
+              {/* <img className="stories-image" src={prometheus} alt="Prometheus" /> */}
+
+              <div className="review-card">
+
+                <div className="review-content">
+                  <div className="review-rating">
+                    {definedRating(1)}
+                  </div>
+
+                  <div className="review-text">He chained me to a rock to have an eagle eat my liver for eternity because I gave fire to humans.</div>
+                  <div className="review-owner-text"><span className="bold">Prometheus </span> experienced <span className="bold"> Zeus</span></div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+
+        </section>
+
       </>
     </>
   )
 }
+
 export default Home
