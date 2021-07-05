@@ -65,7 +65,7 @@ const Home = () => {
   return (
     <>
       <>
-        <div className="hero-container">
+        <section className="hero-container">
 
           <div className='search-container'>
 
@@ -127,43 +127,84 @@ const Home = () => {
 
           </div>
 
-        </div>
+        </section>
 
-        <div className="comments-container-heading">
-          Recent reviews
-        </div>
-        
-        {comments &&
+        <section>
 
-          <div className='scrolling-comments-container'>
-
-            {comments.map(item =>
-              <>
-                <div key={item._id} className="comment-div">
-                  {/* {console.log('POSITION', item.getBoundingClientRect())} */}
-                  <>
-                    {/* {const {offsetLeft} = inputRef.current} */}
-                    {/* {console.log('OFFSET LEFT', offsetLeft)} */}
-                  </>
-                  <div className="comment-header">
-                    <div className="comment-profile-pic "></div>
-                    <div className="comment-rating">{definedRating(item.rating)}</div>
-                  </div>
-                  <div className="engraved comment-owner-text">
-                    <p>
-                      <span className="bold">Person </span>  reviewed  <span className="bold">God</span>
-                    </p>
-                  </div>
-
-                  <h4 className="engraved">{item.text}</h4>
-
-                </div>
-              </>
-            )}
+          <div className="comments-container-heading">
+            Recent reviews
           </div>
-        }
+
+          {comments &&
+
+            <div className='scrolling-comments-container'>
+
+              {comments.map(item =>
+                <>
+                  <div key={item._id} className="comment-div">
+                    {/* {console.log('POSITION', item.getBoundingClientRect())} */}
+                    <>
+                      {/* {const {offsetLeft} = inputRef.current} */}
+                      {/* {console.log('OFFSET LEFT', offsetLeft)} */}
+                    </>
+                    <div className="comment-header">
+                      <div className="comment-profile-pic "></div>
+                      <div className="comment-rating">{definedRating(item.rating)}</div>
+                    </div>
+                    <div className="engraved comment-owner-text">
+                      <p>
+                        <span className="bold">Person </span>  reviewed  <span className="bold">God</span>
+                      </p>
+                    </div>
+
+                    <h4 className="engraved">{item.text}</h4>
+
+                  </div>
+                </>
+              )}
+            </div>
+          }
+        </section>
+
+        <section className="home-banner">
+
+          <div className="home-banner-inner">
+
+            <div className="home-banner-container">
+
+              <h2>Be heard</h2>
+
+              <p>Trust Pistis is free and open to every god and follower everywhere. Sharing your experiences helps others make better choices and gods up their game.</p>
+
+              <Link to="/about">
+                <div className="banner-button">
+                  What we do
+                </div>
+              </Link>
+
+            </div>
+
+            <div className="home-banner-container trust">
+
+              <h2>We protect and promote trust</h2>
+
+              <p>Trust Pistis is based on Trustpilot</p>
+
+              <a href="https://www.trustpilot.com/">
+                <div className="banner-button">
+                  Take a look
+                </div>
+              </a>
+
+            </div>
+
+          </div>
+
+        </section>
+
       </>
     </>
   )
 }
+
 export default Home

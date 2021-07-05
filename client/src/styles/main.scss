@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&display=swap');
 
 body{ 
-  background: rgb(243, 243, 225);
+  background: #f3f3e1;
   // background: #ffd9b3;
   // background: #ffe6cc;
   height: 100%;
@@ -238,7 +238,7 @@ body{
   display: flex;
   flex-wrap: wrap;
   min-width: 20vw;
-  max-height: 50%;
+  max-height: 80%;
   margin: 10px;
   background-color: #ffe6cc;
   display: flex;
@@ -261,6 +261,19 @@ body{
     background-clip: text;
     color: transparent;
     text-shadow: 1px 1px 1px hsla(0,0%,255%,0.6);
+  }
+
+  h4 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    // text-transform: uppercase;
+    // background-color: rgba(102, 51, 0, 0.6);
+    // // background-color: rgba(153, 77, 0, 0.6);
+    // color: transparent;
+    //   background-clip: text;
+    // margin-left: 3;
+    // text-shadow: 1px 1px 1px hsla(0,0%,255%,0.6);
+  
   }
   
   &:hover {
@@ -288,18 +301,7 @@ body{
   border-radius: 30px;
 }
 
-h4 {
-  font-family: 'Roboto Slab', serif;
-  font-weight: 700;
-  // text-transform: uppercase;
-  // background-color: rgba(102, 51, 0, 0.6);
-  // // background-color: rgba(153, 77, 0, 0.6);
-  // color: transparent;
-  //   background-clip: text;
-  // margin-left: 3;
-  // text-shadow: 1px 1px 1px hsla(0,0%,255%,0.6);
 
-}
 
 .engraved {
   text-transform: uppercase;
@@ -323,6 +325,55 @@ h4 {
 }
 
 
+.home-banner {
+  height: 400px;
+  background-color: #ffe6cc;
+  display: flex;
+  justify-content: center;
+}
 
+.home-banner-inner {
+  max-width: 1500px;
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 24px 56px;
+}
 
-// .transform: 
+.home-banner-container {
+  color: #664400;
+  width: 530px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex: 0 0 45%;
+  padding: 56px 40px;
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    width: 70%;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+  .banner-button {
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: 1px solid #664400;
+    color: #664400;
+    display: inline-flex;
+    align-items: center;
+    height: 56px;
+    padding: 0 24px;
+  }
+}
+
+.trust {
+  background-image: url('../Images/natural-paper.jpg');
+  background-size: cover;
+  background-position: bottom;
+  height: 400px;
+  margin-top: calc(-1 * (24px + 48px));
+  box-shadow: 1px -3px 5px rgba(102, 51, 0, 0.2);
+}
+
