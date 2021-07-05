@@ -341,7 +341,7 @@ body{
 
 .home-banner-container {
   color: #664400;
-  width: 530px;
+  max-width: 530px;
   height: 300px;
   display: flex;
   flex-direction: column;
@@ -377,3 +377,66 @@ body{
   box-shadow: 1px -3px 5px rgba(102, 51, 0, 0.2);
 }
 
+@media screen and (max-width: 1024px) {
+  .hero-container {
+  background-image: url('../Images/marbleBackground.png');
+  }
+
+  .comment-div {
+    min-width: 30vw;
+  }
+
+  .trust h2 {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  
+  .search-container-content {
+    padding: 10px 10px 20px;
+
+    .search-header {
+      line-height: 3rem;
+    }
+  }
+
+  .searchBar-container {
+    width: 100%;
+  }
+
+  .categories-button-container {
+    flex-wrap: wrap;
+
+    .category-button {
+      margin-bottom: 10px;
+      height: 60px;
+    }
+  }
+
+  .comment-div {
+    min-width: 90vw;
+  }
+
+  .home-banner {
+    height: fit-content;
+
+    .home-banner-inner {
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+
+      .home-banner-container {
+        width: 100vw;
+        height: fit-content;
+        padding: 0 40px;
+        margin: 20px 0;
+      }
+
+      .trust {
+        box-shadow: none;
+        background: none;
+      }
+    }
+  }
+}
