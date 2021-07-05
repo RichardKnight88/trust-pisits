@@ -3,6 +3,12 @@ import { Link } from 'react-router-dom'
 
 const Navbar = () => {
 
+  // const [burger, setBurger] = useState('')
+
+  // const toggleBurger = () => {
+  //   if (burger === '') setBurger('is-active')
+  //   if (burger === 'is-active') setBurger('')
+  // }
 
 
   return (

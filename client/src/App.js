@@ -12,6 +12,7 @@ import Login from './Components/Login'
 import GodsInfoPage from './Components/GodsInfoPage'
 import ProfilePage from './Components/ProfilePage'
 import About from './Components/About'
+import Footer from './Components/Footer'
 
 
 
@@ -68,7 +69,7 @@ const App = () => {
 
       </Switch>
 
-
+      <Footer />
 
 
 

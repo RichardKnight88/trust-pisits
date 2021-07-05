@@ -1025,8 +1025,12 @@ h4 {
 .ui.segment.getting-rid-of-border {
   box-shadow: none;
   border: none;
+}
+
+.ui.segment.changing-background-color {
   background-color: rgb(243, 243, 225);
 }
+
 
 // ? Centering god/goddess picture on the right side
 .ui.image.god-picture-centered {
@@ -1102,3 +1106,24 @@ h4 {
   margin: .2857em .4285em;
 }
 
+// ! CATEGORY DISPLAY
+
+.inner-divider-width-one-category {
+  max-width: 35%;
+}
+
+.info-page-width-category {
+  max-width:50%;
+}
+
+
+// ! FOOTER COMPONTENT
+
+.footer-color {
+  background-color: hsl(0, 0%, 21%);
+  color: white;
+}
+
+.footer-footer {
+  height: 50px;
+}

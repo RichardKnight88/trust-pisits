@@ -46,7 +46,7 @@ const GodsInfoPage = () => {
     <div>
       <div className='container'>
         <div className='info-page-width top-categories-spacing'>
-          <h4 className='categories-species-subheading'>Categories &gt; {theos.species}</h4>
+          <h4 className='categories-species-subheading'>All &gt; Categories &gt; {theos.species} &gt; {theos.name}</h4>
         </div>
       </div>
       {/*  */}
@@ -55,7 +55,7 @@ const GodsInfoPage = () => {
         <div className='info-page-width'>
           <Grid>
             <Grid.Column>
-              <Segment className='getting-rid-of-border'>
+              <Segment className='getting-rid-of-border changing-background-color'>
                 <Grid columns={2} relaxed='very'>
 
                   <Grid.Column className='inner-divider-width-one'>
@@ -141,7 +141,11 @@ const GodsInfoPage = () => {
                 </Grid.Column>
           
                 <Grid.Column className='info-page-width-two'>
-                  <Segment>Specialised in
+                  <Segment>
+                    <div>
+                    Specialized in
+                    </div>
+              
                     <div className='flexing-jobs-board'>
                       {jobs.map(job => {
                         return (
@@ -157,17 +161,20 @@ const GodsInfoPage = () => {
 
                   <Segment>{theos.name}
                     <br />
-                    <Segment>
+                    <Segment className='getting-rid-of-border'>
                       <div>
                         <Image src={theos.image} alt={theos.name} className='god-picture-centered' /> 
                       </div>
                       <br />
                       <div>{theos.description}</div>
                     </Segment>
-                    <Segment>
+
+                    <Divider />
+
+                    <Segment className='getting-rid-of-border'>
                       <Icon name='address card' />
                   Contact
-                      <Segment>
+                      <Segment className='getting-rid-of-border'>
                         <List>
                           <List.Item icon='map marker alternate' content={theos.locationName} />
                           <List.Item
@@ -177,6 +184,9 @@ const GodsInfoPage = () => {
                         </List>
                       </Segment>
                     </Segment>
+
+                    <Divider />
+
                     <Segment>Categories</Segment>
                   </Segment>
                   <Segment>About PilisTrust</Segment>
