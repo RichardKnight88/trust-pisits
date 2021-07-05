@@ -226,14 +226,19 @@ body{
   width: 100vw;
   height:450px;
   display: flex;
+  justify-content: flex-end;
   // flex-wrap: wrap;
-
+  animation: comment-scroll 300s linear none infinite ;
+  &:hover {
+    animation-play-state: paused;
+  }
 }
 
 .comment-div {
   display: flex;
   flex-wrap: wrap;
   width: 20vw;
+  max-height: 50%;
   margin: 10px;
   background-color: #ffe6cc;
   display: flex;
@@ -257,7 +262,17 @@ body{
     color: transparent;
     text-shadow: 1px 1px 1px hsla(0,0%,255%,0.6);
   }
-  transform: translate();
+  // animation: comment-scroll 300s linear none infinite ;
+  &:hover {
+    box-shadow: inset -5px -2px 5px rgba(102, 51, 0, 0.6), inset 5px 8px 10px lighten(#ffe6cc, 5%), 3px 3px 10px 1px rgba(71, 67, 67, 0.3);
+    transform: scale(1.05);
+  }
+}
+
+@keyframes comment-scroll {
+  100% {
+    transform: translateX(2000px);
+  }
 }
 
 .comment-header {
