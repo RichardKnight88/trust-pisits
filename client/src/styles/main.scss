@@ -53,13 +53,13 @@ body{
   position:absolute;
   width: 400px;
   height:400px;
-  border:1px solid #374e49;
-  box-shadow: rgb(23, 230, 126) 1px 1px 1px 1px; 
-  box-shadow: 10px 10px 10px  rgba(0,0,0,0.6);
-  -moz-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
-  -webkit-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
-  -o-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
-  opacity: 0.5;
+  // border:1px solid #374e49;
+  // box-shadow: rgb(23, 230, 126) 1px 1px 1px 1px; 
+  // box-shadow: 10px 10px 10px  rgba(0,0,0,0.6);
+  // -moz-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
+  // -webkit-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
+  // -o-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
+  opacity: 0.2;
   margin:0; 
 }
 
@@ -68,9 +68,9 @@ body{
   width: 200px;
   height:200px;
   border:1px thin #e05227;
-  border-radius: 5%;
-  box-shadow: rgb(97, 96, 96) 1px 1px 1px 1px;
-  opacity: 0.7;
+  // border-radius: 5%;
+  // box-shadow: rgb(97, 96, 96) 1px 1px 1px 1px;
+  opacity: 0.8;
   margin:0;
   background-image: linear-gradient(blue, green, red);
 }
@@ -580,77 +580,94 @@ h4 {
 
 
 
+// REGISTER STANDARD USER START
+.main-sregister {
+  height:100vh;
+  display: flex;
+  justify-content: center;
+  background: rgb(255, 253, 245);
+  // background: linear-gradient(120deg, rgb(240, 237, 230), rgb(226, 241, 245));
+  // background-size: 1000% 1000%;
+  // -webkit-animation: AnimationName 39s ease infinite;
+  // -moz-animation: AnimationName 39s ease infinite;
+  // animation: AnimationName 39s ease infinite;
+}
+.box-sregister{
+  width: 500px;
+  height:600px
+}
+.container-sregister{
+  margin-top: 100px;
+}
+
+.formfield{
+  height: 60px;
+  width: 500px;
+}
+
+.ui .button{
+  background-color: rgb(252, 229, 200);
+  }
 
 
+.form-sregister{
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+}
 
+h4 .already-login{
+  margin:20px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// REGISTER STANDARD USER END
 
 
 // ! VANIA'S 'QUEENDOOM'
 // ? Sorting single god display page
 
-.info-page-width {
-  width: 1000px;
+// ! LOGIN USER START
+.main-login{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: rgb(255, 253, 245);
+  // background: linear-gradient(180deg, rgb(240, 237, 230), rgb(226, 241, 245));
+  // background-size: 1000% 1000%;
+  // -webkit-animation: AnimationName 39s ease infinite;
+  // -moz-animation: AnimationName 39s ease infinite;
+  // animation: AnimationName 39s ease infinite;
+  
+}
+.form-login{
+  margin-bottom: 10px;
+
+}
+div .box-login{
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 500px;
+  margin-top: 100px
+  
 }
 
-.info-page-width-two {
-  max-width: 400px;
+.button-login {
+  width: 500px;
 }
 
-// .info-page-width-top {
-//   max-width: 600px;
-// }
-
-.body-color{
-  background-color: rgba(175, 175, 175, .2);
+div.form-box-login .button {
+  background-color: rgb(252, 229, 200);
 }
 
+.wanttoregister{
+  width: 500px;
+  height: 60px;
+  margin-top: 40px;
+}
+
+// LOGIN USER END
 
 .inner-divider-width-one {
   max-width: 35%;
@@ -672,3 +689,19 @@ h4 {
 }
 
 
+
+// @-webkit-keyframes AnimationName {
+//   0%{background-position:0% 65%}
+//   50%{background-position:100% 36%}
+//   100%{background-position:0% 65%}
+// }
+// @-moz-keyframes AnimationName {
+//   0%{background-position:0% 65%}
+//   50%{background-position:100% 36%}
+//   100%{background-position:0% 65%}
+// }
+// @keyframes AnimationName {
+//   0%{background-position:0% 65%}
+//   50%{background-position:100% 36%}
+//   100%{background-position:0% 65%}
+// }
