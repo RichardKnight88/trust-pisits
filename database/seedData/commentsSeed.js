@@ -18,7 +18,7 @@ export default [
     placeholderAboutGod: 'Zeus'
   }, 
   {
-    text: 'Serious ego problem. I insulted him and he kept me from home for years as punishment. Lost many good friends to vile creatures becuase of him.',
+    text: 'Serious ego problem. I insulted him and he kept me from home for years as punishment. Lost many good friends to vile creatures because of him.',
     rating: 2,
     placeholderOwner: 'Odysseus', 
     placeholderAboutGod: 'Poseidon'
