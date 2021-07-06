@@ -12,6 +12,7 @@ export const caseInsensitiveName = (variable) => {
 export const getUserIdFromName = (userNameVariable, arrayToFilter) => {
   const arrayFilterValue = arrayToFilter.filter(item => {
     if (item.username === userNameVariable ) {
+      // console.log(item.username)
       return item._id
     } 
   })
@@ -21,9 +22,10 @@ export const getUserIdFromName = (userNameVariable, arrayToFilter) => {
 
 export const matchGodToComment = (nameVariable, arrayToFilter) => {
   const arrayFilterValue = arrayToFilter.filter(item => {
-    // console.log('nameVariable', nameVariable)
+    console.log('nameVariable', nameVariable, item.name)
     // console.log('arrayToFilter', arrayToFilter)
-    if (item.placeholderAboutGod === nameVariable ) {
+    if (item.name === nameVariable ) {
+      console.log('YES')
       return item
     } 
   })

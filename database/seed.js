@@ -30,27 +30,28 @@ const seedDatabase = async () => {
       commentEntry.ownerUsername = getUserIdFromName(commentEntry.placeholderOwner, users).username
       // console.log('COMMENT ENTRY AFTER', commentEntry)
     })
-    console.log('COMMENTS WITH OWNER', commentsSeed)
+
 
     const comments = await Comment.create(commentsSeed)
     console.log(`🌱 DATABASE SEEDED WITH ${comments.length} comments`)
 
-    console.log('COMMENTs', comments)
+    // console.log('COMMENTs', comments)
 
     
     const godsWithOwner = godsSeed.map(god => {
       return { ...god, owner: users[0]._id }
     })
 
-    godsWithOwner.map(god => {
+
+    comments.map(entry => {
       // console.log('COMMENTS TYPE', typeof(god.comments))
       // console.log('Name', god.name)
       // console.log(matchGodToComment(god.name, comments))
-      const commentToPush = matchGodToComment(god.name, comments)
-      // console.log('COMMENT TO PUSH', commentToPush)
+      const godMatch = matchGodToComment(entry.placeholderAboutGod, godsWithOwner)
+      console.log('COMMENT TO PUSH', godMatch)
 
-      if (commentToPush) {
-        god.comments.push(commentToPush)
+      if (godMatch) {
+        godMatch.comments.push(entry)
       } 
     })
 
@@ -58,6 +59,7 @@ const seedDatabase = async () => {
 
     const gods = await God.create(godsWithOwner)
     console.log(`🌱 DATABASE SEEDED WITH ${gods.length} gods`)
+    // console.log(`GODS ${gods}`)
 
 
     await mongoose.connection.close()

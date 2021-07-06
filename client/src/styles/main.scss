@@ -438,7 +438,7 @@ height: 100vh;
 
 .comments-container-heading{
   color: #664400;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 700;
   margin: 30px 0 30px;
   text-align: center;
@@ -470,6 +470,7 @@ height: 100vh;
   box-shadow: inset -5px -2px 5px rgba(102, 51, 0, 0.6), inset 5px 8px 10px lighten(#ffe6cc, 5%), 3px 3px 5px 1px rgba(71, 67, 67, 0.2);
   background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../Images/marbleBackground.png);
   background-size: cover;
+  
   .ui.rating .active.icon {
     background-color: #ffae00;
     background-clip: text;
@@ -506,7 +507,7 @@ height: 100vh;
 
 @keyframes comment-scroll {
   100% {
-    transform: translateX(2000px);
+    transform: translateX(10000px);
   }
 }
 
@@ -525,7 +526,7 @@ height: 100vh;
 
 .engraved {
   text-transform: uppercase;
-  background-color: rgba(102, 51, 0, 0.6);
+  background-color: rgba(102, 51, 0, 0.9);
   // background-color: rgba(153, 77, 0, 0.6);
   color: transparent;
     background-clip: text;
@@ -533,9 +534,9 @@ height: 100vh;
   text-shadow: 1px 1px 1px hsla(0,0%,255%,0.6);
   text-overflow: ellipsis;
   p {
-    font-size: 1em;
+    font-size: 1.2rem;
     .bold {
-      font-size: 1.2em;
+      font-size: 1.5rem;
       font-weight: 700;
     }
   }
