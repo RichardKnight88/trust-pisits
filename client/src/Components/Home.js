@@ -145,7 +145,9 @@ const Home = () => {
                       </p>
                     </div>
 
-                    <h4 className="engraved">{item.text}</h4>
+                    <div className="comment-text-body-container">
+                      <h4 className="engraved comment-text-body">{item.text}</h4>
+                    </div>
 
                   </div>
                 </>

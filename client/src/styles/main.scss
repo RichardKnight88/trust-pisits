@@ -486,8 +486,7 @@ height: 100vh;
 
 .comment-div {
   display: flex;
-  flex-wrap: wrap;
-  min-width: 20vw;
+  min-width: 340px;
   max-height: 80%;
   margin: 10px;
   background-color: #ffe6cc;
@@ -498,6 +497,7 @@ height: 100vh;
   box-shadow: inset -5px -2px 5px rgba(102, 51, 0, 0.6), inset 5px 8px 10px lighten(#ffe6cc, 5%), 3px 3px 5px 1px rgba(71, 67, 67, 0.2);
   background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../Images/marbleBackground.png);
   background-size: cover;
+  contain: content;
   
   .ui.rating .active.icon {
     background-color: #ffae00;
@@ -524,7 +524,8 @@ height: 100vh;
     //   background-clip: text;
     // margin-left: 3;
     // text-shadow: 1px 1px 1px hsla(0,0%,255%,0.6);
-  
+    text-overflow: ellipsis;
+    max-height: 190px;
   }
   
   &:hover {
@@ -552,9 +553,16 @@ height: 100vh;
   border-radius: 30px;
 }
 
+.comment-text-body-container {
+  max-width: 100%;
+  max-height: 80%;
+  contain: content;
+  text-overflow: ellipsis;
+}
+
 .engraved {
   text-transform: uppercase;
-  background-color: rgba(102, 51, 0, 0.9);
+  background-color: rgb(102, 51, 0);
   // background-color: rgba(153, 77, 0, 0.6);
   color: transparent;
     background-clip: text;
@@ -569,6 +577,13 @@ height: 100vh;
     }
   }
 }
+
+.comment-text-body {
+  max-height: 190px;
+  text-overflow: ellipsis;
+  contain: content;
+}
+
 
 .bold {
   font-size: 1.2em;
@@ -691,7 +706,7 @@ height: 100vh;
   }
 
   .comment-div {
-    min-width: 30vw;
+    min-width: 300px;
   }
 
   .trust h2 {
