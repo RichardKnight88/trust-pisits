@@ -806,11 +806,7 @@ height: 100vh;
   display: flex;
   justify-content: center;
   background: rgb(255, 253, 245);
-  // background: linear-gradient(120deg, rgb(240, 237, 230), rgb(226, 241, 245));
-  // background-size: 1000% 1000%;
-  // -webkit-animation: AnimationName 39s ease infinite;
-  // -moz-animation: AnimationName 39s ease infinite;
-  // animation: AnimationName 39s ease infinite;
+
 }
 .box-sregister{
   width: 500px;
@@ -835,9 +831,6 @@ height: 100vh;
   flex-direction: column;
 }
 
-// h4 .already-login{
-//   margin:20px;
-// }
 
 // REGISTER STANDARD USER END
 
@@ -888,40 +881,36 @@ div.form-box-login .button {
 
 // LOGIN USER END
 
-// CREATE A GOD START
-.main-creategod{
-height:100vh;
-  display: flex;
-  justify-content: center;
-  background: rgb(255, 253, 245);
-  // background: linear-gradient(120deg, rgb(240, 237, 230), rgb(226, 241, 245));
-  // background-size: 1000% 1000%;
-  // -webkit-animation: AnimationName 39s ease infinite;
-  // -moz-animation: AnimationName 39s ease infinite;
-  // animation: AnimationName 39s ease infinite;
-}
-.box-creategod{
-  width: 500px;
-  height:600px
-}
-.container-creategod{
-  margin-top: 100px;
-}
+// // CREATE A GOD START
+// .main-creategod{
+// height:100vh;
+//   display: flex;
+//   justify-content: center;
+//   background: rgb(255, 253, 245);
 
-.formfield{
-  height: 60px;
-  width: 500px;
-}
+// }
+// .box-creategod{
+//   width: 500px;
+//   height:600px
+// }
+// .container-creategod{
+//   margin-top: 100px;
+// }
 
-.ui .button{
-  background-color: rgb(252, 229, 200);
-  }
+// .formfield{
+//   height: 60px;
+//   width: 500px;
+// }
 
-.form-creategod{
-  width: 500px;
-  display: flex;
-  flex-direction: column;
-}
+// .ui .button{
+//   background-color: rgb(252, 229, 200);
+//   }
+
+// .form-creategod{
+//   width: 500px;
+//   display: flex;
+//   flex-direction: column;
+// }
 
 
 
@@ -946,20 +935,3 @@ height:100vh;
 //   margin-left: -3rem;
 // }
 
-
-
-// @-webkit-keyframes AnimationName {
-//   0%{background-position:0% 65%}
-//   50%{background-position:100% 36%}
-//   100%{background-position:0% 65%}
-// }
-// @-moz-keyframes AnimationName {
-//   0%{background-position:0% 65%}
-//   50%{background-position:100% 36%}
-//   100%{background-position:0% 65%}
-// }
-// @keyframes AnimationName {
-//   0%{background-position:0% 65%}
-//   50%{background-position:100% 36%}
-//   100%{background-position:0% 65%}
-// }
