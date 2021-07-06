@@ -1133,3 +1133,74 @@ h4 {
 .navbar {
   color: white;
 }
+
+
+
+
+
+
+// ! TRYING TO SORT RESPONSIVNES OF LANDING CUBE
+
+@media only screen and (max-width: 750px) {
+  .box {  
+    width: 200px;
+    height:200px;
+  }
+  
+  .second-box {
+    width: 100px;
+    height:100px;
+  }
+   
+  .box-front{
+    transform: translateX(-100px) translateY(-100px) translateZ(100px);
+  }
+  
+  .second-box-front{
+    transform: translateX(-50px) translateY(-50px) translateZ(50px);
+  } 
+  
+  .box-back{
+    transform: translateX(-100px) translateY(-100px) translateZ(-100px) rotateY(180deg);
+  }
+  
+  .second-box-back{
+    transform: translateX(-50px) translateY(-50px) translateZ(-50px) rotateY(180deg);
+  } 
+  
+  .box-right{
+    transform: translateY(-100px) rotateY(90deg);
+  }
+  
+  .second-box-right{
+    transform: translateY(-50px) rotateY(90deg);
+  } 
+  
+  .box-left{
+    transform: translateY(-100px) translateX(-200px) rotateY(270deg);
+  }
+  
+  .second-box-left{
+    transform: translateY(-50px) translateX(-100px) rotateY(270deg);
+  } 
+  
+  .box-top{
+    transform: translateX(-100px) translateY(-200px) rotateX(90deg);
+  }
+  
+  .second-box-top{
+    transform: translateX(-50px) translateY(-100px) rotateX(90deg);
+  } 
+  
+  .box-bottom{
+    transform: translateX(-100px) rotateX(90deg);
+  }
+  
+  .second-box-bottom{
+    transform: translateX(-50px) rotateX(270deg);
+  } 
+  
+  .box-area{
+    transform: rotateX(90deg) rotateY(90deg);
+  }
+}

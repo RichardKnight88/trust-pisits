@@ -74,8 +74,8 @@ const GodsInfoPage = () => {
                           <div className='start-rating-info-positioning-padding'>{theos.avgRating}</div>
                           <div className='start-rating-info-positioning-padding'>
                             <Popup trigger={<Icon name='info circle' />}>
-                              <span className='popup-information-style engraved'>
-                          The TheoiScore isn&apos;t just a simple average of all reviews. It&apos;s based on multiple factors like the age and number of reviews. Whether or not a business activelly asks customers to write reviews also impacts the TheoiScore.
+                              <span className='popup-information-style engraved-two-normal-text'>
+                          The <strong className='engraved-two-normal-text'>TheoiScore</strong> isn&apos;t just a simple average of all reviews. It&apos;s based on multiple factors like the age and number of reviews. Whether or not a God/Goddess actively asks worshipers to write reviews also impacts the TheoiScore.
                               </span>
                             </Popup>
                           </div>
@@ -151,7 +151,7 @@ const GodsInfoPage = () => {
                         return (
                           
                           <Label key={job} className='positioning-job-tags'>
-                            <p>{job}</p>
+                            <p className='engraved-two-normal-text'>{job}</p>
                           </Label>
                         
                         )

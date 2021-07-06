@@ -33,14 +33,14 @@ const GodsCard = ( { name, image, logo, species, avgRating, locationName }) => {
 
                     <Grid.Column className='inner-divider-width-two'>
                       <div className='content-towards-logo'>
-                        <h1>{name}</h1>
+                        <h1 className='engraved-two-normal-text'>{name}</h1>
                         {/* <p>Reviews {theosCommentsLength}</p> */}
 
                         <>
                           {avgRating && 
                             <div className='start-rating-info-positioning'>
                               <div className='start-rating-info-positioning-padding'>{definedRating(Math.round(avgRating))}</div>
-                              <div className='start-rating-info-positioning-padding'>{avgRating}</div>
+                              <div className='start-rating-info-positioning-padding engraved-two-normal-text'>{avgRating}</div>
                             </div>
                           }
                         </>

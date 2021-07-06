@@ -18,8 +18,8 @@ const Navbar = () => {
         <div className='container'>
           <div className='navbar-brand'>
             <div className="navbar-item">
-              <Link to="/" className="navbar-item">LandingPage</Link>
-              <Link to="/home" className="navbar-item">Home</Link>
+              <Link to="/" className="navbar-item engraved-two-normal-text">LandingPage</Link>
+              <Link to="/home" className="navbar-item engraved-two-normal-text">Home</Link>
             </div>
             <div onClick={toggleBurger} className={`navbar-burger ${burger}`} data-target='theoi-navbar'>
               <span aria-hidden="true"></span>
@@ -29,16 +29,18 @@ const Navbar = () => {
           </div>
 
 
-          <div id='theoi-navbar' className={`navbar-menu ${burger}`}>
+          <div id='theoi-navbar' className={`navbar-menu ${burger} engraved-two-normal-text`}>
           
-            <Link to="/gods" className="navbar-item">Gods</Link>
-            <Link to="/categories" className="navbar-item">Categories</Link>
-            <Link to="/profile" className="navbar-item">Profile</Link>
-            <Link to="/login" className="navbar-item">Login</Link>
-            <Link to="/register" className="navbar-item">Register</Link>
-            <Link to="/deus_register" className="navbar-item">Deus Register</Link>
-            <Link to="/categories/:category_name" className="navbar-item">Gods filtered by category</Link>
-            <Link to="/about" className="navbar-item">This is the about page</Link>
+            <div className='navbar-end'>
+              <Link to="/gods" className="navbar-item engraved-two-normal-text">Gods</Link>
+              <Link to="/categories" className="navbar-item engraved-two-normal-text">Categories</Link>
+              <Link to="/profile" className="navbar-item engraved-two-normal-text">Profile</Link>
+              <Link to="/login" className="navbar-item engraved-two-normal-text">Login</Link>
+              <Link to="/register" className="navbar-item engraved-two-normal-text">Register</Link>
+              <Link to="/deus_register" className="navbar-item engraved-two-normal-text">Deus Register</Link>
+              <Link to="/categories/:category_name" className="navbar-item engraved-two-normal-text">Gods filtered by category</Link>
+              <Link to="/about" className="navbar-item engraved-two-normal-text">This is the about page</Link>
+            </div>
           
           </div>
         </div>
