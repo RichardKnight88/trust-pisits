@@ -27,6 +27,11 @@ const godsSchema = new mongoose.Schema({
     consort: [{ type: String }],
     children: [{ type: String }]
   },
+  media: {
+    info: [{ type: String }],
+    books: [{ type: String }],
+    trivia: [{ type: String }]
+  },
   otherEquivalents: {
     romanEquivalent: { type: String },
     norseEquivalent: { type: String },
@@ -34,7 +39,7 @@ const godsSchema = new mongoose.Schema({
     hinduEquivalent: { type: String }
   },
   owner: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
-  comments: [commentSchema]
+  comments: []
 })
 
 
