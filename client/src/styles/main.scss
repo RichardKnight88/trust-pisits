@@ -1,24 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&display=swap');
 
 // Landing Page Start
-.landingPage-body{ 
+.landingcontainer{
   width: 100vw;
-  height: 95.5vh;            // ! Changed by Vania, to sea how to get rid of scrollbar. Original value is height: 100vh;
-  background-image: radial-gradient(beige, rgb(58, 51, 51));
+  height: 100vh;
+  background-image: radial-gradient(beige, rgb(76, 68, 68));
 }
 
-body{ 
-  background: #f3f3e1;
-  // background: #ffd9b3;
-  // background: #ffe6cc;
-  height: 100%;
+// body{ 
+//   background: #f3f3e1;
+//   // background: #ffd9b3;
+//   // background: #ffe6cc;
+//   height: 100%;
+// }
+
+.landingpage-button {
+  width: 280px;
+  height: 50px;
+  color: rgb(193, 193, 221);
+  cursor: pointer;
+  z-index: 0;
+}
+
+// .landingpage-button:before {
+//   content: '';
+//   background: linear-gradient(45deg, beige, white);
+//   position: absolute;
+//   top: -2px;
+//   left:-2px;
+//   z-index: -1;
+//   filter: blur(15px);
+//   width: calc(100% + 4px);
+//   height: calc(100% + 4px);
+//   opacity: 0.9;
+// }
+
+.landingbutton-position{
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+position: absolute;
+margin-top: 20%;
+margin-left: 90px;
+opacity: 0.3;
 }
 
 .wrapper{ 
   position:absolute;
   left:50%;
   top:50%;
-  perspective: 2000px;
+  perspective: 3000px;
 }
 
 .cube-area{
@@ -32,7 +61,7 @@ body{
 
 @keyframes rotate {
   0%{
-    transform: rotate3d(0,0,0,1deg);
+    transform: rotate3d(0,0,0,10deg);
   }
   25%{
     transition: rotate3d(2,1,0,90deg);
@@ -328,7 +357,6 @@ height: 100vh;
 
 
 .hero-container {
-  color: #664400;
   width: 100vw;
   height: 600px;
   background-image: url(../Images/hero-cracked-marble.jpg); 
@@ -376,7 +404,7 @@ height: 100vh;
   height: 64px;
   border: none;
   text-indent: 24px;
-  box-shadow:  2px 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow:  2px 2px 2px rgba(0, 0, 0, 0.1);
 }
 
 .button-container {
@@ -448,19 +476,14 @@ height: 100vh;
   width: 100vw;
   height:450px;
   display: flex;
-  justify-content: flex-end;
   // flex-wrap: wrap;
-  animation: comment-scroll 300s linear none infinite ;
-  &:hover {
-    animation-play-state: paused;
-  }
+
 }
 
 .comment-div {
   display: flex;
   flex-wrap: wrap;
-  min-width: 20vw;
-  max-height: 80%;
+  width: 20vw;
   margin: 10px;
   background-color: #ffe6cc;
   display: flex;
@@ -532,7 +555,6 @@ height: 100vh;
     background-clip: text;
   margin-left: 3;
   text-shadow: 1px 1px 1px hsla(0,0%,255%,0.6);
-  text-overflow: ellipsis;
   p {
     font-size: 1.2rem;
     .bold {
@@ -542,201 +564,1512 @@ height: 100vh;
   }
 }
 
-.bold {
-  font-size: 1.2em;
-  font-weight: 700;
-}
-
 .comment-owner-text {
   margin: 10px 0;
 }
 
+// .popup-information-style {
+//   font-size: 1em;
+// }
 
-.home-banner {
-  height: 400px;
-  background-color: #ffe6cc;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.form-sregister{
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+// h4 .already-login{
+//   margin:20px;
+// }
+
+
+
+
+
+
+
+
+
+
+// CREATE A GOD START
+.main-creategod{
+height:100vh;
   display: flex;
   justify-content: center;
+  background: rgb(255, 253, 245);
+  // background: linear-gradient(120deg, rgb(240, 237, 230), rgb(226, 241, 245));
+  // background-size: 1000% 1000%;
+  // -webkit-animation: AnimationName 39s ease infinite;
+  // -moz-animation: AnimationName 39s ease infinite;
+  // animation: AnimationName 39s ease infinite;
+}
+.box-creategod{
+  width: 500px;
+  height:600px
+}
+.container-creategod{
+  margin-top: 100px;
 }
 
-.home-banner-inner {
-  max-width: 1500px;
-  display: flex;
-  justify-content: space-between;
-  padding: 24px 24px 56px;
+.formfield{
+  height: 60px;
+  width: 500px;
 }
 
-.home-banner-container {
-  color: #664400;
-  max-width: 530px;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  flex: 0 0 45%;
-  padding: 56px 40px;
-  h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    width: 70%;
+.ui .button{
+  background-color: rgb(252, 229, 200);
   }
-  p {
-    font-size: 1.2rem;
-  }
-  .banner-button {
-    font-size: 1.1rem;
-    font-weight: 700;
-    border: 1px solid #664400;
-    color: #664400;
-    display: inline-flex;
-    align-items: center;
-    height: 56px;
-    padding: 0 24px;
-  }
-}
 
-.trust {
-  background-image: url('../Images/natural-paper.jpg');
-  background-size: cover;
-  background-position: bottom;
-  height: 400px;
-  margin-top: -72px;
-  box-shadow: 1px -3px 5px rgba(102, 51, 0, 0.2);
-}
-
-.personal-stories {
+.form-creategod{
+  width: 500px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  color: #664400;
-  margin-bottom: 50px;
-  height: fit-content;
-
-
-  .homepage-tagline h2 {
-    margin-bottom: 100px;
-    text-align: center;
-  }
-
-  .stories-figure {
-    display: flex;
-    align-items: center;
-  }
-
-  .stories-image {
-    background-image: url('../Images/prometheus.jpg');
-    background-size: cover;
-    background-position: left;
-    width: 90vw;
-    height: 700px;
-  }
-
-  .review-card {
-    width: 300px;
-    height: 300px;
-    background-color: #ffe6cc;
-    margin-top: -50px;
-    margin-left: 20px;
-    box-shadow: 1px -3px 5px rgba(102, 51, 0, 0.2);
-
-    .ui.rating .active.icon {
-      background-color: #ffae00;
-      background-clip: text;
-      color: transparent;
-      text-shadow: 1px 1px 1px hsla(0,0%,255%,0.4);
-    }
-  }
-
-  .review-rating, .review-text {
-    margin-bottom: 30px;
-  }
-  
-  .review-content {
-    padding: 56px 40px;
-    font-size: larger;
-  }
 }
 
-@media screen and (max-width: 1024px) {
-  .hero-container {
-  background-image: url('../Images/marbleBackground.png');
-  }
 
-  .comment-div {
-    min-width: 30vw;
-  }
 
-  .trust h2 {
-    width: 100%;
-  }
-}
 
-@media screen and (max-width: 500px) {
-  
-  .search-container-content {
-    padding: 10px 10px 20px;
 
-    .search-header {
-      line-height: 3rem;
-    }
-  }
 
-  .searchBar-container {
-    width: 100%;
-  }
 
-  .categories-button-container {
-    flex-wrap: wrap;
 
-    .category-button {
-      margin-bottom: 10px;
-      height: 60px;
-    }
-  }
 
-  .comment-div {
-    min-width: 90vw;
-  }
 
-  .home-banner {
-    height: fit-content;
 
-    .home-banner-inner {
-      flex-direction: column;
-      align-items: center;
-      padding: 0;
 
-      .home-banner-container {
-        width: 100vw;
-        height: fit-content;
-        padding: 0 40px;
-        margin: 20px 0;
-      }
 
-      .trust {
-        box-shadow: none;
-        background: none;
-      }
-    }
-  }
 
-  .stories-figure {
-    
 
-    .stories-image {
-      height: 400px;
-      width: 90vh;
-      background-position: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      .review-card {
-        margin: 380px 0 ;
-        padding: 0;
-      }
-    }
-}
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -754,10 +2087,6 @@ height: 100vh;
   max-width: 400px;
 }
 
-// .info-page-width-top {
-//   max-width: 600px;
-// }
-
 .body-color{
   background-color: rgba(175, 175, 175, .2);
 }
@@ -773,6 +2102,11 @@ height: 100vh;
   border: none;
 }
 
+.ui.segment.changing-background-color {
+  background-color: rgb(243, 243, 225);
+}
+
+
 // ? Centering god/goddess picture on the right side
 .ui.image.god-picture-centered {
   margin: auto;
@@ -781,3 +2115,206 @@ height: 100vh;
 .content-towards-logo {
   margin-left: -3rem;
 }
+
+
+// ? Sorting top left side with Categories and species name
+.top-categories-spacing {
+  height: 28px;
+  margin-bottom: .4%;
+  margin-top: 1%;
+}
+
+
+// ? Sorting text inside of comments section on god's profile
+
+.text-header-bold {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.engraved-two-normal-text {
+  background-color: rgba(102, 51, 0, 0.6);
+  // background-color: rgba(153, 77, 0, 0.6);
+  color: transparent;
+    background-clip: text;
+  margin-left: 3;
+  text-shadow: 1px 1px 1px hsla(0,0%,255%,0.6);
+  p {
+    font-size: 1em;
+    .bold {
+      font-size: 1.2em;
+      font-weight: 700;
+    }
+  }
+}
+
+.faded-omega-symbol {
+  opacity: .5;
+}
+
+.ui.horizontal.divider.horizontal-opacity:after, .ui.horizontal.horizontal-opacity.divider:before {
+  opacity: .5;
+  
+}
+
+.user-logo-commentarea-width {
+  max-width: 10%;
+}
+
+.ui.rating .active.icon {
+  background-color: #ffae00;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 1px 1px 1px hsla(0,0%,255%,0.4);
+}
+
+.start-rating-info-positioning {
+  display: flex;
+}
+
+.start-rating-info-positioning-padding {
+  padding: 1%;
+  padding-left: 0%;
+}
+
+.ui.label.positioning-job-tags {
+  margin: .2857em .4285em;
+}
+
+// ! CATEGORY DISPLAY
+
+.inner-divider-width-one-category {
+  max-width: 35%;
+}
+
+.info-page-width-category {
+  max-width:50%;
+}
+
+
+// ! FOOTER COMPONTENT
+
+.footer-color {
+  background-color: hsl(0, 0%, 21%);
+  color: white;
+}
+
+.footer-footer {
+  height: 50px;
+}
+
+// ! NAVBAR COMPONENT
+
+.navbar {
+  color: white;
+}
+
+
+
+
+
+
+// ! TRYING TO SORT RESPONSIVNES OF LANDING CUBE
+
+@media only screen and (max-width: 600px) {
+  .box {  
+    width: 200px;
+    height:200px;
+  }
+  
+  .second-box {
+    width: 100px;
+    height:100px;
+  }
+   
+  .box-front{
+    transform: translateX(-100px) translateY(-100px) translateZ(100px);
+  }
+  
+  .second-box-front{
+    transform: translateX(-50px) translateY(-50px) translateZ(50px);
+  } 
+  
+  .box-back{
+    transform: translateX(-100px) translateY(-100px) translateZ(-100px) rotateY(180deg);
+  }
+  
+  .second-box-back{
+    transform: translateX(-50px) translateY(-50px) translateZ(-50px) rotateY(180deg);
+  } 
+  
+  .box-right{
+    transform: translateY(-100px) rotateY(90deg);
+  }
+  
+  .second-box-right{
+    transform: translateY(-50px) rotateY(90deg);
+  } 
+  
+  .box-left{
+    transform: translateY(-100px) translateX(-200px) rotateY(270deg);
+  }
+  
+  .second-box-left{
+    transform: translateY(-50px) translateX(-100px) rotateY(270deg);
+  } 
+  
+  .box-top{
+    transform: translateX(-100px) translateY(-200px) rotateX(90deg);
+  }
+  
+  .second-box-top{
+    transform: translateX(-50px) translateY(-100px) rotateX(90deg);
+  } 
+  
+  .box-bottom{
+    transform: translateX(-100px) rotateX(90deg);
+
+  }
+  
+  .second-box-bottom{
+    transform: translateX(-50px) rotateX(270deg);
+ 
+  } 
+  
+  .box-area{
+    transform: rotateX(90deg) rotateY(90deg);
+
+  }
+}
+// .inner-divider-width-one {
+//   max-width: 35%;
+// }
+
+// // ? Got rid of predifined border around "company information"
+// .ui.segment.getting-rid-of-border {
+//   box-shadow: none;
+//   border: none;
+// }
+
+// // ? Centering god/goddess picture on the right side
+// .ui.image.god-picture-centered {
+//   margin: auto;
+// }
+
+// .content-towards-logo {
+//   margin-left: -3rem;
+// }
+
+
+
+// @-webkit-keyframes AnimationName {
+//   0%{background-position:0% 65%}
+//   50%{background-position:100% 36%}
+//   100%{background-position:0% 65%}
+// }
+// @-moz-keyframes AnimationName {
+//   0%{background-position:0% 65%}
+//   50%{background-position:100% 36%}
+//   100%{background-position:0% 65%}
+// }
+// @keyframes AnimationName {
+//   0%{background-position:0% 65%}
+//   50%{background-position:100% 36%}
+//   100%{background-position:0% 65%}
+// }

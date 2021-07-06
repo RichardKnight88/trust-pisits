@@ -9,8 +9,8 @@ const godsSchema = new mongoose.Schema({
   image: { type: String },
   website: { type: String },
   godOf: [{ type: String, required: true }],
-  description: { type: String, required: true, maxlength: 300 },
-  symbol: [{ type: String, required: true }],
+  description: { type: String, required: true, maxlength: 700 },
+  symbol: [{ type: String }],
   sacredAnimals: [{ type: String }],
   locationName: { type: String, required: true },
   family: {
