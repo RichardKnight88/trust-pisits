@@ -1,4 +1,5 @@
 import God from '../models/gods.js'
+import Comment from '../models/comments.js'
 import { caseInsensitiveName } from '../config/environment.js'
 
 // ! GET ALL GODS
@@ -14,7 +15,7 @@ export const getOneGod = async (req, res) => {
   try {
     const { name } = req.params
 
-    const singleGod = await God.findOne({ name: caseInsensitiveName(name) }).populate('owner').populate('comments.owner')
+    const singleGod = await God.findOne({ name: caseInsensitiveName(name) }).populate('owner')
 
     if (!singleGod) throw new Error()
 
@@ -48,10 +49,10 @@ export const deleteGod = async (req, res) => {
     const { name } = req.params
     const godToDelete = await God.findOne({ name: caseInsensitiveName(name) })
     if (!godToDelete) throw new Error()
-    console.log('godToDelete >>', godToDelete)
-    console.log('godToDelete.owner >>', godToDelete.owner)
-    console.log('req.currentUser._id >>', req.currentUser._id)
-    console.log('req.currentUser.username >>', req.currentUser.username)
+    // console.log('godToDelete >>', godToDelete)
+    // console.log('godToDelete.owner >>', godToDelete.owner)
+    // console.log('req.currentUser._id >>', req.currentUser._id)
+    // console.log('req.currentUser.username >>', req.currentUser.username)
 
     if (godToDelete.owner.equals(req.currentUser._id) || req.currentUser.username === 'Admin') {
       console.log('AUTHORISED')
@@ -101,15 +102,17 @@ export const addComment = async (req, res) => {
     const godToAddComment = await God.findOne({ name: caseInsensitiveName(name) })
 
     if (!godToAddComment) throw new Error('God does not exist')
-    console.log('GOD ', godToAddComment)
+    // console.log('GOD ', godToAddComment)
 
-    const commentToAdd = { ...req.body, owner: req.currentUser._id }
+    const commentToAdd = { ...req.body, owner: req.currentUser._id, ownerUsername: req.currentUser.username, placeholderAboutGod: godToAddComment.name }
+
+    const newComment = await Comment.create(commentToAdd)
     // maybe add picture?
-    console.log('COMMENT TO ADD', commentToAdd)
-    console.log('GOD COMMENTS', godToAddComment.comments)
-    console.log('GENDER', godToAddComment.gender)
+    // console.log('COMMENT TO ADD', commentToAdd)
+    // console.log('GOD COMMENTS', godToAddComment.comments)
+    // console.log('GENDER', godToAddComment.gender)
 
-    godToAddComment.comments.push(commentToAdd)
+    godToAddComment.comments.push(newComment)
 
     await godToAddComment.save()
 
@@ -129,19 +132,28 @@ export const editComment = async (req, res) => {
     const godToEditComment = await God.findOne({ name: caseInsensitiveName(name) })
     if (!godToEditComment) throw new Error()
 
-    const commentToEdit = godToEditComment.comments.id(commentId)
+    const commentToEdit = await Comment.findById(commentId)
+    console.log('COMMENT', commentToEdit)
     if (!commentToEdit) throw new Error()
 
-    const updatedComment = { owner: commentToEdit.owner._id, ...commentToEdit, ...req.body,  _id: commentToEdit._id } 
+    const updatedComment = { ...commentToEdit._doc , owner: commentToEdit.owner, ...req.body, _id: commentToEdit._id } 
 
     if (updatedComment.owner.equals(req.currentUser._id) || req.currentUser.username === 'Admin') {
       console.log('AUTHORISED')
+      await Comment.findOneAndUpdate({ _id: commentId }, { ...req.body }, { new: true }) 
     } else {
       throw new Error('Unauthorised')
     }
 
-
-    const indexOfCommentToEdit = godToEditComment.comments.indexOf(commentToEdit)
+    // console.log('ID', commentId)
+    // console.log('ID AGAIN', commentToEdit._id)
+    // eslint-disable-next-line eqeqeq
+    const indexOfCommentToEdit = godToEditComment.comments.findIndex(comment => comment._id == commentId)
+    
+    // console.log('GOD TO EDIT', godToEditComment.name)
+    // console.log('GOD COMMENTS', godToEditComment.comments)
+    // console.log('INDEX', indexOfCommentToEdit)
+    // console.log('UPDATED COMMENT', updatedComment)
 
     godToEditComment.comments.splice(indexOfCommentToEdit, 1, updatedComment)
     
@@ -160,17 +172,23 @@ export const deleteComment = async (req, res) => {
 
     const godToDeleteComment = await God.findOne({ name: caseInsensitiveName(name) })
     if (!godToDeleteComment) throw new Error()
-    console.log('God to delete comment', godToDeleteComment)
+    // console.log('God to delete comment', godToDeleteComment)
 
-    const commentToDelete = godToDeleteComment.comments.id(commentId)
+    const commentToDelete = await Comment.findById(commentId)
     if (!commentToDelete) throw new Error()
-    console.log('comment to delete', commentToDelete)
+    // console.log('comment to delete', commentToDelete)
 
     if (commentToDelete.owner.equals(req.currentUser._id) || req.currentUser.username === 'Admin') {
       console.log('AUTHORISED')
     } else {
       throw new Error('Unauthorised')
     }
+
+    // eslint-disable-next-line eqeqeq
+    const indexOfCommentToEdit = godToDeleteComment.comments.findIndex(comment => comment._id == commentId)
+
+    godToDeleteComment.comments.splice(indexOfCommentToEdit, 1)
+
 
     await commentToDelete.remove()
 

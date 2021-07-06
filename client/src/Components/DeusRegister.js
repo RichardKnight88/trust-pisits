@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react'
 import { Button, Form, Divider } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
