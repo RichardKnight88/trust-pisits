@@ -1,12 +1,5 @@
 import mongoose from 'mongoose'
 
-const commentSchema = new mongoose.Schema({
-  text: { type: String, required: true, maxLength: 300 },
-  rating: { type: Number, required: true, min: 1, max: 5 },
-  owner: { type: mongoose.Schema.ObjectId, ref: 'User', required: true }
-}, {
-  timestamps: true
-})
 
 const godsSchema = new mongoose.Schema({
   name: { type: String, required: true, unique: true },
@@ -16,8 +9,8 @@ const godsSchema = new mongoose.Schema({
   image: { type: String },
   website: { type: String },
   godOf: [{ type: String, required: true }],
-  description: { type: String, required: true, maxlength: 300 },
-  symbol: [{ type: String, required: true }],
+  description: { type: String, required: true, maxlength: 700 },
+  symbol: [{ type: String }],
   sacredAnimals: [{ type: String }],
   locationName: { type: String, required: true },
   family: {
@@ -26,6 +19,11 @@ const godsSchema = new mongoose.Schema({
     consort: [{ type: String }],
     children: [{ type: String }]
   },
+  media: {
+    info: [{ type: String }],
+    books: [{ type: String }],
+    trivia: [{ type: String }]
+  },
   otherEquivalents: {
     romanEquivalent: { type: String },
     norseEquivalent: { type: String },
@@ -33,7 +31,7 @@ const godsSchema = new mongoose.Schema({
     hinduEquivalent: { type: String }
   },
   owner: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
-  comments: [commentSchema]
+  comments: []
 })
 
 
