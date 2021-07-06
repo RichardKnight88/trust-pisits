@@ -1,24 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&display=swap');
 
 // Landing Page Start
-.landingPage-body{ 
+.landingcontainer{
   width: 100vw;
-  height: 95.5vh;            // ! Changed by Vania, to sea how to get rid of scrollbar. Original value is height: 100vh;
-  background-image: radial-gradient(beige, rgb(58, 51, 51));
+  height: 100vh;
+  background-image: radial-gradient(beige, rgb(76, 68, 68));
 }
 
-body{ 
-  background: rgb(243, 243, 225);
-  // background: #ffd9b3;
-  // background: #ffe6cc;
-  height: 100%;
+// body{ 
+//   background: #f3f3e1;
+//   // background: #ffd9b3;
+//   // background: #ffe6cc;
+//   height: 100%;
+// }
+
+.landingpage-button {
+  width: 280px;
+  height: 50px;
+  color: rgb(193, 193, 221);
+  cursor: pointer;
+  z-index: 0;
+}
+
+// .landingpage-button:before {
+//   content: '';
+//   background: linear-gradient(45deg, beige, white);
+//   position: absolute;
+//   top: -2px;
+//   left:-2px;
+//   z-index: -1;
+//   filter: blur(15px);
+//   width: calc(100% + 4px);
+//   height: calc(100% + 4px);
+//   opacity: 0.9;
+// }
+
+.landingbutton-position{
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+position: absolute;
+margin-top: 20%;
+margin-left: 90px;
+opacity: 0.3;
 }
 
 .wrapper{ 
   position:absolute;
   left:50%;
   top:50%;
-  perspective: 2000px;
+  perspective: 3000px;
 }
 
 .cube-area{
@@ -32,7 +61,7 @@ body{
 
 @keyframes rotate {
   0%{
-    transform: rotate3d(0,0,0,1deg);
+    transform: rotate3d(0,0,0,10deg);
   }
   25%{
     transition: rotate3d(2,1,0,90deg);
@@ -590,6 +619,15 @@ h4 {
 
 
 
+.form-sregister{
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+// h4 .already-login{
+//   margin:20px;
+// }
 
 
 
@@ -600,11 +638,40 @@ h4 {
 
 
 
+// CREATE A GOD START
+.main-creategod{
+height:100vh;
+  display: flex;
+  justify-content: center;
+  background: rgb(255, 253, 245);
+  // background: linear-gradient(120deg, rgb(240, 237, 230), rgb(226, 241, 245));
+  // background-size: 1000% 1000%;
+  // -webkit-animation: AnimationName 39s ease infinite;
+  // -moz-animation: AnimationName 39s ease infinite;
+  // animation: AnimationName 39s ease infinite;
+}
+.box-creategod{
+  width: 500px;
+  height:600px
+}
+.container-creategod{
+  margin-top: 100px;
+}
 
+.formfield{
+  height: 60px;
+  width: 500px;
+}
 
+.ui .button{
+  background-color: rgb(252, 229, 200);
+  }
 
-
-
+.form-creategod{
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+}
 
 
 
@@ -2203,3 +2270,39 @@ h4 {
 
   }
 }
+// .inner-divider-width-one {
+//   max-width: 35%;
+// }
+
+// // ? Got rid of predifined border around "company information"
+// .ui.segment.getting-rid-of-border {
+//   box-shadow: none;
+//   border: none;
+// }
+
+// // ? Centering god/goddess picture on the right side
+// .ui.image.god-picture-centered {
+//   margin: auto;
+// }
+
+// .content-towards-logo {
+//   margin-left: -3rem;
+// }
+
+
+
+// @-webkit-keyframes AnimationName {
+//   0%{background-position:0% 65%}
+//   50%{background-position:100% 36%}
+//   100%{background-position:0% 65%}
+// }
+// @-moz-keyframes AnimationName {
+//   0%{background-position:0% 65%}
+//   50%{background-position:100% 36%}
+//   100%{background-position:0% 65%}
+// }
+// @keyframes AnimationName {
+//   0%{background-position:0% 65%}
+//   50%{background-position:100% 36%}
+//   100%{background-position:0% 65%}
+// }
