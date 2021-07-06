@@ -1,0 +1,206 @@
+// ! VANIA'S 'QUEENDOOM'
+// ? Sorting single god display page
+
+.info-page-width {
+  width: 1000px;
+}
+
+.info-page-width-two {
+  max-width: 400px;
+}
+
+.body-color{
+  background-color: rgba(175, 175, 175, .2);
+}
+
+
+.inner-divider-width-one {
+  max-width: 35%;
+}
+
+// ? Got rid of predifined border around "company information"
+.ui.segment.getting-rid-of-border {
+  box-shadow: none;
+  border: none;
+}
+
+.ui.segment.changing-background-color {
+  background-color: rgb(243, 243, 225);
+}
+
+
+// ? Centering god/goddess picture on the right side
+.ui.image.god-picture-centered {
+  margin: auto;
+}
+
+.content-towards-logo {
+  margin-left: -3rem;
+}
+
+
+// ? Sorting top left side with Categories and species name
+.top-categories-spacing {
+  height: 28px;
+  margin-bottom: .4%;
+  margin-top: 1%;
+}
+
+
+// ? Sorting text inside of comments section on god's profile
+
+.text-header-bold {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.engraved-two-normal-text {
+  background-color: rgba(102, 51, 0, 0.6);
+  // background-color: rgba(153, 77, 0, 0.6);
+  color: transparent;
+    background-clip: text;
+  margin-left: 3;
+  text-shadow: 1px 1px 1px hsla(0,0%,255%,0.6);
+  p {
+    font-size: 1em;
+    .bold {
+      font-size: 1.2em;
+      font-weight: 700;
+    }
+  }
+}
+
+.faded-omega-symbol {
+  opacity: .5;
+}
+
+.ui.horizontal.divider.horizontal-opacity:after, .ui.horizontal.horizontal-opacity.divider:before {
+  opacity: .5;
+  
+}
+
+.user-logo-commentarea-width {
+  max-width: 10%;
+}
+
+.ui.rating .active.icon {
+  background-color: #ffae00;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 1px 1px 1px hsla(0,0%,255%,0.4);
+}
+
+.start-rating-info-positioning {
+  display: flex;
+}
+
+.start-rating-info-positioning-padding {
+  padding: 1%;
+  padding-left: 0%;
+}
+
+.ui.label.positioning-job-tags {
+  margin: .2857em .4285em;
+}
+
+// ! CATEGORY DISPLAY
+
+.inner-divider-width-one-category {
+  max-width: 35%;
+}
+
+.info-page-width-category {
+  max-width:50%;
+}
+
+
+// ! FOOTER COMPONTENT
+
+.footer-color {
+  background-color: hsl(0, 0%, 21%);
+  color: white;
+}
+
+.footer-footer {
+  height: 50px;
+}
+
+// ! NAVBAR COMPONENT
+
+.navbar {
+  color: white;
+}
+
+
+
+
+
+
+// ! TRYING TO SORT RESPONSIVNES OF LANDING CUBE
+
+@media only screen and (max-width: 600px) {
+  .box {  
+    width: 200px;
+    height:200px;
+  }
+  
+  .second-box {
+    width: 100px;
+    height:100px;
+  }
+   
+  .box-front{
+    transform: translateX(-100px) translateY(-100px) translateZ(100px);
+  }
+  
+  .second-box-front{
+    transform: translateX(-50px) translateY(-50px) translateZ(50px);
+  } 
+  
+  .box-back{
+    transform: translateX(-100px) translateY(-100px) translateZ(-100px) rotateY(180deg);
+  }
+  
+  .second-box-back{
+    transform: translateX(-50px) translateY(-50px) translateZ(-50px) rotateY(180deg);
+  } 
+  
+  .box-right{
+    transform: translateY(-100px) rotateY(90deg);
+  }
+  
+  .second-box-right{
+    transform: translateY(-50px) rotateY(90deg);
+  } 
+  
+  .box-left{
+    transform: translateY(-100px) translateX(-200px) rotateY(270deg);
+  }
+  
+  .second-box-left{
+    transform: translateY(-50px) translateX(-100px) rotateY(270deg);
+  } 
+  
+  .box-top{
+    transform: translateX(-100px) translateY(-200px) rotateX(90deg);
+  }
+  
+  .second-box-top{
+    transform: translateX(-50px) translateY(-100px) rotateX(90deg);
+  } 
+  
+  .box-bottom{
+    transform: translateX(-100px) rotateX(90deg);
+
+  }
+  
+  .second-box-bottom{
+    transform: translateX(-50px) rotateX(270deg);
+ 
+  } 
+  
+  .box-area{
+    transform: rotateX(90deg) rotateY(90deg);
+
+  }
+}
