@@ -6,9 +6,11 @@ import { Link } from 'react-router-dom'
 // import { Link } from 'react-router-dom'
 
 const options = [
+  { key: 'nill', text: '...', value: 'nill' },
   { key: 'm', text: 'Man', value: 'man' },
   { key: 'f', text: 'Woman', value: 'woman' },
   { key: 'o', text: 'Mixed gender', value: 'mixed-gender' }
+
 ]
 
 // const godOf = [
@@ -27,12 +29,12 @@ const options = [
 // ]
 
 const sacredAnimals = [
-  { text: 'Eagle 🦅', value: 'eagle' },
-  { text: 'Peacock 🦚', value: 'peacock' },
-  { text: 'Horse 🎠', value: 'horse' },
-  { text: 'Cow 🐄', value: 'cow' },
-  { text: 'Serpent ⚕️', value: 'serpent' },
-  { text: 'Owl 🦉', value: 'owl' }
+  { key: 'Eagle 🦅', value: 'eagle' },
+  { key: 'Peacock 🦚', value: 'peacock' },
+  { key: 'Horse 🎠', value: 'horse' },
+  { key: 'Cow 🐄', value: 'cow' },
+  { key: 'Serpent ⚕️', value: 'serpent' },
+  { key: 'Owl 🦉', value: 'owl' }
   // { text: 'Eagle 🦅', value: 'eagle' },
   // { text: 'Eagle 🦅', value: 'eagle' },
   // { text: 'Eagle 🦅', value: 'eagle' },
@@ -40,87 +42,65 @@ const sacredAnimals = [
   // { text: 'Eagle 🦅', value: 'eagle' },
   // { text: 'Eagle 🦅', value: 'eagle' }
 ]
-class DeusRegister extends Component {
 
-  state = {}
+const species = [
+  { text: '...', value: 'nil' },
+  { text: 'Primamordial Deity', value: 'primordial' },
+  { text: 'Olympian', value: 'god' },
+  { text: 'Giant', value: 'giant' },
+  { text: 'Titan', value: 'titan' }
+]
 
-  // handleChange = (e, { value }) => this.setState({ value })
-
-  render() {
-    // const { value } = this.state
-    return (
-      <>
-        <Form>
-          {/* <Form.Field >
-            <input fluid label="Name of God" placeholder="Name of God"/>
-          </Form.Field> */}
-          
-          <Form.Field>
-            <input label="Name of God" type="text" placeholder='Name of God' />
-          </Form.Field>
-
-          <Form.Select fluid options={options} placeholder='Select a gender' />
-
-          <Form.Field>
-            <input label="Species" type="text" placeholder="Assign a species" />
-          </Form.Field>
-
-          
-
-          <Form.Select fluid label="God of" placeholder="God of" />
-          <Form.Field label="Name of God" type="text" placeholder="God of" />
-          {/* </Form.Field> */}
-
-          <Form.TextArea label='Description' placeholder='Describe the god selected' />
-
-          <Form.Select fluid label="Sacred animals" options={sacredAnimals} placeholder="What is your god's sacred animal?" />
-
-        </Form>
-        <Link to="/gods">
-          <Button className="button-creategod formfield" type='submit'>Create a god</Button>
-        </Link>
-      </>
-    )
-  }
-
-}
-
-const DeusRegiste = () => {
+const DeusRegister = () => {
 
   return (
-    <h1>hello</h1>
-    // <div className="main-creategod">
-    //   <div className="box-creategod">
+    <>
 
-  //     <div className="container-creategod">
-  //       <h1>Create a God</h1>
-  //       <Form className="form-creategod">
-  //         <Form.Field>
-  //           <input className="formfield" type="text" placeholder='Name of God' required />
-  //         </Form.Field>
+      <div className="main-creategod">
+        <div className="box-creategod">
 
-  //         <Form.Field>
-  //           <input className="formfield" type="text" placeholder='Email' required />
-  //         </Form.Field>
+          <div className="container-creategod">
+            <h1>Create a God</h1>
+            <Form className="form-creategod">
+              <Form.Field>
+                <input label="Name of god" type="text" placeholder='Name of God' required />
+              </Form.Field>
 
-  //         <Form.Field>
-  //           <input className="formfield" type="password" placeholder='Password' required />
-  //         </Form.Field>
+              <Form.Select fluid options={options} placeholder='Select a gender' required />
 
-  //         <Form.Field>
-  //           <input className="formfield" type="password" placeholder='Confirm your password' required />
-  //         </Form.Field>
+              <Form.Select fluid options={species} placeholder='Select species' required />
 
-  //         <Button className="button-creategod formfield" type='submit'>Create a God</Button>
-  //         {/* <Divider horizontal>or</Divider> */}
-  //       </Form>
+              <Form.Field>
+                <input type="text" placeholder='What is your God ruling?' required />
+              </Form.Field>
 
-  //       {/* <Link to="/login">
-  //         <Button className="button-creategod formfield" type='submit'>Log in</Button>
-  //       </Link> */}
-  //     </div>
-  //   </div>
-  // </div>
+              <Form.TextArea placeholder='Please provide a description of the god selected...' required />
+
+              <Form.Field>
+                <input type="text" placeholder='Location' required />
+              </Form.Field>
+
+              <Form.Field>
+                <input type="text" placeholder='Parents' required />
+              </Form.Field>
+
+              <Form.Field>
+                <input type="text" placeholder='Siblings' required />
+              </Form.Field>
+              <Link to="/gods">
+                <Button className="button-creategod formfield" angle double right type='submit'>
+                  Create a God</Button>
+              </Link>
+              {/* <Divider horizontal>or</Divider> */}
+            </Form>
+
+
+            {/* <Button className="button-creategod formfield" type='submit'>Log in</Button> */}
+
+          </div>
+        </div>
+      </div>
+    </>
   )
 }
 export default DeusRegister

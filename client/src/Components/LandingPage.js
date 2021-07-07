@@ -27,7 +27,7 @@ const LandingPage = () => {
           <div className="landingbutton-position">
             <Link to="/home">
               <div >
-                <Button className="landingpage-button" content='Click to enter website' size='medium' />
+                <Button className="landingpage-button fade-in" content='Click to enter website' size='medium' />
               </div>
             </Link >
           </div>

@@ -17,35 +17,50 @@
 .landingpage-button {
   width: 280px;
   height: 50px;
-  color: rgb(193, 193, 221);
   cursor: pointer;
   z-index: 0;
 }
 
-// .landingpage-button:before {
-//   content: '';
-//   background: linear-gradient(45deg, beige, white);
-//   position: absolute;
-//   top: -2px;
-//   left:-2px;
-//   z-index: -1;
-//   filter: blur(15px);
-//   width: calc(100% + 4px);
-//   height: calc(100% + 4px);
-//   opacity: 0.9;
-// }
+.fade-in {
+  text-align: center;
+  animation: fadein 6s;
+  -moz-animation: fadein 6s; /* Firefox */
+  -webkit-animation: fadein 6s; /* Safari and Chrome */
+  -o-animation: fadein 6s; /* Opera */
+}
+@keyframes fadein {
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+}
+}
+
+.landingpage-button:before {
+  content: '';
+  background: linear-gradient(45deg, beige, white);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  z-index: -1;
+  filter: blur(25px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  opacity: 0.9;
+}
 
 .landingbutton-position{
 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 position: absolute;
 margin-top: 20%;
-margin-left: 90px;
-opacity: 0.3;
+margin-left: 70%;
+opacity: 0.2;
 }
 
 .wrapper{ 
   position:absolute;
-  left:50%;
+  left:35%;
   top:50%;
   perspective: 3000px;
 }
@@ -61,16 +76,34 @@ opacity: 0.3;
 
 @keyframes rotate {
   0%{
-    transform: rotate3d(0,0,0,10deg);
+    transform: rotate3d(0,0,1,10deg);
   }
-  25%{
-    transition: rotate3d(2,1,0,90deg);
+  10%{
+    transition: rotate3d(0,0,1,190deg);
+  }
+  20%{
+    transition: rotate3d(0,1,0,260deg);
+  }
+  30%{
+    transition: rotate3d(0,1,0,289deg);
+  }
+  40%{
+    transition: rotate3d(0,1,0,90deg);
   }
   50% {
     transform: rotate3d(0,1,0,180deg);
   }
-  75%{
-    transform: rotate3d(0,2,4,270deg);
+  60%{
+    transition: rotate3d(-1,1,0,90deg);
+  }
+  70%{
+    transform: rotate3d(0,1,0,270deg);
+  }
+  80%{
+    transition: rotate3d(1,0,0,90deg);
+  }
+  90%{
+    transition: rotate3d(2,1,0,290deg);
   }
   100%{
     transform: rotate3d(0,1,0,360deg);
@@ -209,7 +242,8 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-wrap: wrap;
-background-image: url('../Images/Developers/about-image.jpeg');
+background-image: url('../Images/statues.jpeg');
+background-size: cover;
 width: 100vw;
 height: 100vh;
 }
@@ -249,12 +283,11 @@ height: 100vh;
   position: relative;
   width: 250px;
   height:350px;
-  box-shadow: 0 0 10px rgba(247, 247, 247, 0.2);
+  box-shadow: 0 0 10px rgb(255, 236, 194);
   border-radius: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .card-about-wrapper{
@@ -267,8 +300,8 @@ height: 100vh;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  opacity:0.7;
-  transition: 0.2s;
+  opacity:0.8;
+  transition: 1s;
   transform: translateZ(20px)
 } 
 
@@ -292,18 +325,18 @@ height: 100vh;
   left:0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  // object-fit: cover;
 } 
 
 .container-about .card-about .content-about .contentBx-about h3{
-  color: rgb(255, 255, 255);
+  color: rgb(56, 15, 15);
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 500;
   font-size: 18px;
   text-align: center;
   margin: 20px 0 10px;
-  line-height: 1.1em;
+  line-height: 1.6em;
 }
 
 .container-about .card-about .content-about .contentBx-about h3 span{
@@ -342,7 +375,7 @@ height: 100vh;
 }
 .github{
   svg {
-  fill: black;
+  fill: black !important;
 }
 }
 
@@ -800,118 +833,121 @@ height: 100vh;
 
 
 
-
+// ! REGISTER USER START
 .main-sregister {
   height:100vh;
   display: flex;
   justify-content: center;
-  background: rgb(255, 253, 245);
+  background-image: url('../Images/perfect.png');
+  // background-repeat: no-repeat;
+  background-size: contain;
 }
 .box-sregister{
   width: 500px;
-  height:600px
+  height:600px;
+  margin-left: 20%;
 }
 .container-sregister{
   margin-top: 100px;
+  color:white
 }
 .formfield{
   height: 60px;
   width: 500px;
 }
-.ui .button{
+div .form .button {
   background-color: rgb(252, 229, 200);
   }
+
 .form-sregister{
   width: 500px;
   display: flex;
   flex-direction: column;
 }
+// ! REGISTER USER END
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// ! LOGIN USER START
 .main-login{
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
-  background: rgb(255, 253, 245);
-  // background: linear-gradient(180deg, rgb(240, 237, 230), rgb(226, 241, 245));
-  // background-size: 1000% 1000%;
-  // -webkit-animation: AnimationName 39s ease infinite;
-  // -moz-animation: AnimationName 39s ease infinite;
-  // animation: AnimationName 39s ease infinite;
+  // background: rgb(255, 253, 245);
+  background-image: linear-gradient(white, beige);
+  background-image: url('../Images/perfect.png');
+  background-size: contain;
+  
 }
+
 .form-login{
   margin-bottom: 10px;
 }
+
 div .box-login{
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   width: 500px;
-  margin-top: 100px
+  margin-top: 100px;
+  margin-left:20%;
+  color:white;
 }
+
 .button-login {
   width: 500px;
 }
+
 div.form-box-login .button {
   background-color: rgb(252, 229, 200);
 }
+
 .wanttoregister{
   width: 500px;
   height: 60px;
   margin-top: 40px;
 }
+// ! LOGIN USER END
 
 
+// ! CREATE A GOD START
+.main-creategod{
+height:100vh;
+display: flex;
+justify-content: center;
+// background: rgb(255, 253, 245);
+background-image: url('../Images/perfect.png');
+background-size: contain;
 
+}
 
+.box-creategod{
+  width: 500px;
+  height:600px;
+  margin-left: 20%;
+}
 
+.container-creategod{
+  margin-top: 100px;
+  color:white;
+}
 
-// // CREATE A GOD START
-// .main-creategod{
-// height:100vh;
-//   display: flex;
-//   justify-content: center;
-//   background: rgb(255, 253, 245);
-
-// }
-// .box-creategod{
-//   width: 500px;
-//   height:600px
-// }
-// .container-creategod{
-//   margin-top: 100px;
-// }
-
-// .formfield{
-//   height: 60px;
-//   width: 500px;
-// }
+.formfield{
+  height: 60px;
+  width: 500px;
+}
 
 // .ui .button{
-//   background-color: rgb(252, 229, 200);
+//   background-color: rgb(112, 204, 207);
 //   }
 
-// .form-creategod{
-//   width: 500px;
-//   display: flex;
-//   flex-direction: column;
-// }
+.form-creategod{
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+}
 
+// ! CREATE GOD END
 
 
 

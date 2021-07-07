@@ -31,7 +31,7 @@ const StandardRegister = () => (
         </Form>
         {/* <h4 className="already-login">Already have an account?<a href="Log in">Log in</Link></a> */}
         <Link to="/login">
-          <Button className="button-sregister formfield" type='submit'>Log in</Button>
+          <Button className="button-sregister formfield register" type='submit'>Log in</Button>
         </Link>
         {/* </h4> */}
       </div>
