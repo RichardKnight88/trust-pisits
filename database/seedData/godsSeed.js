@@ -164,6 +164,602 @@ export default [
     comments: []
   },
 
+
+  // ! PRIMORDIAL
+
+  {
+    name: 'Achlys',
+    gender: 'Female',
+    species: 'Protogenoi',
+    logo: '',
+    website: 'https://en.wikipedia.org/wiki/Achlys',
+    image: 'https://static.wikia.nocookie.net/the-demonic-paradise/images/c/c2/Akhlys.png',
+    godOf: ['Poisons'],
+    description: 'The goddess of misery, poisons, and eternal night. Said to have existed before Chaos itself. Her hobbies are clawing at her cheeks to make them bleed, she takes pleasure in crying no matter how much it hurts. She can create poisonous flowers by just summoning them to her will.',
+    symbol: ['poison', 'foggy midnight moon'],
+    sacredAnimals: ['spiders', 'cockroaches'],
+    locationName: 'Tartarus',
+    family: {
+      parents: ['Nyx', 'Chaos'],
+      siblings: ['Erebos', 'Gaea', 'Tartarus', 'Hemera', 'Eris', 'Elpis', 'Fates', 'Keres', 'Hypanos', 'Thanatos', 'Charon', 'Aither'],
+      consort: [''],
+      children: ['']
+    },
+    media: {
+      info: ['https://mysticalshores.com/2017/01/01/the-goddess-achlys/', 'http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0104%3Aalphabetic+letter%3DA%3Aentry+group%3D3%3Aentry%3Dachlys-bio-1', 'https://en.wikipedia.org/wiki/Achlys', 'https://riordan.fandom.com/wiki/Akhlys'],
+      books: ['The House of Hades', 'The Blood of Olympus'],
+      trivia: [''],
+    },
+    otherEquivalents: {
+      romanEquivalent: ''
+    }
+},
+
+{
+    name: 'Aether',
+    gender: 'Male',
+    species: 'Protogenoi',
+    logo: '',
+    website: 'https://en.wikipedia.org/wiki/Aether_(mythology)',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/f/f1/Aether_in_battle_with_a_lion-headed_Giant.jpg',
+    godOf: ['The Upper Sky', 'Light'],
+    description: 'The Protogenos of the mists of light which fill the upper zones of air, the air of the gods. His element lay beneath the arch of heaven”s dome, but high above the airs of the mortal realm.',
+    symbol: [''],
+    sacredAnimals: [''],
+    locationName: 'The Upper Air',
+    family: {
+      parents: ['Erebus', 'Nyx'],
+      siblings: ['Hemera', 'Hypnos', 'Thanatos','Eris', 'Clotho', 'Lachesis', 'Atropos', 'Apate', 'Nemesis', 'Eleos','the Keres', 'Hecate', 'Alecto', 'Megaera', 'Tisiphone', 'Lyssa', 'Dolos', 'Momus', 'Moros', 'Oizys'
+],
+      consort: ['Hemera'],
+      children: ['Gaia', 'Thalassa', 'Uranus', 'Aergia', 'Pontus', 'Tartarus']
+    },
+    media: {
+      info: ['https://greekmythology.wikia.org/wiki/Aether', 'https://www.theoi.com/Protogenos/Aither.html', 'https://en.wikipedia.org/wiki/Aether_(mythology)', 'https://www.britannica.com/topic/Aether'],
+      books: [''],
+      trivia: [''],
+    },
+    otherEquivalents: {
+      romanEquivalent: 'Ether'
+    }
+},
+
+{
+    name: 'Aion',
+    gender: 'Male',
+    species: 'Protogenoi',
+    logo: '',
+    website: 'https://en.wikipedia.org/wiki/Aion_(deity)',
+    image:  'https://upload.wikimedia.org/wikipedia/commons/4/4e/Aion_mosaic_Glyptothek_Munich_W504.jpg',
+    godOf: ['Cyclical Time', 'Eternity', 'Zodiac'],
+    description: 'The deity associated with time, the orb or circle encompassing the universe, and the zodiac. The "time" represented by him is unbounded, in contrast to Chronos as empirical time divided into past, present, and future. He is thus a god of the ages, associated with mystery religions concerned with the afterlife.',
+    symbol: [''],
+    sacredAnimals: [''],
+    locationName: 'Time',
+    family: {
+      parents: ['Unknown'],
+      siblings: ['Unknown'],
+      consort: [''],
+      children: ['']
+    },
+    media: {
+      info: ['https://www.greekboston.com/culture/mythology/aion/', 'https://en.wikipedia.org/wiki/Aion_(deity)'],
+      books: [''],
+      trivia: [''],
+    },
+    otherEquivalents: {
+      romanEquivalent: 'Aeternitas'
+    }
+},
+
+{
+    name: 'Ananke',
+    gender: 'Female',
+    species: 'Protogenoi',
+    logo: '',
+    website: 'https://en.wikipedia.org/wiki/Ananke',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Ananke_by_Platone.jpgSpi',
+    godOf: ['Necessity', 'Compulsion', 'Inevitability'],
+    description: 'The goddess of inevitability, compulsion, and necessity.',
+    symbol: ['Spindle', 'Torch'],
+    sacredAnimals: [''],
+    locationName: 'The cosmo',
+    family: {
+      parents: ['Self-formed'],
+      siblings: [' Chronos ', 'Tartarus', 'Gaia', 'Nyx'],
+      consort: ['Chronos'],
+      children: ['Ather', 'Phanes', 'Erebus', 'The Moirai']
+    },
+    media: {
+      info: ['https://en.wikipedia.org/wiki/Ananke', 'https://www.theoi.com/Protogenos/Ananke.html', 'https://greekmythology.wikia.org/wiki/Anance', 'https://www.britannica.com/topic/Ananke-Greek-mythology'],
+      books: ['The Cunning Man', 'Tales of Pirx the Pilot', 'Ravirn', 'The Wicked + The Divine', 'Mobile Suit Gundam'],
+      trivia: [''],
+    },
+    otherEquivalents: {
+      romanEquivalent: 'Necessitas'
+    }
+},
+
+{
+    name: 'Chaos',
+    gender: 'Genderless',
+    species: 'Protogenoi',
+    logo: '',
+    website: 'https://en.wikipedia.org/wiki/Chaos_(cosmogony)#Greco-Roman_tradition',
+    image: ' https://static.wikia.nocookie.net/greekmythology/images/1/13/Chaos.gif',
+    godOf: ['Outer Space', 'the color Black'],
+    description: ' The personification of nothingness from which all of existence sprang. Depicted as a void. She was the first of the primordial gods to emerge at the dawn of creation. She was followed in quick succession by Gaia (Earth), Tartaros (the Pit Below) and Eros (Procreation).',
+    symbol: [''],
+    sacredAnimals: [''],
+    locationName: 'None',
+    family: {
+      parents: ['None'],
+      siblings: ['None'],
+      consort: [''],
+      children: ['Erebos', 'Gaia', 'Nyx', 'Chronos', 'Tartarus', 'Ananke', 'Birds']
+    },
+    media: {
+      info: ['https://en.wikipedia.org/wiki/Chaos_(cosmogony)#Greco-Roman_tradition', 'https://www.theoi.com/Protogenos/Khaos.html', 'https://www.britannica.com/topic/Chaos-ancient-Greek-religion', 'https://greekmythology.wikia.org/wiki/Chaos'],
+      books: ['The House of Hades', 'Percy Jackson”s Greek Gods'],
+      trivia: [''],
+    },
+    otherEquivalents: {
+      romanEquivalent: 'Aer'
+    }
+},
+
+{
+    name: 'Chronos',
+    gender: 'Male',
+    species: 'Protogenoi',
+    logo: '',
+    website: 'https://en.wikipedia.org/wiki/Chronos',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/e/ea/Pierre_Mignard_%281610-1695%29_-_Time_Clipping_Cupid%27s_Wings_%281694%29.jpg',
+    godOf: ['Empirical Time'],
+    description: ' The primordial god of time. He and his consort, the serpentine goddess Ananke (Inevitability), enveloped the primordial world-egg in their coils and split it apart to form the ordered universe of earth, sea and sky. After this act of creation the couple circled the cosmos driving the rotation of heaven and the eternal passage of time.',
+    symbol: ['Harvesting Scythe', 'Zodiac Wheel'],
+    sacredAnimals: [''],
+    locationName: 'Everywhere',
+    family: {
+      parents: ['None'],
+      siblings: ['None'],
+      consort: ['Ananke'],
+      children: ['Chaos', 'Aether', 'Phanes', 'The Moirai', 'Hemera', 'Horae']
+    },
+    media: {
+      info: ['https://en.wikipedia.org/wiki/Chronos', 'https://www.theoi.com/Protogenos/Khronos.html', 'https://greek-myth.fandom.com/wiki/Chronos', 'https://greekmythology.wikia.org/wiki/Chronos_(protogenos)'],
+      books: [''],
+      trivia: [''],
+    },
+    otherEquivalents: {
+      romanEquivalent: ''
+    }
+},
+
+{
+    name: 'Erebus',
+    gender: 'Male',
+    species: 'Protogenoi',
+    logo: '',
+    website: 'https://en.wikipedia.org/wiki/Erebus',
+    image: 'https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg',
+    godOf: ['Darkness', 'Shadow'],
+    description: 'The Protogenos of the mists of darkness. His dark element is sunk into the hollows of the earth, and encircles the dismal realm of the underworld.',
+    symbol: [''],
+    sacredAnimals: [''],
+    locationName: 'Darkness',
+    family: {
+      parents: ['Chaos'],
+      siblings: ['Nyx', 'Tartarus', 'Gaia', 'Eros'],
+      consort: ['Nyx'],
+      children: ['Thanatos', 'Apate', 'Aether', 'Hemera', 'Hypnos', 'the Keres', 'Moros', 'the Moirai', 'the Hesperides', 'Dolos', 'Nemesis', 'Oizys', 'Oneiroi', 'Momus', 'Philotes', 'Eris','Geras']
+    },
+    media: {
+      info: ['https://en.wikipedia.org/wiki/Erebus', 'https://www.theoi.com/Protogenos/Erebos.html', 'https://greekmythology.wikia.org/wiki/Erebos', 'https://www.britannica.com/topic/Erebus'],
+      books: [''],
+      trivia: [''],
+    },
+    otherEquivalents: {
+      romanEquivalent: 'Scouts'
+    }
+},
+
+{
+    name: 'Eros',
+    gender: 'Male',
+    species: 'Protogenoi',
+    logo: '',
+    website: 'https://en.wikipedia.org/wiki/Eros',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Gerard_FrancoisPascalSimon-Cupid_Psyche_end.jpg/1280px-Gerard_FrancoisPascalSimon-Cupid_Psyche_end.jpg',
+    godOf: ['Love', 'Lust', 'Sex'],
+    description: 'The mischievous god of love and attraction',
+    symbol: ['Bow and arrows'],
+    sacredAnimals: ['Hare'],
+    locationName: 'Mount Olympus',
+    family: {
+      parents: ['Aphrodite', 'Ares'],
+      siblings: ['Harmonia', 'Phobos', 'Deimos', 'Anteros', 'Pothos', 'Himeros', 'Hermaphroditus', 'Hedylogos'],
+      consort: ['Psyche'],
+      children: ['Hedone']
+    },
+    media: {
+      info: ['https://riordan.fandom.com/wiki/Eros', 'https://en.wikipedia.org/wiki/Eros', 'https://www.theoi.com/Ouranios/Eros.html'],
+      books: ['Percy Jackson”s Greek Gods', 'Percy Jackson”s Greek Heroes'],
+      trivia: [''],
+    },
+    otherEquivalents: {
+      romanEquivalent: 'Cupid'
+    }
+},
+
+{
+    name: 'Gaia',
+    gender: 'Female',
+    species: 'Protogenoi',
+    logo: '',
+    website: 'https://en.wikipedia.org/wiki/Gaia',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/b/ba/Feuerbach_Gaea.jpg',
+    godOf: ['The Earth'],
+    description: 'Personification of the Earth (Mother Earth) and one of the Greek primordial deities born at the dawn of creation. Gaia is the ancestral mother of all life.',
+    symbol: [''],
+    sacredAnimals: ['Serpent', 'The Lunar Bull', 'The Pig', 'Bees'],
+    locationName: 'Earth',
+    family: {
+      parents: ['Aether', 'Hemera'],
+      siblings: ['Nyx', 'Erebus', 'Tartarus'],
+      consort: ['Uranus', 'Pontus', 'Aether', 'Tartarus'],
+      children: ['Uranus', 'Pontus', 'the Ourea', 'the Hecatonchires', 'the Cyclopes', 'the Titans', 'the Gigantes', 'Nereus', 'Thaumus', 'Phorcys', 'Ceto', 'Eurybia', 'Aergia', 'Typhon', 'Python', 'Antaeus']
+    },
+    media: {
+      info: [''],
+      books: ['The Titan”s Curse', 'The Battle of the Labyrinth', 'The Lost Hero', 'The Son of Neptune', 'Son of Magic', 'The Mark of Athena', 'The House of Hades', 'Percy Jackson”s Greek Gods', 'The Blood of Olympus', 'Camp Jupiter Classified: A Probatio”s Journal'],
+      trivia: [''],
+    },
+    otherEquivalents: {
+      romanEquivalent: 'Terra'
+    }
+},
+
+{
+    name: 'Hemera',
+    gender: 'Female',
+    species: 'Protogenoi',
+    logo: '',
+    website: 'https://en.wikipedia.org/wiki/Hemera',
+    image: 'https://static.wikia.nocookie.net/greekmythology/images/d/d3/William-Adolphe_Bouguereau_%281825-1905%29_-_Day_%281881%29.jpg',
+    godOf: ['Day'],
+    description: 'The personification of of day and one of the Greek primordial deities. She is the goddes of the daytime.',
+    symbol: [''],
+    sacredAnimals: [''],
+    locationName: 'Tartarus',
+    family: {
+      parents: ['Erebus', 'Nyx'],
+      siblings: ['Aether', 'Hypnos', 'Thanatos', 'Oizys', 'Momus', 'Apate', 'the Moirai', 'the Oneiroi', 'Eris', 'the Furies', 'Moros'],
+      consort: ['Aether'],
+      children: ['Gaia', 'Uranus', 'Thalassa']
+    },
+    media: {
+      info: ['https://en.wikipedia.org/wiki/Hemera', 'https://www.theoi.com/Protogenos/Hemera.html', 'https://riordan.fandom.com/wiki/Hemera', 'https://greekmythology.wikia.org/wiki/Hemera'],
+      books: ['Percy Jackson”s Greek Gods', 'Percy Jackson”s Greek Heroes', 'The House of Hades'],
+      trivia: [''],
+    },
+    otherEquivalents: {
+      romanEquivalent: 'Dies'
+    }
+},
+
+{
+    name: 'Hypnos',
+    gender: 'Male',
+    species: 'Protogenoi',
+    logo: '',
+    website: 'https://en.wikipedia.org/wiki/Hypnos',
+    image: 'https://static.wikia.nocookie.net/greekmythology/images/c/ce/OvX1n81.jpg',
+    godOf: ['Sleep'],
+    description: 'The perdonification of sleep',
+    symbol: ['Poppy', 'River Lethe', 'Cottonwood'],
+    sacredAnimals: [''],
+    locationName: 'Underworld',
+    family: {
+      parents: ['Nyx', 'Erebus'],
+      siblings: ['Moros', 'Keres', 'Thanatos', 'Oneiroi', 'Momus', 'Oizys', 'Hesperides', 'Moirai', 'Nemesis', 'Apate', 'Philotes', 'Geras', 'Eris', 'Styx', 'Dolos', 'Ponos', 'Euphrosyne', 'Epiphron'],
+      consort: ['Pasithea'],
+      children: ['Morpheus', 'Phobetor', 'Phantasos', 'Clovis', 'Hypnos` Cabin']
+    },
+    media: {
+      info: ['https://en.wikipedia.org/wiki/Hypnos', 'https://www.theoi.com/Daimon/Hypnos.html', 'https://greekmythology.wikia.org/wiki/Hypnos'],
+      books: ['The Last Olympian', 'The Lost Hero', 'The House of Hades', 'The Hidden Oracle', 'The Burning Maze'],
+      trivia: [''],
+    },
+    otherEquivalents: {
+      romanEquivalent: 'Somnus'
+    }
+},
+
+{
+    name: 'Nemesis',
+    gender: 'Female',
+    species: 'Protogenoi',
+    logo: '',
+    website: 'https://en.wikipedia.org/wiki/Nemesis',
+    image: 'https://static.wikia.nocookie.net/greekgoddesses/images/2/22/Nemesis.jpg/revision/latest/scale-to-width-down/302?cb=20131216111953',
+    godOf: ['Retribution', 'Indignation', 'Balance'],
+    description: 'The goddess of indignation against, and retribution for, evil deeds and undeserved good fortune. She enacts rightful retribution against those who succumb to hubris, arrogance before the gods.',
+    symbol: ['sword', 'lash', 'dagger', 'measuring rod', 'scales', 'bridle'],
+    sacredAnimals: ['goose'],
+    locationName: 'Unknown',
+    family: {
+      parents: ['Nyx', 'Erebus'],
+      siblings: ['Moros', 'Keres', 'Thanatos', 'Hypnos', 'Oneiroi', 'Momus', 'Oizys', 'Moirai', 'Hesperides', 'Apate', 'Philotes', 'Geras', 'Eris', 'Styx', 'Dolos', 'Ponos', 'Euphrosyne', 'Epiphron', 'Continentia', 'Petulantia', 'Misericordia', 'Pertinacia'],
+      consort: ['Zeus', 'Tartarus'],
+      children: ['Helen of Troy', 'the Telchines']
+    },
+    media: {
+      info: ['https://en.wikipedia.org/wiki/Nemesis', 'https://www.theoi.com/Daimon/Nemesis.html', 'https://riordan.fandom.com/wiki/Nemesis', 'https://greekmythology.wikia.org/wiki/Nemesis', 'https://www.britannica.com/topic/Nemesis-Greek-religion'],
+      books: ['The Lightning Thief', 'The Battle of the Labyrinth', 'The Last Olympian', 'The Mark of Athena', 'The Hidden Oracle'],
+      trivia: [''],
+    },
+    otherEquivalents: {
+      romanEquivalent: ''
+    }
+},
+
+{
+    name: 'Nesoi',
+    gender: 'Female',
+    species: 'Protogenoi',
+    logo: '',
+    website: 'https://en.wikipedia.org/wiki/Nesoi',
+    image: 'http://www.ancientgreecereloaded.com/files/ancient_greece_reloaded_website/myths_and_stories/extra_foto/nesoi/nesoi-2.jpg',
+    godOf: ['Islands'],
+    description: 'The goddesses of islands. Each island had its own personified deity. Originally they were Ourea (Mountains) which Poseidon levered into sea with his trident',
+    symbol: [''],
+    sacredAnimals: [''],
+    locationName: 'Mount Othrys',
+    media: {
+      info: ['https://en.wikipedia.org/wiki/Nesoi', 'https://www.theoi.com/Protogenos/Nesoi.html'],
+      books: [''],
+      trivia: [''],
+    },
+    family: {
+      parents: ['Gaia'],
+      siblings: ['Islands itself', 'Unknown number'],
+      consort: [''],
+      children: ['']
+    },
+    otherEquivalents: {
+      romanEquivalent: ''
+    }
+},
+
+{
+    name: 'Nyx',
+    gender: 'Female',
+    species: 'Protogenoi',
+    logo: '',
+    website: 'https://en.wikipedia.org/wiki/Nyx',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/William-Adolphe_Bouguereau_%281825-1905%29_-_La_Nuit_%281883%29.jpg/1024px-William-Adolphe_Bouguereau_%281825-1905%29_-_La_Nuit_%281883%29.jpg',
+    godOf: ['Night'],
+    description: 'The goddess of the night. She stood at or near the beginning of creation and mothered other personified deities. She watches over the shadows of the night and tries her best to keep the night safe. Due to her high power she”s often feated a lot around Mount Olympus',
+    symbol: ['crescent moon'],
+    sacredAnimals: [''],
+    locationName: 'Tartarus',
+    family: {
+      parents: ['Chaos', 'Phanes'],
+      siblings: ['Gaia', 'Tartarus', 'Erebus'],
+      consort: ['Erebus'],
+      children: ['Aether', 'Hemera', 'Moros', 'Apate', 'Dolos', 'Nemesis', 'the Keres', 'the Moirai', 'the Hesperides', 'Oizys', 'Momus', 'the Oneiroi', 'Hypnos', 'Thanatos', 'Koalemos', 'Philotes', 'Geras', 'Eris', 'Charon']
+    },
+    media: {
+      info: ['https://en.wikipedia.org/wiki/Nyx', 'https://www.theoi.com/Protogenos/Nyx.html', 'https://www.britannica.com/topic/Nyx', 'https://greekmythology.wikia.org/wiki/Nyx', 'https://riordan.fandom.com/wiki/Nyx ', 'https://greekgoddesses.fandom.com/wiki/Nyx ', 'https://www.ancientgreecereloaded.com/files/ancient_greece_reloaded_website/titans/nyx.php', 'https://www.greeklegendsandmyths.com/nyx.html'],
+      books: ['Percy Jackson”s Greek Gods', 'Percy Jackson”s Greek Heroes', 'The House of Hades'],
+      trivia: [''],
+    },
+    otherEquivalents: {
+      romanEquivalent: 'Nox'
+    }
+},
+
+{
+    name: 'Ourea',
+    gender: 'Mixed',
+    species: 'Protogenoi',
+    logo: '',
+    website: 'https://en.wikipedia.org/wiki/Ourea',
+    image: 'https://www.ancientgreecereloaded.com/files/ancient_greece_reloaded_website/images/pictures/gods_and_goddesses/ourea.jpg',
+    godOf: ['mountains'],
+    description: 'The gods of mountains. Each mountain was believed to have its own deity. The ten ourea are: Aitna, Athos, Helikon, Kithairon, Nysos, Olympus I, Olympus II, Oreios, Parnes, and Tmolus',
+    symbol: [''],
+    sacredAnimals: [''],
+    locationName: 'Mountains',
+    family: {
+      parents: ['Gaia'],
+      siblings: ['The mountains itself', 'Unknown number'],
+      consort: [''],
+      children: ['']
+    },
+    media: {
+      info: ['https://en.wikipedia.org/wiki/Ourea', 'https://www.theoi.com/Protogenos/Ourea.html', 'https://riordan.fandom.com/wiki/Ourae', 'https://greekmythology.wikia.org/wiki/Ourea', 'https://www.ancientgreecereloaded.com/files/ancient_greece_reloaded_website/gods_and_goddesses/ourea.php'],
+      books: ['The House of Hades'],
+      trivia: [''],
+    },
+    otherEquivalents: {
+      romanEquivalent: 'Montes'
+    }
+},
+
+{
+    name: 'Phanes',
+    gender: 'Male',
+    species: 'Protogenoi',
+    logo: '',
+    website: 'https://en.wikipedia.org/wiki/Phanes',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/1/16/Phanes.jpg',
+    godOf: ['Creation', 'Procreation', 'Fertility', 'Light'],
+    description: 'The mystic golden-winged primeval god of procreation and the generation of the new life. He was hatched from the world-egg of Chronos and Ananke, entwined with a seprent. He is also the first king of the universe.',
+    symbol: ['serpent'],
+    sacredAnimals: [''],
+    locationName: 'Universe',
+    family: {
+      parents: ['Chronos', 'Ananke'],
+      siblings: ['Chaos', 'Moirai', 'Horae'],
+      consort: [''],
+      children: ['Nyx']
+    },
+    media: {
+      info: ['https://en.wikipedia.org/wiki/Phanes', 'https://www.theoi.com/Protogenos/Phanes.html ', 'https://greekmythology.wikia.org/wiki/Phanes', 'https://www.greeklegendsandmyths.com/phanes.html' 
+],
+      books: [''],
+      trivia: [''],
+    },
+    otherEquivalents: {
+      romanEquivalent: ''
+    }
+},
+
+{
+    name: 'Pontus',
+    gender: 'male',
+    species: 'Protogenoi',
+    logo: '',
+    website: 'https://en.wikipedia.org/wiki/Pontus_(mythology)',
+    image: 'https://static.wikia.nocookie.net/greekmythology/images/a/ab/Pontus.jpg/revision/latest/scale-to-width-down/398?cb=20160722012242',
+    godOf: ['Sea'],
+    description: 'The god of the sea. He is the sea itself, not merley its resident deity. He is also father of the fish and other sea creatues.',
+    symbol: [''],
+    sacredAnimals: [''],
+    locationName: 'Sea',
+    family: {
+      parents: ['Gaia'],
+      siblings: ['Nyx', 'Achlys', 'Erebus', 'Tartarus', 'Uranus', 'Nereus', 'Thaumas', 'Phorcys', 'Aigaios', 'Okeanos'],
+      consort: ['Gaia', 'Thalassa'],
+      children: ['Nereus', 'Thaumas', 'Phorcys', 'Ceto', 'Eurybia', 'Telchines', 'The Fish', 'All other sea creatures']
+    },
+    media: {
+      info: ['https://en.wikipedia.org/wiki/Pontus_(mythology)', 'https://www.theoi.com/Protogenos/Pontos.html', 'https://riordan.fandom.com/wiki/Pontos', 'https://greekmythology.wikia.org/wiki/Pontos', 'https://www.ancientgreecereloaded.com/files/ancient_greece_reloaded_website/gods_and_goddesses/pontus.php', 'https://www.greeklegendsandmyths.com/pontus.html', 'http://godsofgreekmythology.weebly.com/pontus.html'],
+      books: [''],
+      trivia: [''],
+    },
+    otherEquivalents: {
+      romanEquivalent: ''
+    }
+},
+
+{
+    name: 'Tartarus',
+    gender: 'male',
+    species: 'Protogenoi',
+    logo: '',
+    website: 'https://en.wikipedia.org/wiki/Tartarus',
+    image: '',
+    godOf: ['Stormy pit of Tartarus', 'Underworld'],
+    description: 'He is the god of the stormy pit of Tartaros that lies beneath the foundations of the eath. He is also the body of the pit itself. It is where monsters go to reform once they are slain.',
+    symbol: [''],
+    sacredAnimals: [''],
+    locationName: 'Tartarus (Underworld)',
+    family: {
+      parents: ['Chaos'],
+      siblings: ['Gaia', 'Uranus', 'Erebus', 'Pontus', 'Nyx', 'Achlys'],
+      consort: ['Gaia', 'Aether', 'Erebos', 'Nyx'],
+      children: ['Typhon', 'Gigantes', 'Kampe', 'Echidna']
+    },
+    media: {
+      info: ['https://en.wikipedia.org/wiki/Tartarus', 'https://www.theoi.com/Protogenos/Tartaros.html', 'https://riordan.fandom.com/wiki/Tartarus_(primordial)', 'https://greekmythology.wikia.org/wiki/Tartarus_(protogenos)', 'https://www.ancientgreecereloaded.com/files/ancient_greece_reloaded_website/titans/tartarus.php ', 'https://www.greeklegendsandmyths.com/tartarus.html', 'https://www.greeklegendsandmyths.com/prisoners-of-tartarus.html ', 'http://godsofgreekmythology.weebly.com/tartarus.html'],
+      books: ['Percy Jackson”s Greek Gods', 'The House of Hades', 'The Blood of Olympus'],
+      trivia: [''],
+    },
+    otherEquivalents: {
+      romanEquivalent: ''
+    }
+},
+
+{
+    name: 'Thalassa',
+    gender: 'female',
+    species: 'Protogenoi',
+    logo: '',
+    website: 'https://en.wikipedia.org/wiki/Thalassa',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Hatay_thalassa.jpg',
+    godOf: ['Sea'],
+    description: 'The goddes o the sea. She is considered to be the actual personification of the sea”s water.',
+    symbol: [''],
+    sacredAnimals: [''],
+    locationName: 'Sea',
+    family: {
+      parents: ['Ather', 'Hemera'],
+      siblings: ['Gaia', 'Uranus'],
+      consort: ['Pontus'],
+      children: ['Storm giants', 'The Fish', 'Telchines']
+    },
+    media: {
+      info: ['https://en.wikipedia.org/wiki/Thalassa', 'https://greekmythology.wikia.org/wiki/Thalassa', 'https://www.greeklegendsandmyths.com/thalassa.html', 'https://www.theoi.com/Protogenos/Thalassa.html' 
+],
+      books: [''],
+      trivia: [''],
+    },
+    otherEquivalents: {
+      romanEquivalent: ''
+    }
+},
+
+{
+    name: 'Thanatos',
+    gender: 'male',
+    species: 'Protogenoi',
+    logo: '',
+    website: 'https://en.wikipedia.org/wiki/Thanatos',
+    image: 'https://static.wikia.nocookie.net/greekmythology/images/6/6d/8401.jpg/revision/latest/scale-to-width-down/507?cb=20160626054417',
+    godOf: ['Death'],
+    description: 'God of peaceful death. Though he appears a dark and grey character, his touch is gentle, likened to that of his twin brother Hypnos (Sleep). Violent death is the domain os his blood-craving sistets, the Keres, spirits of slaughter and disease.',
+    symbol: ['theta', 'poppy', 'butterfly', 'sword', 'inverted torch'],
+    sacredAnimals: [''],
+    locationName: 'Underworld',
+    family: {
+      parents: ['Nyx', 'Erebus'],
+      siblings: ['Moros', 'Keres', 'Hypnos', 'Oneiroi', 'Momus', 'Oizys', 'Hesperides', 'Moirai', 'Nemesis', 'Apate', 'Philotes', 'Geras', 'Eris', 'Styx', 'Dolos', 'Ponos', 'Euphrosyne', 'Epiphron', 'Continentia', 'Petulantia', 'Misericordia', 'Pertinacia'],
+      consort: [''],
+      children: ['None']
+    },
+    media: {
+      info: ['https://en.wikipedia.org/wiki/Thanatos', 'https://www.theoi.com/Daimon/Thanatos.html', 'https://riordan.fandom.com/wiki/Thanatos', 'https://greekmythology.wikia.org/wiki/Thanatos', 'https://www.britannica.com/topic/Thanatos-Greek-mythology', 'https://www.ancientgreecereloaded.com/files/ancient_greece_reloaded_website/gods_and_goddesses/thanatos.php'],
+      books: ['The Son of Neptune', 'The Mark of Athena', 'The House of Hades', 'Percy Jackson”s Greek Gods'],
+      trivia: [''],
+    },
+    otherEquivalents: {
+      romanEquivalent: 'Mors'
+    }
+},
+
+{
+    name: 'Uranus',
+    gender: 'male',
+    species: 'Protogenoi',
+    logo: '',
+    website: 'https://en.wikipedia.org/wiki/Uranus_(mythology)',
+    logo: '',
+    image: 'https://www.greekmythology.com/images/mythology/uranus_large_image_14.jpg',
+    godOf: ['Sky'],
+    description: 'He was the god of the solid sky-dome. He was the literal sky, imagined as a solid dome of brass, decorated with stars, whoe edges decended to rest upon he outermost limits of the flat earth. He was the first king of the cosmos who was castrated and deposed by his own son Cronus',
+    symbol: ['zodiac wheel'],
+    sacredAnimals: [''],
+    locationName: 'Sky',
+    family: {
+      parents: ['Gaia'],
+      siblings: ['Unknown number'],
+      consort: ['Gaia'],
+      children: ['Oceanus', 'Crius', 'Iapetus', 'Rhea', 'Mnemosyne', 'Tethys', 'Coeus', 'Hyperion', 'Theia', 'Themis', 'Phoebe', 'Cronus', 'Brontew', 'Steropes', 'Arges', 'Cottus', 'Briareus', 'Gyges', 'Alecto', 'Megaera', 'Tisiphone', 'Mneme', 'Melete', 'Aoide', 'Porphyrion', 'Alcyoenus', 'Ephialtes', 'Eurytus', 'Clytius', 'Mimas', 'Pallas', 'Polybotes', 'Enceladus', 'Hippolytus', 'Gration', 'Agrius', 'Thoas', 'Actaeus', 'Megalesius', 'Ormenus', 'Lycus', 'Meliae', 'Curetes', 'Aetna', 'Aristaeus']
+    },
+    media: {
+      info: ['https://en.wikipedia.org/wiki/Uranus_(mythology)', 'https://www.theoi.com/Protogenos/Ouranos.html', 'https://greekmythology.wikia.org/wiki/Ouranos', 'https://www.ancientgreecereloaded.com/files/ancient_greece_reloaded_website/titans/ouranos.php', 'https://www.greeklegendsandmyths.com/ouranos.html', 'http://godsofgreekmythology.weebly.com/uranus.html', 'https://www.britannica.com/topic/Uranus-mythology'],
+      books: [''],
+      trivia: [''],
+    },
+    otherEquivalents: {
+      romanEquivalent: 'Caaelus'
+    }
+},
+
+
   // ! MAJOR TITANS
 
   {

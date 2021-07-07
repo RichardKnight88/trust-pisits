@@ -2051,14 +2051,52 @@ background-size: contain;
   color: white;
 }
 
+// ! RESULT BOX COMPONENT
 
+h3.result-box-heading-margin:last-child {
+  margin-bottom: -1.5rem;
+}
 
+.engraved-box-heading:hover {
+  text-decoration: underline;
+}
+
+a.engraved-two-normal-text {
+  background-color: rgba(102, 51, 0, 0.6);
+  // background-color: rgba(153, 77, 0, 0.6);
+  color: transparent;
+    background-clip: text;
+  margin-left: 3;
+  text-shadow: 1px 1px 1px hsla(0,0%,255%,0.6);
+  p {
+    font-size: 1em;
+    .bold {
+      font-size: 1.2em;
+      font-weight: 700;
+    }
+  }
+}
+
+.info-page-container-margin {
+  margin-bottom: 1.5rem;
+}
 
 
 
 // ! TRYING TO SORT RESPONSIVNES OF LANDING CUBE
 
 @media only screen and (max-width: 600px) {
+
+  .ui.grid>.row.flexing-mobile {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .ui.grid>.column:not(.row), .ui.grid>.row>.column {
+    width: 35%;
+    margin-left: 2%;
+}
+
   .box {  
     width: 200px;
     height:200px;
