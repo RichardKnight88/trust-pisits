@@ -489,11 +489,17 @@ body ::-webkit-scrollbar-track {
     }
   }
 
+  .personal-stories{
+
+    margin-bottom: 0;
+
   .stories-figure {
     
+    height: 730px;
+    flex-direction: column;
 
     .stories-image {
-      height: 400px;
+      max-height: 400px;
       width: 90vh;
       background-position: center;
       display: flex;
@@ -504,6 +510,7 @@ body ::-webkit-scrollbar-track {
         padding: 0;
       }
     }
+  }
 }
 }
 
