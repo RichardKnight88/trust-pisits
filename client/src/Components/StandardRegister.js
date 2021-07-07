@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Button, Form, Divider } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
-import { useHistory } from 'react-router-dom'
+import { useHistory, useLocation } from 'react-router-dom'
 import axios from 'axios'
 
 
@@ -20,6 +20,23 @@ const StandardRegister = () => {
     isDeusUser: false,
   })
 
+  const [location, setLocation] = useState(null)
+  const lastLocation = useLocation().pathname
+
+  useEffect(() => {
+    // console.log('LOCATION', lastLocation)
+    if (location === '/deus_register') {
+      const settingLocation = { ...registerData, isDeusUser: true }
+      console.log('TRUE>>>', settingLocation)
+      setRegisterData(settingLocation)  
+    } else {
+      const settingLocation = { ...registerData, isDeusUser: false }
+      console.log('FALSE >>>', settingLocation)
+      setRegisterData(settingLocation)  
+    }
+    setLocation(lastLocation)
+  }, [location, lastLocation]) 
+
   // Handling error
   const [errors, setErrors] = useState('')
 
@@ -27,7 +44,7 @@ const StandardRegister = () => {
   const handleRegisterData = (event) => {
     const getUserData = { ...registerData, [event.target.name]: event.target.value }
     const newError = { ...errors, [event.target.name]: '' }
-    setRegisterData(getUserData)
+    setRegisterData(getUserData) 
     setErrors(newError)
   }
 
@@ -39,7 +56,7 @@ const StandardRegister = () => {
       await axios.post('/api/register', registerData)
       const response = await axios.post('/api/login', { email: registerData.email, password: registerData.password })
       window.localStorage.setItem('token', response.data.token)
-      history.push('/home')
+      registerData.isDeusUser ? history.push('/create-god') : history.push('/home')
     } catch (err) {
       console.log(err)
       window.alert('Your email or username is already in use.')
@@ -47,7 +64,7 @@ const StandardRegister = () => {
     }
   }
 
-  console.log('DATA FROM REGISTER >>>', registerData)
+  // console.log('DATA FROM REGISTER >>>', registerData)
 
   return (
     <>

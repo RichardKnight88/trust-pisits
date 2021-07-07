@@ -32,11 +32,15 @@ const App = () => {
         </Route>
 
         <Route path="/deus_register">
-          <DeusRegister />
+          <StandardRegister />
         </Route>
 
         <Route path="/register">
           <StandardRegister />
+        </Route>
+
+        <Route path="/create-god">
+          <DeusRegister />
         </Route>
 
         <Route path="/login">

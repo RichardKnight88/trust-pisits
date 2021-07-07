@@ -51,7 +51,7 @@ const species = [
   { text: 'Titan', value: 'titan' }
 ]
 
-const DeusRegister = () => {
+const DeusCreation = () => {
 
   return (
     <>
@@ -103,4 +103,4 @@ const DeusRegister = () => {
     </>
   )
 }
-export default DeusRegister
+export default DeusCreation
