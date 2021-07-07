@@ -19,8 +19,8 @@ const GodsCard = ( { name, avgRating, gender, comments }) => {
             <h3 className='result-box-heading-margin'>
               <Link to={`/gods/${name.toLowerCase()}`} className='engraved-two-normal-text'>
                 {name}&nbsp;
-                <span>|</span>&nbsp;
-                {gender === 'Mixed' ? `${name.toLowerCase()}.theoi` : gender === 'Male' ? `${name.toLowerCase()}.theos` : `${name.toLowerCase()}.thea` }
+                &nbsp;&nbsp;<span>|</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                {gender === 'Mixed' ? `www.${name.toLowerCase()}.theoi` : gender === 'Male' ? `www.${name.toLowerCase()}.theos` : `www.${name.toLowerCase()}.thea` }
               </Link>
             </h3>
           </Grid.Row>
