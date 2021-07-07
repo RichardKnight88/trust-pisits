@@ -25,7 +25,7 @@ const seedDatabase = async () => {
 
     commentsSeed.map(commentEntry => {
       // console.log('COMMENT ENTRY PLACEHOLDER', commentEntry.placeholderOwner)
-
+      // console.log('COMMENT ENTRY BEFORE USER MATCH', commentEntry)
       commentEntry.owner = getUserIdFromName(commentEntry.placeholderOwner, users)._id
       commentEntry.ownerUsername = getUserIdFromName(commentEntry.placeholderOwner, users).username
       // console.log('COMMENT ENTRY AFTER', commentEntry)
@@ -47,8 +47,9 @@ const seedDatabase = async () => {
       // console.log('COMMENTS TYPE', typeof(god.comments))
       // console.log('Name', god.name)
       // console.log(matchGodToComment(god.name, comments))
+      // console.log('Name', entry.placeholderAboutGod)
       const godMatch = matchGodToComment(entry.placeholderAboutGod, godsWithOwner)
-      console.log('COMMENT TO PUSH', godMatch)
+      // console.log('COMMENT TO PUSH', godMatch)
 
       if (godMatch) {
         godMatch.comments.push(entry)

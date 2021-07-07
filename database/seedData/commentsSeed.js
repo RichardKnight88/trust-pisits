@@ -6,6 +6,12 @@ export default [
     placeholderAboutGod: 'Zeus'
   }, 
   {
+    text: 'Great god. Really helped me out with the Gorgons by letting me borrow those sweet winged sandals',
+    rating: 5,
+    placeholderOwner: 'Perseus', 
+    placeholderAboutGod: 'Hermes'
+  }, 
+  {
     text: 'Married her brother',
     rating: 2,
     placeholderOwner: 'Poseidon', 
@@ -16,6 +22,12 @@ export default [
     rating: 3,
     placeholderOwner: 'Danae', 
     placeholderAboutGod: 'Zeus'
+  }, 
+  {
+    text: 'My favourite half-sister. Gave her the head of Medusa as a gift',
+    rating: 4,
+    placeholderOwner: 'Perseus', 
+    placeholderAboutGod: 'Athena'
   }, 
   {
     text: 'Serious ego problem. I insulted him and he kept me from home for years as punishment. Lost many good friends to vile creatures because of him.',
@@ -52,5 +64,42 @@ export default [
     rating: 1,
     placeholderOwner: 'Prometheus', 
     placeholderAboutGod: 'Zeus'
+  }, 
+  {
+    // eslint-disable-next-line quotes
+    text: "Handsome, strong and well armed. He loved war. What's not to like?",
+    rating: 5,
+    placeholderOwner: 'Spartan', 
+    placeholderAboutGod: 'Ares'
+  }, 
+  {
+    text: 'Truly an evil god. Committed many atrocities through his love of war.',
+    rating: 1,
+    placeholderOwner: 'Lawyer-1980', 
+    placeholderAboutGod: 'Ares'
+  }, 
+  {
+    text: 'A true inspiration. The reason I chose a career in midwifery.',
+    rating: 5,
+    placeholderOwner: 'the-midwife', 
+    placeholderAboutGod: 'Artemis'
+  }, 
+  {
+    text: 'Absolutely beautiful.',
+    rating: 5,
+    placeholderOwner: 'Paris', 
+    placeholderAboutGod: 'Aphrodite'
+  }, 
+  {
+    text: 'Not a loyal husband by any stretch.',
+    rating: 2,
+    placeholderOwner: 'Hera', 
+    placeholderAboutGod: 'Zeus'
+  }, 
+  {
+    text: 'He ate me. ATE ME! HIS OWN DAUGHTER!! Would give zero stars if I could.',
+    rating: 1,
+    placeholderOwner: 'Demeter', 
+    placeholderAboutGod: 'Cronus'
   }
 ]

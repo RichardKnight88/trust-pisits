@@ -188,14 +188,15 @@ export default [
     media: {
       info: ['https://mysticalshores.com/2017/01/01/the-goddess-achlys/', 'http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0104%3Aalphabetic+letter%3DA%3Aentry+group%3D3%3Aentry%3Dachlys-bio-1', 'https://en.wikipedia.org/wiki/Achlys', 'https://riordan.fandom.com/wiki/Akhlys'],
       books: ['The House of Hades', 'The Blood of Olympus'],
-      trivia: [''],
+      trivia: ['']
     },
     otherEquivalents: {
       romanEquivalent: ''
-    }
-},
+    },
+    comments: []
+  },
 
-{
+  {
     name: 'Aether',
     gender: 'Male',
     species: 'Protogenoi',
@@ -209,28 +210,29 @@ export default [
     locationName: 'The Upper Air',
     family: {
       parents: ['Erebus', 'Nyx'],
-      siblings: ['Hemera', 'Hypnos', 'Thanatos','Eris', 'Clotho', 'Lachesis', 'Atropos', 'Apate', 'Nemesis', 'Eleos','the Keres', 'Hecate', 'Alecto', 'Megaera', 'Tisiphone', 'Lyssa', 'Dolos', 'Momus', 'Moros', 'Oizys'
-],
+      siblings: ['Hemera', 'Hypnos', 'Thanatos', 'Eris', 'Clotho', 'Lachesis', 'Atropos', 'Apate', 'Nemesis', 'Eleos', 'the Keres', 'Hecate', 'Alecto', 'Megaera', 'Tisiphone', 'Lyssa', 'Dolos', 'Momus', 'Moros', 'Oizys'
+      ],
       consort: ['Hemera'],
       children: ['Gaia', 'Thalassa', 'Uranus', 'Aergia', 'Pontus', 'Tartarus']
     },
     media: {
       info: ['https://greekmythology.wikia.org/wiki/Aether', 'https://www.theoi.com/Protogenos/Aither.html', 'https://en.wikipedia.org/wiki/Aether_(mythology)', 'https://www.britannica.com/topic/Aether'],
       books: [''],
-      trivia: [''],
+      trivia: ['']
     },
     otherEquivalents: {
       romanEquivalent: 'Ether'
-    }
-},
+    },
+    comments: []
+  },
 
-{
+  {
     name: 'Aion',
     gender: 'Male',
     species: 'Protogenoi',
     logo: '',
     website: 'https://en.wikipedia.org/wiki/Aion_(deity)',
-    image:  'https://upload.wikimedia.org/wikipedia/commons/4/4e/Aion_mosaic_Glyptothek_Munich_W504.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/4/4e/Aion_mosaic_Glyptothek_Munich_W504.jpg',
     godOf: ['Cyclical Time', 'Eternity', 'Zodiac'],
     description: 'The deity associated with time, the orb or circle encompassing the universe, and the zodiac. The "time" represented by him is unbounded, in contrast to Chronos as empirical time divided into past, present, and future. He is thus a god of the ages, associated with mystery religions concerned with the afterlife.',
     symbol: [''],
@@ -245,14 +247,15 @@ export default [
     media: {
       info: ['https://www.greekboston.com/culture/mythology/aion/', 'https://en.wikipedia.org/wiki/Aion_(deity)'],
       books: [''],
-      trivia: [''],
+      trivia: ['']
     },
     otherEquivalents: {
       romanEquivalent: 'Aeternitas'
-    }
-},
+    },
+    comments: []
+  },
 
-{
+  {
     name: 'Ananke',
     gender: 'Female',
     species: 'Protogenoi',
@@ -273,14 +276,15 @@ export default [
     media: {
       info: ['https://en.wikipedia.org/wiki/Ananke', 'https://www.theoi.com/Protogenos/Ananke.html', 'https://greekmythology.wikia.org/wiki/Anance', 'https://www.britannica.com/topic/Ananke-Greek-mythology'],
       books: ['The Cunning Man', 'Tales of Pirx the Pilot', 'Ravirn', 'The Wicked + The Divine', 'Mobile Suit Gundam'],
-      trivia: [''],
+      trivia: ['']
     },
     otherEquivalents: {
       romanEquivalent: 'Necessitas'
-    }
-},
+    },
+    comments: []
+  },
 
-{
+  {
     name: 'Chaos',
     gender: 'Genderless',
     species: 'Protogenoi',
@@ -301,14 +305,15 @@ export default [
     media: {
       info: ['https://en.wikipedia.org/wiki/Chaos_(cosmogony)#Greco-Roman_tradition', 'https://www.theoi.com/Protogenos/Khaos.html', 'https://www.britannica.com/topic/Chaos-ancient-Greek-religion', 'https://greekmythology.wikia.org/wiki/Chaos'],
       books: ['The House of Hades', 'Percy Jackson”s Greek Gods'],
-      trivia: [''],
+      trivia: ['']
     },
     otherEquivalents: {
       romanEquivalent: 'Aer'
-    }
-},
+    },
+    comments: []
+  },
 
-{
+  {
     name: 'Chronos',
     gender: 'Male',
     species: 'Protogenoi',
@@ -329,14 +334,15 @@ export default [
     media: {
       info: ['https://en.wikipedia.org/wiki/Chronos', 'https://www.theoi.com/Protogenos/Khronos.html', 'https://greek-myth.fandom.com/wiki/Chronos', 'https://greekmythology.wikia.org/wiki/Chronos_(protogenos)'],
       books: [''],
-      trivia: [''],
+      trivia: ['']
     },
     otherEquivalents: {
       romanEquivalent: ''
-    }
-},
+    },
+    comments: []
+  },
 
-{
+  {
     name: 'Erebus',
     gender: 'Male',
     species: 'Protogenoi',
@@ -352,19 +358,20 @@ export default [
       parents: ['Chaos'],
       siblings: ['Nyx', 'Tartarus', 'Gaia', 'Eros'],
       consort: ['Nyx'],
-      children: ['Thanatos', 'Apate', 'Aether', 'Hemera', 'Hypnos', 'the Keres', 'Moros', 'the Moirai', 'the Hesperides', 'Dolos', 'Nemesis', 'Oizys', 'Oneiroi', 'Momus', 'Philotes', 'Eris','Geras']
+      children: ['Thanatos', 'Apate', 'Aether', 'Hemera', 'Hypnos', 'the Keres', 'Moros', 'the Moirai', 'the Hesperides', 'Dolos', 'Nemesis', 'Oizys', 'Oneiroi', 'Momus', 'Philotes', 'Eris', 'Geras']
     },
     media: {
       info: ['https://en.wikipedia.org/wiki/Erebus', 'https://www.theoi.com/Protogenos/Erebos.html', 'https://greekmythology.wikia.org/wiki/Erebos', 'https://www.britannica.com/topic/Erebus'],
       books: [''],
-      trivia: [''],
+      trivia: ['']
     },
     otherEquivalents: {
       romanEquivalent: 'Scouts'
-    }
-},
+    },
+    comments: []
+  },
 
-{
+  {
     name: 'Eros',
     gender: 'Male',
     species: 'Protogenoi',
@@ -385,14 +392,15 @@ export default [
     media: {
       info: ['https://riordan.fandom.com/wiki/Eros', 'https://en.wikipedia.org/wiki/Eros', 'https://www.theoi.com/Ouranios/Eros.html'],
       books: ['Percy Jackson”s Greek Gods', 'Percy Jackson”s Greek Heroes'],
-      trivia: [''],
+      trivia: ['']
     },
     otherEquivalents: {
       romanEquivalent: 'Cupid'
-    }
-},
+    },
+    comments: []
+  },
 
-{
+  {
     name: 'Gaia',
     gender: 'Female',
     species: 'Protogenoi',
@@ -413,14 +421,15 @@ export default [
     media: {
       info: [''],
       books: ['The Titan”s Curse', 'The Battle of the Labyrinth', 'The Lost Hero', 'The Son of Neptune', 'Son of Magic', 'The Mark of Athena', 'The House of Hades', 'Percy Jackson”s Greek Gods', 'The Blood of Olympus', 'Camp Jupiter Classified: A Probatio”s Journal'],
-      trivia: [''],
+      trivia: ['']
     },
     otherEquivalents: {
       romanEquivalent: 'Terra'
-    }
-},
+    },
+    comments: []
+  },
 
-{
+  {
     name: 'Hemera',
     gender: 'Female',
     species: 'Protogenoi',
@@ -441,14 +450,15 @@ export default [
     media: {
       info: ['https://en.wikipedia.org/wiki/Hemera', 'https://www.theoi.com/Protogenos/Hemera.html', 'https://riordan.fandom.com/wiki/Hemera', 'https://greekmythology.wikia.org/wiki/Hemera'],
       books: ['Percy Jackson”s Greek Gods', 'Percy Jackson”s Greek Heroes', 'The House of Hades'],
-      trivia: [''],
+      trivia: ['']
     },
     otherEquivalents: {
       romanEquivalent: 'Dies'
-    }
-},
+    },
+    comments: []
+  },
 
-{
+  {
     name: 'Hypnos',
     gender: 'Male',
     species: 'Protogenoi',
@@ -469,14 +479,15 @@ export default [
     media: {
       info: ['https://en.wikipedia.org/wiki/Hypnos', 'https://www.theoi.com/Daimon/Hypnos.html', 'https://greekmythology.wikia.org/wiki/Hypnos'],
       books: ['The Last Olympian', 'The Lost Hero', 'The House of Hades', 'The Hidden Oracle', 'The Burning Maze'],
-      trivia: [''],
+      trivia: ['']
     },
     otherEquivalents: {
       romanEquivalent: 'Somnus'
-    }
-},
+    },
+    comments: []
+  },
 
-{
+  {
     name: 'Nemesis',
     gender: 'Female',
     species: 'Protogenoi',
@@ -497,14 +508,15 @@ export default [
     media: {
       info: ['https://en.wikipedia.org/wiki/Nemesis', 'https://www.theoi.com/Daimon/Nemesis.html', 'https://riordan.fandom.com/wiki/Nemesis', 'https://greekmythology.wikia.org/wiki/Nemesis', 'https://www.britannica.com/topic/Nemesis-Greek-religion'],
       books: ['The Lightning Thief', 'The Battle of the Labyrinth', 'The Last Olympian', 'The Mark of Athena', 'The Hidden Oracle'],
-      trivia: [''],
+      trivia: ['']
     },
     otherEquivalents: {
       romanEquivalent: ''
-    }
-},
+    },
+    comments: []
+  },
 
-{
+  {
     name: 'Nesoi',
     gender: 'Female',
     species: 'Protogenoi',
@@ -519,7 +531,7 @@ export default [
     media: {
       info: ['https://en.wikipedia.org/wiki/Nesoi', 'https://www.theoi.com/Protogenos/Nesoi.html'],
       books: [''],
-      trivia: [''],
+      trivia: ['']
     },
     family: {
       parents: ['Gaia'],
@@ -529,10 +541,11 @@ export default [
     },
     otherEquivalents: {
       romanEquivalent: ''
-    }
-},
+    },
+    comments: []
+  },
 
-{
+  {
     name: 'Nyx',
     gender: 'Female',
     species: 'Protogenoi',
@@ -553,14 +566,15 @@ export default [
     media: {
       info: ['https://en.wikipedia.org/wiki/Nyx', 'https://www.theoi.com/Protogenos/Nyx.html', 'https://www.britannica.com/topic/Nyx', 'https://greekmythology.wikia.org/wiki/Nyx', 'https://riordan.fandom.com/wiki/Nyx ', 'https://greekgoddesses.fandom.com/wiki/Nyx ', 'https://www.ancientgreecereloaded.com/files/ancient_greece_reloaded_website/titans/nyx.php', 'https://www.greeklegendsandmyths.com/nyx.html'],
       books: ['Percy Jackson”s Greek Gods', 'Percy Jackson”s Greek Heroes', 'The House of Hades'],
-      trivia: [''],
+      trivia: ['']
     },
     otherEquivalents: {
       romanEquivalent: 'Nox'
-    }
-},
+    },
+    comments: []
+  },
 
-{
+  {
     name: 'Ourea',
     gender: 'Mixed',
     species: 'Protogenoi',
@@ -581,14 +595,15 @@ export default [
     media: {
       info: ['https://en.wikipedia.org/wiki/Ourea', 'https://www.theoi.com/Protogenos/Ourea.html', 'https://riordan.fandom.com/wiki/Ourae', 'https://greekmythology.wikia.org/wiki/Ourea', 'https://www.ancientgreecereloaded.com/files/ancient_greece_reloaded_website/gods_and_goddesses/ourea.php'],
       books: ['The House of Hades'],
-      trivia: [''],
+      trivia: ['']
     },
     otherEquivalents: {
       romanEquivalent: 'Montes'
-    }
-},
+    },
+    comments: []
+  },
 
-{
+  {
     name: 'Phanes',
     gender: 'Male',
     species: 'Protogenoi',
@@ -607,17 +622,18 @@ export default [
       children: ['Nyx']
     },
     media: {
-      info: ['https://en.wikipedia.org/wiki/Phanes', 'https://www.theoi.com/Protogenos/Phanes.html ', 'https://greekmythology.wikia.org/wiki/Phanes', 'https://www.greeklegendsandmyths.com/phanes.html' 
-],
+      info: ['https://en.wikipedia.org/wiki/Phanes', 'https://www.theoi.com/Protogenos/Phanes.html ', 'https://greekmythology.wikia.org/wiki/Phanes', 'https://www.greeklegendsandmyths.com/phanes.html'
+      ],
       books: [''],
-      trivia: [''],
+      trivia: ['']
     },
     otherEquivalents: {
       romanEquivalent: ''
-    }
-},
+    },
+    comments: []
+  },
 
-{
+  {
     name: 'Pontus',
     gender: 'male',
     species: 'Protogenoi',
@@ -638,14 +654,15 @@ export default [
     media: {
       info: ['https://en.wikipedia.org/wiki/Pontus_(mythology)', 'https://www.theoi.com/Protogenos/Pontos.html', 'https://riordan.fandom.com/wiki/Pontos', 'https://greekmythology.wikia.org/wiki/Pontos', 'https://www.ancientgreecereloaded.com/files/ancient_greece_reloaded_website/gods_and_goddesses/pontus.php', 'https://www.greeklegendsandmyths.com/pontus.html', 'http://godsofgreekmythology.weebly.com/pontus.html'],
       books: [''],
-      trivia: [''],
+      trivia: ['']
     },
     otherEquivalents: {
       romanEquivalent: ''
-    }
-},
+    },
+    comments: []
+  },
 
-{
+  {
     name: 'Tartarus',
     gender: 'male',
     species: 'Protogenoi',
@@ -666,14 +683,15 @@ export default [
     media: {
       info: ['https://en.wikipedia.org/wiki/Tartarus', 'https://www.theoi.com/Protogenos/Tartaros.html', 'https://riordan.fandom.com/wiki/Tartarus_(primordial)', 'https://greekmythology.wikia.org/wiki/Tartarus_(protogenos)', 'https://www.ancientgreecereloaded.com/files/ancient_greece_reloaded_website/titans/tartarus.php ', 'https://www.greeklegendsandmyths.com/tartarus.html', 'https://www.greeklegendsandmyths.com/prisoners-of-tartarus.html ', 'http://godsofgreekmythology.weebly.com/tartarus.html'],
       books: ['Percy Jackson”s Greek Gods', 'The House of Hades', 'The Blood of Olympus'],
-      trivia: [''],
+      trivia: ['']
     },
     otherEquivalents: {
       romanEquivalent: ''
-    }
-},
+    },
+    comments: []
+  },
 
-{
+  {
     name: 'Thalassa',
     gender: 'female',
     species: 'Protogenoi',
@@ -692,17 +710,18 @@ export default [
       children: ['Storm giants', 'The Fish', 'Telchines']
     },
     media: {
-      info: ['https://en.wikipedia.org/wiki/Thalassa', 'https://greekmythology.wikia.org/wiki/Thalassa', 'https://www.greeklegendsandmyths.com/thalassa.html', 'https://www.theoi.com/Protogenos/Thalassa.html' 
-],
+      info: ['https://en.wikipedia.org/wiki/Thalassa', 'https://greekmythology.wikia.org/wiki/Thalassa', 'https://www.greeklegendsandmyths.com/thalassa.html', 'https://www.theoi.com/Protogenos/Thalassa.html'
+      ],
       books: [''],
-      trivia: [''],
+      trivia: ['']
     },
     otherEquivalents: {
       romanEquivalent: ''
-    }
-},
+    },
+    comments: []
+  },
 
-{
+  {
     name: 'Thanatos',
     gender: 'male',
     species: 'Protogenoi',
@@ -723,20 +742,20 @@ export default [
     media: {
       info: ['https://en.wikipedia.org/wiki/Thanatos', 'https://www.theoi.com/Daimon/Thanatos.html', 'https://riordan.fandom.com/wiki/Thanatos', 'https://greekmythology.wikia.org/wiki/Thanatos', 'https://www.britannica.com/topic/Thanatos-Greek-mythology', 'https://www.ancientgreecereloaded.com/files/ancient_greece_reloaded_website/gods_and_goddesses/thanatos.php'],
       books: ['The Son of Neptune', 'The Mark of Athena', 'The House of Hades', 'Percy Jackson”s Greek Gods'],
-      trivia: [''],
+      trivia: ['']
     },
     otherEquivalents: {
       romanEquivalent: 'Mors'
-    }
-},
+    },
+    comments: []
+  },
 
-{
+  {
     name: 'Uranus',
     gender: 'male',
     species: 'Protogenoi',
     logo: '',
     website: 'https://en.wikipedia.org/wiki/Uranus_(mythology)',
-    logo: '',
     image: 'https://www.greekmythology.com/images/mythology/uranus_large_image_14.jpg',
     godOf: ['Sky'],
     description: 'He was the god of the solid sky-dome. He was the literal sky, imagined as a solid dome of brass, decorated with stars, whoe edges decended to rest upon he outermost limits of the flat earth. He was the first king of the cosmos who was castrated and deposed by his own son Cronus',
@@ -752,12 +771,13 @@ export default [
     media: {
       info: ['https://en.wikipedia.org/wiki/Uranus_(mythology)', 'https://www.theoi.com/Protogenos/Ouranos.html', 'https://greekmythology.wikia.org/wiki/Ouranos', 'https://www.ancientgreecereloaded.com/files/ancient_greece_reloaded_website/titans/ouranos.php', 'https://www.greeklegendsandmyths.com/ouranos.html', 'http://godsofgreekmythology.weebly.com/uranus.html', 'https://www.britannica.com/topic/Uranus-mythology'],
       books: [''],
-      trivia: [''],
+      trivia: ['']
     },
     otherEquivalents: {
       romanEquivalent: 'Caaelus'
-    }
-},
+    },
+    comments: []
+  },
 
 
   // ! MAJOR TITANS
@@ -787,7 +807,8 @@ export default [
     },
     otherEquivalents: {
       romanEquivalent: 'Polus'
-    }
+    },
+    comments: []
   },
 
   {
@@ -815,7 +836,8 @@ export default [
     },
     otherEquivalents: {
       romanEquivalent: ''
-    }
+    },
+    comments: []
   },
 
   {
@@ -843,7 +865,8 @@ export default [
     },
     otherEquivalents: {
       romanEquivalent: 'Saturn'
-    }
+    },
+    comments: []
   },
 
   {
@@ -872,7 +895,8 @@ export default [
     },
     otherEquivalents: {
       romanEquivalent: ''
-    }
+    },
+    comments: []
   },
 
   {
@@ -900,7 +924,8 @@ export default [
     },
     otherEquivalents: {
       romanEquivalent: ''
-    }
+    },
+    comments: []
   },
 
   {
@@ -928,7 +953,8 @@ export default [
     },
     otherEquivalents: {
       romanEquivalent: 'Moneta'
-    }
+    },
+    comments: []
   },
 
   {
@@ -956,7 +982,8 @@ export default [
     },
     otherEquivalents: {
       romanEquivalent: 'Oceanus'
-    }
+    },
+    comments: []
   },
 
   {
@@ -984,7 +1011,8 @@ export default [
     },
     otherEquivalents: {
       romanEquivalent: ''
-    }
+    },
+    comments: []
   },
 
   {
@@ -1012,7 +1040,8 @@ export default [
     },
     otherEquivalents: {
       romanEquivalent: 'Ops'
-    }
+    },
+    comments: []
   },
 
   {
@@ -1040,7 +1069,8 @@ export default [
     },
     otherEquivalents: {
       romanEquivalent: ''
-    }
+    },
+    comments: []
   },
 
   {
@@ -1068,7 +1098,8 @@ export default [
     },
     otherEquivalents: {
       romanEquivalent: ''
-    }
+    },
+    comments: []
   },
 
   {
@@ -1096,7 +1127,8 @@ export default [
     },
     otherEquivalents: {
       romanEquivalent: ''
-    }
+    },
+    comments: []
   }
 
 
