@@ -1,15 +1,16 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 /* eslint-disable no-unused-vars */
-import axios from 'axios'
 import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 import { Link } from 'react-router-dom'
 import { definedRating } from '../sematinicElements/ratings.js'
-import prometheus from '../Images/prometheus.jpg'
+import Searchbar from './Searchbar'
 
 
 
 const Home = () => {
 
+  const [godsData, setGodsData] = useState([])
   const [comments, setComments] = useState([])
   const [categories, setCategories] = useState([])
   const [errors, setErrors] = useState(false)
@@ -27,6 +28,7 @@ const Home = () => {
 
         // console.log('DATA', data.filter(item => item.comments.length > 0))
 
+        setGodsData(data)
 
         const godsWithActiveComments = data.filter(item => item.comments.length > 0)
 
@@ -68,7 +70,7 @@ const Home = () => {
 
   }, [])
 
-  console.log('CATEGORIES', categories)
+  // console.log('CATEGORIES', categories)
 
   return (
     <>
@@ -84,13 +86,15 @@ const Home = () => {
               <h2 className="search-subheader">Read reviews. Write reviews. Find gods.</h2>
 
               <div className="searchBar-container">
-                <form className="home-searchbar">
+                {/* <form className="home-searchbar">
                   <input className="searchbar" placeholder="God or god types" />
 
                   <div className="button-container">
                     <button className="hero-search-button">search</button>
                   </div>
-                </form>
+                </form> */}
+                {/* {console.log('GODS DATA BEFORE', godsData)} */}
+                <Searchbar godsData={godsData} />
               </div>
 
 
@@ -141,7 +145,7 @@ const Home = () => {
             Recent reviews
           </div>
 
-          {comments &&
+          {comments.length > 0 &&
 
             <div className='scrolling-comments-container'>
 
