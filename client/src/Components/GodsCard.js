@@ -6,64 +6,44 @@ import { definedRating } from '../sematinicElements/ratings.js'
 
 // COMPONENT SHOWING FILTERED GODS
 
-const GodsCard = ( { name, image, logo, species, avgRating, locationName }) => {
+const GodsCard = ( { name, avgRating, gender, comments }) => {
   
   return (
-  // <div>
-  //   <Link  to={`/gods/${name.toLowerCase()}`}>
+
+    <div className='container info-page-container-margin'>
+
+      <div className='info-page-width-two'>
         
-  //     <h3 className="color">{name}</h3>
-  //     {/* <img src={image} alt={name} title={name}/> */}
-  //   </Link>
-  // </div>
+        <Grid>
+          <Grid.Row>
+            <h3 className='result-box-heading-margin'>
+              <Link to={`/gods/${name.toLowerCase()}`} className='engraved-two-normal-text'>
+                {name}&nbsp;
+                <span>|</span>&nbsp;
+                {gender === 'Mixed' ? `${name.toLowerCase()}.theoi` : gender === 'Male' ? `${name.toLowerCase()}.theos` : `${name.toLowerCase()}.thea` }
+              </Link>
+            </h3>
+          </Grid.Row>
 
-    <div>
-      <Link to={`/gods/${name.toLowerCase()}`}>
-
-        <div className='container'>
-          <div className='info-page-width-category'>
-            <Grid>
-              <Grid.Column>
-                <Segment>
-                  <Grid columns={2} relaxed='very'>
-
-                    <Grid.Column className='inner-divider-width-one-category'>
-                      <Image src={logo} />
-                    </Grid.Column>
-
-                    <Grid.Column className='inner-divider-width-two'>
-                      <div className='content-towards-logo'>
-                        <h1 className='engraved-two-normal-text'>{name}</h1>
-                        {/* <p>Reviews {theosCommentsLength}</p> */}
-
-                        <>
-                          {avgRating && 
-                            <div className='start-rating-info-positioning'>
-                              <div className='start-rating-info-positioning-padding'>{definedRating(Math.round(avgRating))}</div>
-                              <div className='start-rating-info-positioning-padding engraved-two-normal-text'>{avgRating}</div>
-                            </div>
-                          }
-                        </>
-
-                        <div>{species}</div>
-
-                        <div>{locationName}</div>
-                      </div>
-                    </Grid.Column>
-
-                  </Grid>
-
-
-                </Segment>
-              </Grid.Column>
-            </Grid>
-          </div>
-        </div>
-
-      </Link>
-
-      
+          <Grid.Row className='result-box-bottom-margin'>
+            <>   
+              {avgRating && 
+                <div className='start-rating-info-positioning'>
+                  <div>{definedRating(Math.round(avgRating))}</div>
+                  &nbsp;&nbsp;
+                  <span>{comments.length} reviews</span>&nbsp;&nbsp;
+                  {avgRating !== 'No ratings' ? `|  TheioScore ${avgRating}` : ''}      
+                  &nbsp;&nbsp;<span>|</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <Link>Write a review</Link>
+                </div>
+              }
+            </>
+          </Grid.Row>
+        </Grid>
+          
+      </div>
     </div>
+
   ) 
 }
 

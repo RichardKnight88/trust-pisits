@@ -31,6 +31,7 @@ const GodsInfoPage = () => {
         setTheosCommentsLength(data.comments.length)              // For styling purposes, not for semantic purpose. To see how many reviews are there.
         
         setTheosComments(data.comments)
+        console.log('COMMENTS >> ', data.comments.ownerUsername)
 
         setJobs(data.godOf)
 
@@ -104,7 +105,7 @@ const GodsInfoPage = () => {
         <div className='container'>
           <div className='info-page-width'>
             <Grid>
-              <Grid.Row>
+              <Grid.Row className='flexing-mobile'>
                 <Grid.Column>
                   <Segment>Write Review</Segment>
                   <Segment>
@@ -121,7 +122,7 @@ const GodsInfoPage = () => {
   
   
                           <Grid.Column>
-                            <Grid.Column><p>User name</p></Grid.Column>
+                            <Grid.Column><p>{comment.ownerUsername}</p></Grid.Column>
                             <Grid.Column>
                               <Grid divided='vertically'>
                                 <Grid.Row columns={2}>
@@ -180,8 +181,11 @@ const GodsInfoPage = () => {
                           <List.Item icon='map marker alternate' content={theos.locationName} />
                           <List.Item
                             icon='linkify'
-                            content={<Link to={{ pathname: `${theos.website}` }} target='_blank'>{theosToLowerCase}.theoi</Link>}
+                            content={<Link to={{ pathname: `${theos.website}` }} target='_blank'>
+                              {theos.gender === 'Mixed' ? `${theosToLowerCase}.theoi` : theos.gender === 'Male' ? `${theosToLowerCase}.theos` : `${theosToLowerCase}.thea` }
+                            </Link>}
                           />
+                          
                         </List>
                       </Segment>
                     </Segment>
