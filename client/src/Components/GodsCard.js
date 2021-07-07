@@ -30,11 +30,13 @@ const GodsCard = ( { name, avgRating, gender, comments }) => {
               {avgRating && 
                 <div className='start-rating-info-positioning'>
                   <div>{definedRating(Math.round(avgRating))}</div>
+                  <p>
                   &nbsp;&nbsp;
-                  <span>{comments.length} reviews</span>&nbsp;&nbsp;
-                  {avgRating !== 'No ratings' ? `|  TheioScore ${avgRating}` : ''}      
+                    <span>{comments.length} reviews</span>&nbsp;&nbsp;
+                    {avgRating !== 'No ratings' ? `|  TheioScore ${avgRating}` : ''}      
                   &nbsp;&nbsp;<span>|</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <Link>Write a review</Link>
+                    <Link>Write a review</Link>
+                  </p>
                 </div>
               }
             </>
