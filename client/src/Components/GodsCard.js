@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Divider, Grid, Image, Segment, Icon, List, Popup, Label } from 'semantic-ui-react'
 import { definedRating } from '../sematinicElements/ratings.js'
@@ -7,7 +7,20 @@ import { definedRating } from '../sematinicElements/ratings.js'
 // COMPONENT SHOWING FILTERED GODS
 
 const GodsCard = ( { name, avgRating, gender, comments }) => {
-  
+
+  const [nameWebsite, setNameWebsite] = useState(null)
+
+  useEffect(() => {
+    if (name && gender === 'Male') {
+      console.log('theos.name >>>', name)
+      setNameWebsite(`${name.toLowerCase()}.theos`)
+    } else if (gender === 'Female') {
+      setNameWebsite(`${name.toLowerCase()}.thea`)
+    } else {
+      setNameWebsite(`${name.toLowerCase()}.theoi`)
+    }
+  }, [name, gender])
+
   return (
 
     <div className='container info-page-container-margin'>
@@ -20,7 +33,7 @@ const GodsCard = ( { name, avgRating, gender, comments }) => {
               <Link to={`/gods/${name.toLowerCase()}`} className='engraved-two-normal-text'>
                 {name}&nbsp;
                 &nbsp;&nbsp;<span>|</span>&nbsp;&nbsp;&nbsp;&nbsp;
-                {gender === 'Mixed' ? `www.${name.toLowerCase()}.theoi` : gender === 'Male' ? `www.${name.toLowerCase()}.theos` : `www.${name.toLowerCase()}.thea` }
+                {nameWebsite}
               </Link>
             </h3>
           </Grid.Row>

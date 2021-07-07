@@ -2177,3 +2177,11 @@ a.engraved-two-normal-text {
 //   margin-left: -3rem;
 // }
 
+.navbar.is-dark .navbar-end > .navbar-item, 
+.navbar.is-dark .navbar-end .navbar-link {
+  background-color: rgba(102, 51, 0, 0.6);
+  color: transparent;
+    background-clip: text;
+  margin-left: 3;
+  text-shadow: 1px 1px 1px hsla(0,0%,255%,0.6);
+}

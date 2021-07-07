@@ -1,4 +1,4 @@
-const getTokenFromStorage = () => {
+export const getTokenFromStorage = () => {
   return window.localStorage.getItem('token')
 }
 
@@ -8,7 +8,7 @@ export const getPayload = () => {
   if (!token) return
   
   const splitToken = token.split('.')
-  console.log('splitToken >>>', splitToken)
+  // console.log('splitToken >>>', splitToken)
 
   if (splitToken.length < 3) return
   return JSON.parse(atob(splitToken[1]))

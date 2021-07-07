@@ -11,25 +11,25 @@ const godsSchema = new mongoose.Schema({
   godOf: [{ type: String, required: true }],
   description: { type: String, required: true, maxlength: 700 },
   symbol: [{ type: String }],
-  sacredAnimals: [{ type: String }],
-  locationName: { type: String, required: true },
-  family: {
-    parents: [{ type: String, required: true }],
-    siblings: [{ type: String, required: true }],
-    consort: [{ type: String }],
-    children: [{ type: String }]
-  },
-  media: {
-    info: [{ type: String }],
-    books: [{ type: String }],
-    trivia: [{ type: String }]
-  },
-  otherEquivalents: {
-    romanEquivalent: { type: String },
-    norseEquivalent: { type: String },
-    slavicEquivalent: { type: String },
-    hinduEquivalent: { type: String }
-  },
+  // sacredAnimals: [{ type: String }],
+  // locationName: { type: String, required: true },
+  // family: {
+  //   parents: [{ type: String, required: true }],
+  //   siblings: [{ type: String, required: true }],
+  //   consort: [{ type: String }],
+  //   children: [{ type: String }]
+  // },
+  // media: {
+  //   info: [{ type: String }],
+  //   books: [{ type: String }],
+  //   trivia: [{ type: String }]
+  // },
+  // otherEquivalents: {
+  //   romanEquivalent: { type: String },
+  //   norseEquivalent: { type: String },
+  //   slavicEquivalent: { type: String },
+  //   hinduEquivalent: { type: String }
+  // },
   owner: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
   comments: []
 })

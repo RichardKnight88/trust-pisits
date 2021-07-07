@@ -33,7 +33,7 @@ const Login = () => {
     } catch (err) {
       console.log(err)
       setErrors(true)
-      window.alert('Your email or username is already in use.')
+      window.alert('Your email or password is wrong.')
     }
   }
 

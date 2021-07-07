@@ -1,7 +1,23 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useHistory, useLocation } from 'react-router-dom'
+import { getPayload } from './Authentification/auth'
 
 const Navbar = () => {
+
+  const history = useHistory()
+  const location = useLocation()
+
+  const checkUserIsAuthenticated = () => {
+
+    const payload = getPayload()
+
+    if (!payload) return
+    
+    const currentTime = Math.round(Date.now() / 1000)
+    return currentTime < payload.exp
+
+  }
+
 
   const [burger, setBurger] = useState('')
 
@@ -10,6 +26,11 @@ const Navbar = () => {
     if (burger === 'is-active') setBurger('')
   }
 
+  const handleLogout = () => {
+    window.localStorage.removeItem('token')
+    history.push('/home')
+    location.pathname
+  }
 
   return (
 
@@ -32,13 +53,36 @@ const Navbar = () => {
           <div id='theoi-navbar' className={`navbar-menu ${burger} engraved-two-normal-text`}>
           
             <div className='navbar-end'>
-              <Link to="/gods" className="navbar-item engraved-two-normal-text">Gods</Link>
+              <Link to="/gods" className="navbar-item engraved-two-normal-text hover-effect-link">Gods</Link>
+
               <Link to="/categories" className="navbar-item engraved-two-normal-text">Categories</Link>
+
               <Link to="/profile" className="navbar-item engraved-two-normal-text">Profile</Link>
-              <Link to="/login" className="navbar-item engraved-two-normal-text">Login</Link>
+
+              {checkUserIsAuthenticated() ?
+
+                <Link 
+                  to='/home'
+                  className="navbar-item engraved-two-normal-text"
+                  onClick={handleLogout}
+                >
+
+                    Log out
+
+                </Link> 
+
+                :
+
+                <Link to="/login" className="navbar-item engraved-two-normal-text">Login</Link>
+              }
+              {/* <Link to="/login" className="navbar-item engraved-two-normal-text">Login</Link> */}
+
               <Link to="/register" className="navbar-item engraved-two-normal-text">Register</Link>
+
               <Link to="/deus_register" className="navbar-item engraved-two-normal-text">Deus Register</Link>
+
               <Link to="/categories/:category_name" className="navbar-item engraved-two-normal-text">Gods filtered by category</Link>
+              
               <Link to="/about" className="navbar-item engraved-two-normal-text">This is the about page</Link>
             </div>
           

@@ -18,6 +18,8 @@ const GodsInfoPage = () => {
   const [jobs, setJobs] = useState([])
   const [hasError, setHasError] = useState(false)
 
+  const [nameWebsite, setNameWebsite] = useState(null)
+
   const { name } = useParams()
 
   useEffect(() => {
@@ -35,6 +37,7 @@ const GodsInfoPage = () => {
 
         setJobs(data.godOf)
 
+      
       } catch (err) {
         setHasError(true)
       }
@@ -42,6 +45,16 @@ const GodsInfoPage = () => {
     getData()
   }, [])
 
+  useEffect(() => {
+    if (theosToLowerCase && theos.gender === 'Male') {
+      console.log('theos.name >>>', theos.name)
+      setNameWebsite(`${theosToLowerCase}.theos`)
+    } else if (theos.gender === 'Female') {
+      setNameWebsite(`${theosToLowerCase}.thea`)
+    } else {
+      setNameWebsite(`${theosToLowerCase}.theoi`)
+    }
+  }, [theosToLowerCase])
 
   return (
     
@@ -109,7 +122,7 @@ const GodsInfoPage = () => {
                 <Grid.Column>
                   <Segment>Write Review</Segment>
                   <Segment>
-              BIG REVIWES 
+              BIG REVIEWS 
                     <Image src='https://react.semantic-ui.com/images/wireframe/paragraph.png' />
                   </Segment>
                   {theosComments.map(comment => {
@@ -182,7 +195,7 @@ const GodsInfoPage = () => {
                           <List.Item
                             icon='linkify'
                             content={<Link to={{ pathname: `${theos.website}` }} target='_blank'>
-                              {theos.gender === 'Mixed' ? `${theosToLowerCase}.theoi` : theos.gender === 'Male' ? `${theosToLowerCase}.theos` : `${theosToLowerCase}.thea` }
+                              {nameWebsite}
                             </Link>}
                           />
                           
