@@ -11,6 +11,7 @@ import prometheus from '../Images/prometheus.jpg'
 const Home = () => {
 
   const [comments, setComments] = useState([])
+  const [categories, setCategories] = useState([])
   const [errors, setErrors] = useState(false)
 
 
@@ -26,9 +27,20 @@ const Home = () => {
 
         // console.log('DATA', data.filter(item => item.comments.length > 0))
 
+
         const godsWithActiveComments = data.filter(item => item.comments.length > 0)
 
         const commentsArray = []
+
+        const categoriesArray = []
+
+        data.map(item => {
+          // console.log(item.species)
+          if (categoriesArray.indexOf(item.species) < 0) {
+            // console.log('INDEX', categoriesArray.indexOf(item.species))
+            categoriesArray.push(item.species)
+          }
+        })
 
         // console.log('COMMENTS', godsWithActiveComments.map(item => item.comments))
 
@@ -42,6 +54,8 @@ const Home = () => {
         // console.log('COMMENTS ARRAY', commentsArray.map(item => item.text))
 
         setComments(commentsArray)
+        setCategories(categoriesArray)
+
         // setComments(data.map(item => item.comments.map(item => item)))
 
       } catch (err) {
@@ -53,6 +67,8 @@ const Home = () => {
     getData()
 
   }, [])
+
+  console.log('CATEGORIES', categories)
 
   return (
     <>
@@ -80,44 +96,42 @@ const Home = () => {
 
               <div className="categories-continer">
 
+
                 <div className="categories-tagline">
                   Browse gods by category
                 </div>
 
                 <div className="categories-button-container">
 
-                  <Link to="/categories">
-                    <div className="category-button">
-                      Primordial
-                    </div>
-                  </Link>
+                  {categories.length > 0 &&
+
+                    categories.map(item => {
+                      return (
+                        <div key={item}>
+                          <Link to={`/categories/${item}`}>
+                            <div className="category-button">
+                              {item}
+                            </div>
+                          </Link>
+                        </div>
+                      )
+                    })
+
+                  }
 
                   <Link to="/categories">
                     <div className="category-button">
-                      Olympian
+                      ...
                     </div>
                   </Link>
-
-                  <Link to="/categories">
-                    <div className="category-button">
-                      Titan
-                    </div>
-                  </Link>
-
-                  <Link to="/categories">
-                    <div className="category-button">
-                      Giant
-                    </div>
-                  </Link>
-
 
                 </div>
 
               </div>
 
             </div>
-
           </div>
+
 
         </section>
 
@@ -145,7 +159,9 @@ const Home = () => {
                       </p>
                     </div>
 
-                    <h4 className="engraved">{item.text}</h4>
+                    <div className="comment-text-body-container">
+                      <h4 className="engraved comment-text-body">{item.text}</h4>
+                    </div>
 
                   </div>
                 </>

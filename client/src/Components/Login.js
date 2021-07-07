@@ -2,6 +2,7 @@ import React from 'react'
 import { Button, Divider, Form } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 
+
 const Login = () => {
   return (
     <div className="main-login">
@@ -10,8 +11,9 @@ const Login = () => {
         <div className="form-box-login">
           <Form className="form-login">
             <Form.Field>
-              <input className="formfield" type="text" placeholder='Username' required />
+              <input name="users" className="formfield" type="text" rel="noreferrer"  placeholder='Username' required />
             </Form.Field>
+            
             <Form.Field>
               <input className="formfield" type="password" placeholder='Password' required />
             </Form.Field>
