@@ -431,10 +431,6 @@ body ::-webkit-scrollbar-track {
   background-image: url('../Images/marbleBackground.png');
   }
 
-  .searchBar-container {
-    width: 100%;
-  }
-
   .comment-div {
     min-width: 300px;
   }
@@ -518,9 +514,3 @@ body ::-webkit-scrollbar-track {
 }
 }
 
-@media screen and (max-width: 320px) {
-  .hero-container {
-    width: 100%;
-    background-size: contain;
-  }
-}
