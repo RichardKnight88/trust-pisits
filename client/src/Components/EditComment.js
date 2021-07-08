@@ -140,8 +140,8 @@ const CommentEdit = () => {
                   />
                 </Form.Field>
 
-                <Button className='comment-submit-button' type='submit'>Submit Changes</Button>
-                <Button className='comment-submit-button delete-button-color' type='submit' onClick={deleteComment}>Delete</Button>
+                <Button type='submit'>Submit Changes</Button>
+                <Button className='comment-submit-button' type='submit' onClick={deleteComment}>Delete</Button>
               </Form>
 
             </div>

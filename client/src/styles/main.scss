@@ -2,6 +2,7 @@
 @import 'homepage';
 @import 'comment';
 @import 'displayinfopage';
+@import 'deleteEditComment';
 
 // Landing Page Start
 .landingcontainer{
@@ -2168,9 +2169,10 @@ a.engraved-two-normal-text {
 
   }
 }
-// .inner-divider-width-one {
-//   max-width: 35%;
-// }
+.inner-divider-width-one {
+  max-width: 35%;
+
+}
 
 // // ? Got rid of predifined border around "company information"
 // .ui.segment.getting-rid-of-border {
