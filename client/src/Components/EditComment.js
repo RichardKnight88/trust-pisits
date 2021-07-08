@@ -1,74 +1,70 @@
-import React, { useState, useEffect  } from 'react'
-import { useHistory, useParams, useLocation } from 'react-router-dom'
-import { Button, Form, Segment, Grid, Image, Rating } from 'semantic-ui-react'
-import { getTokenFromStorage } from './Authentification/auth'
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { useParams, useHistory } from 'react-router-dom'
 import axios from 'axios'
+import { getTokenFromStorage } from './Authentification/auth'
+import { Button, Form, Segment, Grid, Image, Rating } from 'semantic-ui-react'
 
 
-const Comment = () => {
-
-  console.log('pageview >>>', location.pathName)
-
-  const { name } = useParams()
+const CommentEdit = () => {
 
   const history = useHistory()
+  const { name, commentId } = useParams()
 
-  // Handling user input
-  const [commentData, setCommentData] = useState({
+  const [commentDataEdit, setCommentDataEdit] = useState({
     text: '',
     rating: '',
     textHeader: '',
   })
 
-  // Handling error
-  const [errors, setErrors] = useState('')
+  const [errors, setErrors] = useState({
+    text: '',
+    rating: '',
+    textHeader: '',
+  })
+  
+  useEffect(() => {
+    const getData = async () => {
+      const { data } = await axios.get(`/api/gods/${name}/comments/${commentId}`)
+      console.log('DATA >>>', data)
+      setCommentDataEdit(data)
+    }
+    getData()
+  }, [commentId, name])
 
-  // Handling incoming data from comment section
-  const handleCommentData = (event) => {
-    //console.log('NAME OF THE COMMENT >>', event.target.name)
-    const getUserComment = { ...commentData, [event.target.name]: event.target.value }
-    //console.log('getUserComment >>>', getUserComment)
-    const newError = { ...errors, [event.target.name]: '' }
-    setCommentData(getUserComment)
+  console.log('INCOMiNG DATA', commentDataEdit)
+
+  const handleTextChange = (event) => {
+    const newCommentData = { ...commentDataEdit, [event.target.name]: event.target.value }
+    const newErrors = { ...errors, [event.target.name]: '' }
+    setCommentDataEdit(newCommentData)
+    setErrors(newErrors)
+  }
+
+  const handleRatingChange = (event, data) => {
+    const getRatingNumber = { ...commentDataEdit, [data.name]: data.rating }
+    const newError = { errors, [event.target.name]: '' }
+    setCommentDataEdit(getRatingNumber)
     setErrors(newError)
   }
 
-  // Submit data from comment to the backend
-  const setComment = async (event, data) => {
+  const handleSubmit = async (event) => {
+    event.preventDefault()
     try {
-      event.preventDefault()
-      const token = window.localStorage.getItem('token')
-      // console.log('TOKEN >>>', token)
-      console.log('DATA >>>', data)
-      // console.log('EVENT.TARGET.NAME >>', event.target.target)
-      await axios.post(`/api/gods/${name}/comments`, commentData, 
+      await axios.put(`/api/gods/${name}/comments/${commentId}`, commentDataEdit,
         {
           headers: {
-            Authorization: `Bearer ${token}` },
+            Authorization: `Bearer ${getTokenFromStorage()}` },
         }
-      ) 
-      
-  
+      )
       history.push(`/gods/${name}`)
     } catch (err) {
-      console.log(err)
-      // setErrors(err.response.data.errors)
-      window.alert('Something went wrong 😬')
+      setErrors(err.response.data.errors)
     }
   }
 
 
-  const checkingRating = (event, data) => {
-    const getRatingNumber = { ...commentData, [data.name]: data.rating }
-    console.log('data >>>', data)
-    const newError = { errors, [event.target.name]: '' }
-    setCommentData(getRatingNumber)
-    setErrors(newError)
-  }
 
 
-  
 
   return (
 
@@ -89,7 +85,7 @@ const Comment = () => {
               <h3 className='comment-heading'>Rate your recent experience</h3>
 
 
-              <Form onSubmit={setComment}>
+              <Form onSubmit={handleSubmit}>
 
                 {<Rating 
                   maxRating={5} 
@@ -97,8 +93,8 @@ const Comment = () => {
                   icon='star' 
                   size='massive'
                   name='rating' 
-                  rating={commentData.rating}
-                  onRate={checkingRating}
+                  rating={commentDataEdit.rating}
+                  onRate={handleRatingChange}
                 />}
              
 
@@ -114,8 +110,8 @@ const Comment = () => {
                     placeholder='This is where you write your review. Explain what happened, and leave out offensive words. Keep your feedback honest, helpful, and constructive.' 
                     required 
                     name='text'
-                    value={commentData.text}
-                    onChange={handleCommentData}
+                    value={commentDataEdit.text}
+                    onChange={handleTextChange}
                   />
                 </div>
 
@@ -129,14 +125,13 @@ const Comment = () => {
                     placeholder='Write the title of your review here?' 
                     required 
                     name='textHeader'
-                    value={commentData.textHeader}
-                    onChange={handleCommentData}
+                    value={commentDataEdit.textHeader}
+                    onChange={handleTextChange}
                   />
                 </Form.Field>
 
                 <Button className='comment-submit-button' type='submit'>Submit</Button>
-                <Button className='comment-submit-button' type='submit'>Edit</Button>
-                <Button className='comment-submit-button' type='submit'>Delete</Button>
+                <Button className='comment-submit-button delete-button-color' type='submit'>Delete</Button>
               </Form>
 
             </div>
@@ -144,7 +139,15 @@ const Comment = () => {
         </div>
       </div>
     </>
+
   )
+
 }
 
-export default Comment
+
+
+
+
+
+
+export default CommentEdit

@@ -13,3 +13,14 @@ export const getPayload = () => {
   if (splitToken.length < 3) return
   return JSON.parse(atob(splitToken[1]))
 }
+
+export const checkUserIsAuthenticated = () => {
+
+  const payload = getPayload()
+
+  if (!payload) return
+  
+  const currentTime = Math.round(Date.now() / 1000)
+  return currentTime < payload.exp
+
+}

@@ -15,7 +15,7 @@ import About from './Components/About'
 import Footer from './Components/Footer'
 import Comment from './Components/Comment'
 import Business from './Components/Business'
-
+import EditComment from './Components/EditComment'
 
 
 const App = () => {
@@ -24,6 +24,10 @@ const App = () => {
     <BrowserRouter>
       < Navbar />
       <Switch>
+
+        <Route path="/gods/:name/comments/:commentId">
+          <EditComment />
+        </Route>
 
         <Route path="/gods/:name/comments">
           <Comment />

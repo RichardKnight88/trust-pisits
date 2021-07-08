@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom'
 import { Divider, Grid, Image, Segment, Icon, List, Popup, Label, Rating } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 import { definedRating } from '../sematinicElements/ratings.js'
-import { getPayload } from './Authentification/auth'
+import { getPayload, checkUserIsAuthenticated } from './Authentification/auth'
 
 // ! COMPONENT TO SHOW INDIVIDUAL THEOS (aka 'god' in Greek)
 
@@ -23,16 +23,13 @@ const GodsInfoPage = () => {
 
   const { name } = useParams()
 
-  const checkUserIsAuthenticated = () => {
+  console.log('getPayload >>>', getPayload())
 
-    const payload = getPayload()
+  // const [currentUser, setCurrentUser] = (null)
 
-    if (!payload) return
-    
-    const currentTime = Math.round(Date.now() / 1000)
-    return currentTime < payload.exp
+  // const currentUserId = getPayload().sub
+  // console.log('currentUserId >>>', currentUserId) 
 
-  }
 
   useEffect(() => {
     const getData = async () => {
@@ -68,6 +65,8 @@ const GodsInfoPage = () => {
       setNameWebsite(`${theosToLowerCase}.theoi`)
     }
   }, [theosToLowerCase])
+
+
 
   return (
     
@@ -176,6 +175,7 @@ const GodsInfoPage = () => {
 
                                     {checkUserIsAuthenticated() ?
 
+                                      
                                       <Grid.Column>
                                         <Icon name='edit outline' />
                                       </Grid.Column>
