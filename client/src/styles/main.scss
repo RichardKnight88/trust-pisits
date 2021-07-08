@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&display=swap');
 @import 'homepage';
+@import 'comment';
 
 // Landing Page Start
 .landingcontainer{
@@ -1927,6 +1928,8 @@ background-size: contain;
 
 .body-color{
   background-color: rgba(175, 175, 175, .2);
+  display: flex;
+  justify-content: center;
 }
 
 

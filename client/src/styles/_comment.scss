@@ -1,0 +1,49 @@
+.ui.segment.comment-box {
+  height: 80%;
+  margin-top: 3%;
+  width: 35rem;
+}
+
+.comment-top-part {
+  justify-content: center;
+}
+
+.display-god-top-part-margin {
+  margin-top:3.6rem;
+}
+
+.comment-background {
+  height:80vh;
+  display: flex;
+  justify-content: center;
+  background-image: url('../Images/perfect.png');
+  // background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container-area-text { 
+  margin-top: 1rem;
+  color:black;
+  padding: 1rem;
+}
+
+.comment-heading {
+  font-size: 1.7rem;
+  letter-spacing: .1rem;
+}
+
+.comment-parahraph {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+// .comment-button-submit {
+//   width: 10rem;
+//   height: 3rem;
+// }
+
+.ui.form textarea {
+  height: 10rem;
+  resize: none;
+}
+

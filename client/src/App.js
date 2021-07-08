@@ -13,6 +13,7 @@ import GodsInfoPage from './Components/GodsInfoPage'
 import ProfilePage from './Components/ProfilePage'
 import About from './Components/About'
 import Footer from './Components/Footer'
+import Comment from './Components/Comment'
 
 
 
@@ -65,6 +66,10 @@ const App = () => {
 
         <Route path="/about">
           <About />
+        </Route>
+
+        <Route path="/comment">
+          <Comment />
         </Route>
 
         <Route path="/">
