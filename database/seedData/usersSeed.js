@@ -42,6 +42,13 @@ export default [
     isDeusUser: true
   }, 
   {
+    username: 'Demeter', 
+    email: 'demeter@email.com', 
+    password: 'pass', 
+    passwordConfirmation: 'pass',
+    isDeusUser: true
+  }, 
+  {
     username: 'Hera', 
     email: 'hera@email.com', 
     password: 'pass', 
@@ -82,5 +89,33 @@ export default [
     password: 'pass', 
     passwordConfirmation: 'pass',
     isDeusUser: true
+  },
+  {
+    username: 'Spartan', 
+    email: 'spartan@email.com', 
+    password: 'pass', 
+    passwordConfirmation: 'pass',
+    isDeusUser: false
+  },
+  {
+    username: 'Lawyer-1980', 
+    email: 'lawyer-1980@email.com', 
+    password: 'pass', 
+    passwordConfirmation: 'pass',
+    isDeusUser: false
+  },
+  {
+    username: 'the-midwife', 
+    email: 'the-midwife@email.com', 
+    password: 'pass', 
+    passwordConfirmation: 'pass',
+    isDeusUser: false
+  },
+  {
+    username: 'Paris', 
+    email: 'paris@email.com', 
+    password: 'pass', 
+    passwordConfirmation: 'pass',
+    isDeusUser: false
   }
 ]
