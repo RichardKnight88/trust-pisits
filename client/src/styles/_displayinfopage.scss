@@ -53,3 +53,73 @@ a.hover-link-to-comment:hover {
 .gods-logo-postioning {
   margin-left: 1rem;
 }
+
+
+
+
+.user-comment-position {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.user-comment-position-two {
+  display: flex;
+  align-items: center;
+}
+
+.user-comment-position-two-inner-one {
+  margin-right: .7rem;
+}
+
+.user-comment-position-two-inner-two {
+  margin-left: .7rem;
+}
+
+.commentator-pic-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height:5rem;
+  border-radius: 50%;
+  background-image: url('https://i.ibb.co/kDvfxhz/comentator-profile.png');
+}
+
+.rating-date {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.size-date {
+  font-size: .9rem;
+}
+
+.text-comment-area {
+  margin: 1rem 0 2rem;
+}
+
+
+
+
+
+@media only screen and (max-width: 1024px) {
+
+  .ui.grid>.row.flexing-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items:center
+  }
+  
+  div.column.flexing-ipad {
+    width: 30%;
+  }
+
+  
+  .ui.grid>.row>.column.flexing-ipad {
+    width: 50%;
+  }
+
+
+}

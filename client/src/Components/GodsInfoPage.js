@@ -5,7 +5,7 @@ import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import { Divider, Grid, Image, Segment, Icon, List, Popup, Label, Rating } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
-import { definedRating } from '../sematinicElements/ratings.js'
+import { definedRating, getUseableDate } from '../sematinicElements/ratings.js'
 import { getPayload, checkUserIsAuthenticated } from './Authentification/auth'
 
 // ! COMPONENT TO SHOW INDIVIDUAL THEOS (aka 'god' in Greek)
@@ -23,7 +23,11 @@ const GodsInfoPage = () => {
 
   const { name } = useParams()
 
-  console.log('getPayload >>>', getPayload())
+  const getTwoLetters = (nameVariable) => {
+    const lettersArray = [nameVariable[0], nameVariable[1]]
+    const firstTwoLetters = lettersArray.join('')
+    return firstTwoLetters
+  }
 
 
   const [currentUserId, setCurrentUserId] = useState(null)
@@ -182,7 +186,7 @@ const GodsInfoPage = () => {
             <div className='info-page-width'>
               <Grid>
                 <Grid.Row className='flexing-mobile'>
-                  <Grid.Column>
+                  <Grid.Column className='flexing-ipad'>
                     <Segment>
                       <div className='write-review-box-positioning'>
                         <div className='write-review-box-positioning-inner-box'>
@@ -210,42 +214,66 @@ const GodsInfoPage = () => {
                       return (
                         <Segment key={comment._id}>
                           <Grid>
-                            <Grid.Column className='user-logo-commentarea-width '>
-                              <div className="comment-profile-pic "></div>
-                            </Grid.Column>
-      
                             <Grid.Column>
-                              <Grid.Column><p>{comment.ownerUsername}</p></Grid.Column>
-                              <Grid.Column>
-                                <Grid divided='vertically'>
-                                  <Grid.Row columns={2}>
-                                    <Grid.Column><p>NUMBER OF REVIEWS</p></Grid.Column>
-                                    <Grid.Column><p>LOCATION</p></Grid.Column>
+                              {/* <div className='position-commentator'>
+                                <Image src='https://i.ibb.co/kDvfxhz/comentator-profile.png' alt='comentator-picture' className='commentator-pic-background' />
+                                <p className='comentator-picture-text-centered'>{getTwoLetters(comment.ownerUsername)}</p>
+                              </div> */}
+                              
+                              <div className='user-comment-position'>
+                                
+                                <div className='user-comment-position-two'>
+                                  <div className='user-comment-position-two-inner-one'>
+                                    <div className='commentator-pic-background'>
+                                      <h2 className='engraved'>{getTwoLetters(comment.ownerUsername).toUpperCase()}</h2>
+                                    </div>
+                                  </div>
 
-                                    {currentUserId === comment.owner ?
+                                  <div className='user-comment-position-two-inner-one'>
+                                    <p>{comment.ownerUsername}</p>
+                                  </div>
+                                </div>
+                              
 
-                                      
-                                      <Grid.Column>
-                                        <Link to={`/gods/${theosToLowerCase}/comments/${comment._id}`}>
-                                          <Icon name='edit outline' />
-                                        </Link>
-                                        
-                                      </Grid.Column>
+                                <div className='edit-button'>
+                                
 
-                                      :
+                                  {currentUserId === comment.owner ?
+     
+                                    <Link to={`/gods/${theosToLowerCase}/comments/${comment._id}`}>
+                                      <Icon name='edit outline' />
+                                    </Link>
+  
+                                    :
 
-                                      ''
-                                    }
-                                    
-    
-                                  </Grid.Row>
-                                </Grid>
-                              </Grid.Column>
+                                    <Icon name='edit outline disabled' />
+                                  }
+
+                                </div>
+
+                              </div>
+
+                              
                             </Grid.Column>
                           </Grid>
                           <Divider horizontal className='horizontal-opacity'><span className='engraved-two-normal-text faded-omega-symbol'>&#8486;</span></Divider>
-                          <h6 className='engraved text-header-bold'>{comment.textHeader}</h6>
-                          <p className="engraved-two-normal-text">{comment.text}</p>
+                          
+                          <div className='rating-date'>
+                            {
+                              comment.rating &&  
+                            <div className='start-rating-info-positioning-padding'>
+                              {definedRating(comment.rating)}
+                            </div>
+                            }
+
+                            <p className='engraved-two-normal-text size-date'>{getUseableDate(comment.createdAt)}</p>
+
+                          </div>
+                               
+                          <div className='text-comment-area'>
+                            <h6 className='engraved text-header-bold'>{comment.textHeader}</h6>
+                            <p className="engraved-two-normal-text">{comment.text}</p>
+                          </div>
                           <Divider horizontal className='horizontal-opacity'><span className='engraved-two-normal-text faded-omega-symbol'>&#8486;</span></Divider>
                         </Segment>
                       )

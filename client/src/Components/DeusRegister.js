@@ -10,7 +10,7 @@ import axios from 'axios'
 
 
 const options = [
-  { key: 'nill', text: '...', value: 'nill' },
+  
   { key: 'm', text: 'Man', value: 'Man' },
   { key: 'f', text: 'Woman', value: 'Woman' },
   { key: 'o', text: 'Mixed gender', value: 'Mixed' }
@@ -116,11 +116,11 @@ const DeusCreation = () => {
   return (
     <>
 
-      <div className="main-creategod">
+      <div className="main-creategod fluid">
         <div className="box-creategod">
 
           <div className="container-creategod">
-            <h1>Create a God</h1>
+            <h1 className='creating-god-heading'>Create a God</h1>
             <Form className="form-creategod" onSubmit={submitGod}>
 
               <Form.Field>
@@ -132,6 +132,7 @@ const DeusCreation = () => {
                   name='name'
                   value={godCreation.name}
                   onChange={handleGodsData}
+                  
                 />
               </Form.Field>
 
@@ -153,6 +154,7 @@ const DeusCreation = () => {
                 placeholder='Select a gender' 
                 required 
                 name='gender'
+                className='god-dropdown-color'
                 onChange={handleDropdownMenu}
                 value={godCreation.gender}
               />

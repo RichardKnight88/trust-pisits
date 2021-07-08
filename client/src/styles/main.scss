@@ -3,6 +3,7 @@
 @import 'comment';
 @import 'displayinfopage';
 @import 'profilepage';
+@import 'deleteEditGod';
 
 @import 'deleteEditComment';
 
@@ -128,8 +129,8 @@ opacity: 0.2;
 
 .second-box{
   position:absolute;
-  width: 200px;
-  height:200px;
+  width: 150px;
+  height:150px;
   border:1px thin #e05227;
   border-radius: 5%;
   box-shadow: rgb(97, 96, 96) 1px 1px 1px 1px;
@@ -152,7 +153,7 @@ opacity: 0.2;
 }
 
 .second-box-front{
-  transform: translateX(-150px) translateY(-150px) translateZ(100px);
+  transform: translateX(-112.5px) translateY(-112.5px) translateZ(75px);
   background:url('../Images/gods-pictures/zeus-image.jpeg'); 
   background-repeat: no-repeat;
   background-size: cover;
@@ -166,7 +167,7 @@ opacity: 0.2;
 }
 
 .second-box-back{
-  transform: translateX(-150px) translateY(-150px) translateZ(-100px) rotateY(180deg);
+  transform: translateX(-112.5px) translateY(-112.5px) translateZ(-75px) rotateY(180deg);
   background:url('../Images/gods-pictures/Poseidon-image.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -180,7 +181,7 @@ opacity: 0.2;
 }
 
 .second-box-right{
-  transform: translateY(-150px) translateX(-50px) rotateY(90deg);
+  transform: translateY(-112.5px) translateX(-37.5px) rotateY(90deg);
   background:url('../Images/gods-pictures/ares-image.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -194,7 +195,7 @@ opacity: 0.2;
 }
 
 .second-box-left{
-  transform: translateY(-150px) translateX(-250px) rotateY(270deg);
+  transform: translateY(-112.5px) translateX(-187.5px) rotateY(270deg);
   background:url('../Images/gods-pictures/apollo-image.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -209,7 +210,7 @@ opacity: 0.2;
 }
 
 .second-box-top{
-  transform: translateX(-150px) translateY(-250px) rotateX(90deg);
+  transform: translateX(-112.5px) translateY(-187.5px) rotateX(90deg);
   background:url('../Images/gods-pictures/hades-image.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -223,7 +224,7 @@ opacity: 0.2;
 }
 
 .second-box-bottom{
-  transform: translateX(-150px) translateY(-50px) rotateX(270deg);
+  transform: translateX(-112.5px) translateY(-37.5px) rotateX(270deg);
   background:url('../Images/gods-pictures/athena-image.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -506,20 +507,21 @@ display: flex;
 justify-content: center;
 background-image: url('../Images/perfect-gradient.jpeg');
 background-size: cover;
-
+align-items: center;
 }
 
 .box-creategod{
+  height: 100vh;
   width: 500px;
   height:600px;
   margin-left: 30%;
-  margin-top: 10%;
+  // margin-top: 10%;
 }
 
-.container-creategod{
-  // margin-top: 100px;
-  color:white;
-}
+// .container-creategod{
+//   // margin-top: 100px;
+//   color:white;
+// }
 
 .formfield{
   height: 60px;
@@ -2008,9 +2010,6 @@ background-size: cover;
   
 }
 
-.user-logo-commentarea-width {
-  max-width: 10%;
-}
 
 .ui.rating .active.icon {
   background-color: #ffae00;
@@ -2051,7 +2050,7 @@ background-size: cover;
 }
 
 .footer-footer {
-  height: 50px;
+  height: 1rem;
 }
 
 // ! NAVBAR COMPONENT
@@ -2096,15 +2095,6 @@ a.engraved-two-normal-text {
 
 @media only screen and (max-width: 600px) {
 
-  .ui.grid>.row.flexing-mobile {
-    display: flex;
-    flex-direction: column;
-    
-  }
-  .ui.grid>.column:not(.row), .ui.grid>.row>.column {
-    width: 35%;
-    margin-left: 2%;
-}
 
   .box {  
     width: 200px;
@@ -2171,10 +2161,7 @@ a.engraved-two-normal-text {
 
   }
 }
-.inner-divider-width-one {
-  max-width: 35%;
 
-}
 
 // // ? Got rid of predifined border around "company information"
 // .ui.segment.getting-rid-of-border {

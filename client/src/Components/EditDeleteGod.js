@@ -7,7 +7,6 @@ import { faGenderless } from '@fortawesome/free-solid-svg-icons'
 
 
 const options = [
-  { key: 'nill', text: '...', value: 'nill' },
   { key: 'm', text: 'Man', value: 'Man' },
   { key: 'f', text: 'Woman', value: 'Woman' },
   { key: 'o', text: 'Mixed gender', value: 'Mixed' }
@@ -214,8 +213,10 @@ const DeleteEditGod = () => {
 
               {/* <Link to="/gods"> */}
               
-              <Button className='comment-submit-button' type='submit'>Submit Changes</Button>
-              <Button className='comment-submit-button delete-button-color' type='submit' onClick={deleteGod}>Delete</Button>
+              <div className='spacing-buttons-update-delete-god'>
+                <Button className='button-width-god' type='submit'>Submit</Button>
+                <Button className='comment-submit-button button-width-god' type='submit' onClick={deleteGod}>Delete</Button>
+              </div>
               {/* </Link> */}
               {/* <Divider horizontal>or</Divider> */}
             </Form>

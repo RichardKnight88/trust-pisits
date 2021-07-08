@@ -1,0 +1,37 @@
+.spacing-buttons-update-delete-god {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.button.ui.button.button-width-god {
+  margin-top: 3rem;
+  width: 10rem;
+  height: 3rem;
+}
+
+// #f3f3e1
+
+.ui.form input:not([type]), 
+.ui.form input[type=date], 
+.ui.form input[type=datetime-local], 
+.ui.form input[type=email], 
+.ui.form input[type=file], 
+.ui.form input[type=number], 
+.ui.form input[type=password], 
+.ui.form input[type=search], 
+.ui.form input[type=tel], 
+.ui.form input[type=text], 
+.ui.form input[type=time], 
+.ui.form input[type=url], 
+.ui.form textarea {
+  background: #f3f3e1;
+}
+
+.ui.fluid.selection.dropdown {
+  background: #f3f3e1;
+}
+
+.creating-god-heading {
+  color: #f3f3e1;
+  margin-bottom: 2rem;
+}
