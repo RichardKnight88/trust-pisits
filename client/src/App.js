@@ -25,6 +25,10 @@ const App = () => {
       < Navbar />
       <Switch>
 
+        <Route path="/gods/:name/comments">
+          <Comment />
+        </Route>
+
         <Route path="/categories/:category_name">
           <FilteredGodsByCategory />
         </Route>
@@ -71,10 +75,6 @@ const App = () => {
 
         <Route path='/business'>
           <Business />
-        </Route>
-
-        <Route path="/comment">
-          <Comment />
         </Route>
 
         <Route path="/">

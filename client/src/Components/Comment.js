@@ -10,7 +10,7 @@ const Comment = () => {
 
   console.log('pageview >>>', location.pathName)
 
-  const params = useParams()
+  const { name } = useParams()
 
   const history = useHistory()
 
@@ -42,7 +42,7 @@ const Comment = () => {
       // console.log('TOKEN >>>', token)
       console.log('DATA >>>', data)
       // console.log('EVENT.TARGET.NAME >>', event.target.target)
-      await axios.post(`/api/gods/${params.name}/comments`, commentData, 
+      await axios.post(`/api/gods/${name}/comments`, commentData, 
         {
           headers: {
             Authorization: `Bearer ${token}` },
@@ -50,7 +50,7 @@ const Comment = () => {
       ) 
       
   
-      history.push(`/gods/zeus`)
+      history.push(`/gods/${name}`)
     } catch (err) {
       console.log(err)
       // setErrors(err.response.data.errors)

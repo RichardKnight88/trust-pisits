@@ -139,7 +139,7 @@ const GodsInfoPage = () => {
                       <div className='write-review-box-positioning'>
                         <div className='write-review-box-positioning-inner-box'>
                           <div><Image className='comment-picture-size' src='https://i.ibb.co/fHJphxZ/Comment-Picture.png' alt='comment-picture' /></div>
-                          <div><Link className='hover-link-to-comment' to={`/comment/${theosToLowerCase}`}>Write review</Link></div>
+                          <div><Link className='hover-link-to-comment' to={`/gods/${theosToLowerCase}/comments`}>Write review</Link></div>
                         </div>
                         <div>
                           {<Rating 
