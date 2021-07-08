@@ -3,7 +3,7 @@ import axios from 'axios'
 import { Link, useHistory } from 'react-router-dom'
 import { getCurrentUser, getTokenFromStorage, getTwoLetters } from './Authentification/auth'
 import { Rating, Icon } from 'semantic-ui-react'
-import { definedRating } from '../sematinicElements/ratings.js'
+import { definedRating, getUseableDate } from '../sematinicElements/ratings.js'
 
 
 const ProfilePage = () => {
@@ -22,32 +22,7 @@ const ProfilePage = () => {
 
   }, [])
 
-  currentUser && console.log('USER', currentUser, currentUser.username)
-
-  const getUseableDate = (createdAt) => {
-    // console.log('BITS', createdAt[0], createdAt[1])
-    const dateSplit = createdAt.split('T')
-    const dateGrab = dateSplit[0]
-    // console.log('DATE', dateGrab)
-    const year = dateGrab.split('-')[0]
-    // console.log('year SPLIT', year)
-    const month = dateGrab.split('-')[1]
-    const monthNum = parseInt(month)
-    // console.log('month SPLIT', month)
-    const day = dateGrab.split('-')[2]
-    // console.log('day SPLIT', day)
-
-
-
-    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']
-
-    const useableDate = [day, months[monthNum - 1], year]
-    const useableDateString = useableDate.join(' ')
-
-    return useableDateString
-
-  }
-
+  // currentUser && console.log('USER', currentUser, currentUser.username)
 
   return (
     <>
