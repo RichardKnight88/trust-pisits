@@ -5,30 +5,26 @@
 .landingcontainer{
   width: 100vw;
   height: 100vh;
-  background-image: radial-gradient(beige, rgb(76, 68, 68));
+  background-image: linear-gradient(rgb(114, 111, 105), rgb(197, 185, 146));
 }
 
 body{ 
   padding-top: 49px;
   background: #f3f3e1;
-//   // background: #ffd9b3;
-//   // background: #ffe6cc;
-//   height: 100%;
 }
 
 .landingpage-button {
   width: 280px;
   height: 50px;
   cursor: pointer;
-  z-index: 0;
 }
 
+
 .fade-in {
-  text-align: center;
-  animation: fadein 6s;
-  -moz-animation: fadein 6s; /* Firefox */
-  -webkit-animation: fadein 6s; /* Safari and Chrome */
-  -o-animation: fadein 6s; /* Opera */
+  animation: 6s;
+  -moz-animation: fadein 6s; 
+  -webkit-animation: fadein 6s;
+  -o-animation: fadein 6s;
 }
 @keyframes fadein {
   from {
@@ -68,44 +64,44 @@ opacity: 0.2;
 }
 
 .cube-area{
-  position:relative;
+  position:absolute;
   transform-style: preserve-3d;
   animation-name: rotate;
-  animation-duration:20s;
+  animation-duration:40s;
   animation-timing-function:linear;
   animation-iteration-count: infinite;
 }
 
 @keyframes rotate {
   0%{
-    transform: rotate3d(0,0,1,10deg);
+    transform: rotate3d(1,1,1,90deg);
   }
   10%{
-    transition: rotate3d(0,0,1,190deg);
+    transition: rotate3d(1,0,1,100deg);
   }
   20%{
-    transition: rotate3d(0,1,0,260deg);
+    transition: rotate3d(0, 1, 0.5, 3.50rad);
   }
   30%{
-    transition: rotate3d(0,1,0,289deg);
+    transition: rotate3d(1,1,0,120deg);
   }
   40%{
-    transition: rotate3d(0,1,0,90deg);
+    transition: rotate3d(0,1,1,30deg);
   }
   50% {
-    transform: rotate3d(0,1,0,180deg);
+    transform: rotate3d(2, 1, 1, 160deg);
   }
   60%{
-    transition: rotate3d(-1,1,0,90deg);
+    transition: rotate3d(1,1,0,90deg);
   }
   70%{
-    transform: rotate3d(0,1,0,270deg);
+    transform: rotate3d(2,1,-1,120deg);
   }
   80%{
     transition: rotate3d(1,0,0,90deg);
   }
   90%{
-    transition: rotate3d(2,1,0,290deg);
+    transition: rotate3d(1,2,-1,60deg);
   }
   100%{
     transform: rotate3d(0,1,0,360deg);
@@ -115,16 +111,14 @@ opacity: 0.2;
 
 .box{
   position:absolute;
-  width: 400px;
-  height:400px;
+  width: 300px;
+  height:300px;
   border:1px solid #374e49;
-  box-shadow: rgb(23, 230, 126) 1px 1px 1px 1px; 
   box-shadow: 10px 10px 10px  rgba(0,0,0,0.6);
   -moz-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
   -webkit-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
   -o-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
-  opacity: 0.5;
-  margin:0; 
+  opacity: 0.2;
 }
 
 .second-box{
@@ -134,7 +128,7 @@ opacity: 0.2;
   border:1px thin #e05227;
   border-radius: 5%;
   box-shadow: rgb(97, 96, 96) 1px 1px 1px 1px;
-  opacity: 0.7;
+  opacity: 1;
   margin:0;
   background-image: linear-gradient(blue, green, red);
 }
@@ -146,86 +140,86 @@ opacity: 0.2;
 }
 
 .box-front{
-  transform: translateX(-200px) translateY(-200px) translateZ(200px);
-  background:url('../Images/gods/Zeus.jpeg');
+  transform: translateX(-200px) translateY(-200px) translateZ(-150px);
+  background:url('../Images/gods/ZeusCube.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .second-box-front{
-  transform: translateX(-100px) translateY(-100px) translateZ(100px);
+  transform: translateX(-150px) translateY(-150px) translateZ(100px);
   background:url('../Images/gods-pictures/zeus-image.jpeg'); 
   background-repeat: no-repeat;
   background-size: cover;
 } 
 
 .box-back{
-  transform: translateX(-200px) translateY(-200px) translateZ(-200px) rotateY(180deg);
-  background:url('../Images/gods/Poseidon.jpeg');
+  transform: translateX(-200px) translateY(-200px) translateZ(150px) rotateY(180deg);
+  background:url('../Images/gods/PoseidonCube.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .second-box-back{
-  transform: translateX(-100px) translateY(-100px) translateZ(-100px) rotateY(180deg);
+  transform: translateX(-150px) translateY(-150px) translateZ(-100px) rotateY(180deg);
   background:url('../Images/gods-pictures/Poseidon-image.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
 } 
 
 .box-right{
-  transform: translateY(-200px) rotateY(90deg);
-  background:url('../Images/gods/Hestia.jpeg');
+  transform: translateY(-200px) translateX(-50px) rotateY(90deg);
+  background:url('../Images/gods/AresCube.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .second-box-right{
-  transform: translateY(-100px) rotateY(90deg);
+  transform: translateY(-150px) translateX(-50px) rotateY(90deg);
   background:url('../Images/gods-pictures/ares-image.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
 } 
 
 .box-left{
-  transform: translateY(-200px) translateX(-400px) rotateY(270deg);
-  background:url('../Images/gods/Apollo.jpeg');
+  transform: translateY(-200px) translateX(-350px) rotateY(270deg);
+  background:url('../Images/gods/ApolloCube.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .second-box-left{
-  transform: translateY(-100px) translateX(-200px) rotateY(270deg);
-  background:url('../Images/gods-pictures/athena-image.jpeg');
+  transform: translateY(-150px) translateX(-250px) rotateY(270deg);
+  background:url('../Images/gods-pictures/apollo-image.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
 } 
 
 
 .box-top{
-  transform: translateX(-200px) translateY(-400px) rotateX(90deg);
-  background:url('../Images/gods/Hades.jpeg');
+  transform: translateX(-200px) translateY(-350px) rotateX(90deg);
+  background:url('../Images/gods/HadesPSD.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .second-box-top{
-  transform: translateX(-100px) translateY(-200px) rotateX(90deg);
+  transform: translateX(-150px) translateY(-250px) rotateX(90deg);
   background:url('../Images/gods-pictures/hades-image.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
 } 
 
 .box-bottom{
-  transform: translateX(-200px) rotateX(90deg);
-  background:url('../Images/gods/Athena.jpeg');
+  transform: translateX(-200px) translateY(-50px) rotateX(-90deg);
+  background:url('../Images/gods/AthenaCube.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .second-box-bottom{
-  transform: translateX(-100px) rotateX(270deg);
-  background:url('../Images/gods-pictures/aphrodite-image.jpeg');
+  transform: translateX(-150px) translateY(-50px) rotateX(270deg);
+  background:url('../Images/gods-pictures/athena-image.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
 } 
@@ -414,14 +408,15 @@ height: 100vh;
   height:100vh;
   display: flex;
   justify-content: center;
-  background-image: url('../Images/perfect.png');
+  background-image: url('../Images/perfect-gradient.jpeg');
   // background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 .box-sregister{
   width: 500px;
   height:600px;
-  margin-left: 20%;
+  margin-left: 30%;
+  margin-top: 5%;
 }
 .container-sregister{
   margin-top: 100px;
@@ -440,6 +435,11 @@ div .form .button {
   display: flex;
   flex-direction: column;
 }
+
+.or {
+  color:white;
+}
+
 // ! REGISTER USER END
 
 
@@ -449,10 +449,9 @@ div .form .button {
   height: 100vh;
   display: flex;
   justify-content: center;
-  // background: rgb(255, 253, 245);
   background-image: linear-gradient(white, beige);
-  background-image: url('../Images/perfect.png');
-  background-size: contain;
+  background-image: url('../Images/perfect-gradient.jpeg');
+  background-size: cover;
   
 }
 
@@ -466,8 +465,13 @@ div .box-login{
   box-sizing: border-box;
   width: 500px;
   margin-top: 100px;
-  margin-left:20%;
+  margin-left:30%;
+  margin-top: 10%;
   color:white;
+}
+
+.divider-word{
+  color:white
 }
 
 .button-login {
@@ -491,20 +495,20 @@ div.form-box-login .button {
 height:100vh;
 display: flex;
 justify-content: center;
-// background: rgb(255, 253, 245);
-background-image: url('../Images/perfect.png');
-background-size: contain;
+background-image: url('../Images/perfect-gradient.jpeg');
+background-size: cover;
 
 }
 
 .box-creategod{
   width: 500px;
   height:600px;
-  margin-left: 20%;
+  margin-left: 30%;
+  margin-top: 10%;
 }
 
 .container-creategod{
-  margin-top: 100px;
+  // margin-top: 100px;
   color:white;
 }
 
@@ -513,9 +517,6 @@ background-size: contain;
   width: 500px;
 }
 
-// .ui .button{
-//   background-color: rgb(112, 204, 207);
-//   }
 
 .form-creategod{
   width: 500px;

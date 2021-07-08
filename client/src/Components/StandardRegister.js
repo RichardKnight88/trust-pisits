@@ -27,7 +27,7 @@ const StandardRegister = () => (
             <input className="formfield" type="password"  placeholder='Confirm your password' required />
           </Form.Field>
           <Button className="button-sregister formfield" type='submit'>Create a free account</Button>
-          <Divider horizontal>or</Divider>
+          <Divider className="or" horizontal>or</Divider>
         </Form>
         {/* <h4 className="already-login">Already have an account?<a href="Log in">Log in</Link></a> */}
         <Link to="/login">
