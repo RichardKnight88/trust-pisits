@@ -9,16 +9,38 @@
 
 .user-summary-content-container {
   display: flex;
+  width: 80%
+}
+
+.profile-pic-container {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-pic {
+  border-radius: 100%;
+  height: 75px;
+  width:75px;
 }
 
 .username-container {
   flex-grow: 1;
   font-size: 3rem;
   font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+.reviews-container {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .review-content-container {
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,4 +50,11 @@
   font-size: 3em;
   font-weight: 700;
   padding: 10px;
+}
+
+.review-text {
+  display: flex;
+  align-items: flex-end;
+  font-size: 1em;
+  font-weight: 700;
 }

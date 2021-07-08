@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 // import axios from 'axios'
 import { getCurrentUser } from './Authentification/auth'
+import { Rating } from 'semantic-ui-react'
 
 const ProfilePage = () => {
 
@@ -49,7 +50,8 @@ const ProfilePage = () => {
                 <div className="review-content-container">
 
                   <div className="review-number">{currentUser.userComments.length}</div>
-                  <div className="review-text">Reviews</div>
+                  <div className="review-text"><Rating defaultRating={1} maxRating={1} size='huge' disabled /> 
+                  Reviews</div>
 
                 </div>
 
