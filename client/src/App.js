@@ -15,7 +15,7 @@ import About from './Components/About'
 import Footer from './Components/Footer'
 import Comment from './Components/Comment'
 import Business from './Components/Business'
-import EditComment from './Components/EditDeleteComment'
+import EditComment from './Components/EditComment'
 import EditDeleteGod from './Components/EditDeleteGod'
 
 
