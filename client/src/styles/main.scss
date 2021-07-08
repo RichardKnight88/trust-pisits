@@ -7,7 +7,9 @@
 .landingcontainer{
   width: 100vw;
   height: 100vh;
-  background-image: linear-gradient(rgb(114, 111, 105), rgb(197, 185, 146));
+  // background-image: linear-gradient(rgb(252, 252, 252), rgb(197, 185, 146));
+  background-image: url('../Images/about-page.jpeg');
+  background-size: cover;
 }
 
 body{ 
@@ -20,7 +22,6 @@ body{
   height: 50px;
   cursor: pointer;
 }
-
 
 .fade-in {
   animation: 6s;
@@ -54,7 +55,7 @@ body{
 // font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 position: absolute;
 margin-top: 20%;
-margin-left: 70%;
+margin-left: 55%;
 opacity: 0.2;
 }
 
@@ -69,44 +70,44 @@ opacity: 0.2;
   position:inherit;
   transform-style: preserve-3d;
   animation-name: rotate;
-  animation-duration:40s;
+  animation-duration:100s;
   animation-timing-function:linear;
   animation-iteration-count: infinite;
 }
 
 @keyframes rotate {
   0%{
-    transform: rotate3d(0,1,1,90deg);
+    transform: rotate3d(0,1,1,36deg);
   }
   10%{
-    transition: rotate3d(1,0,1,100deg);
+    transition: rotate3d(1,0,1,72deg);
   }
   20%{
-    transition: rotate3d(0, 1, 0.5, 3.50rad);
+    transition: rotate3d(0, 1, 0.5, 108deg);
   }
   30%{
-    transition: rotate3d(1,1,0,120deg);
+    transition: rotate3d(1,1,0,144deg);
   }
   40%{
-    transition: rotate3d(0,1,1,30deg);
+    transition: rotate3d(0,1,1,180deg);
   }
   50% {
-    transform: rotate3d(2, 1, 1, 160deg);
+    transform: rotate3d(2, 1, 1, 216deg);
   }
   60%{
-    transition: rotate3d(1,1,0,90deg);
+    transition: rotate3d(1,1,0,252deg);
   }
   70%{
-    transform: rotate3d(2,1,-1,120deg);
+    transform: rotate3d(2,1,-1,288deg);
   }
   80%{
-    transition: rotate3d(1,0,0,90deg);
-  }
-  90%{
-    transition: rotate3d(1,2,-1,60deg);
+    transition: rotate3d(1,0,0,324deg);
   }
   100%{
-    transform: rotate3d(0,1,0,360deg);
+    transition: rotate3d(1,2,-1,360deg);
+  }
+  100%{
+    transform: rotate3d(0,1,0,36deg);
   }
 }
 
@@ -125,8 +126,8 @@ opacity: 0.2;
 
 .second-box{
   position:absolute;
-  width: 200px;
-  height:200px;
+  width: 150px;
+  height:150px;
   border:1px thin #e05227;
   border-radius: 5%;
   box-shadow: rgb(97, 96, 96) 1px 1px 1px 1px;
@@ -149,7 +150,7 @@ opacity: 0.2;
 }
 
 .second-box-front{
-  transform: translateX(-150px) translateY(-150px) translateZ(100px);
+  transform: translateX(-125px) translateY(-150px) translateZ(75px);
   background:url('../Images/gods-pictures/zeus-image.jpeg'); 
   background-repeat: no-repeat;
   background-size: cover;
@@ -163,7 +164,7 @@ opacity: 0.2;
 }
 
 .second-box-back{
-  transform: translateX(-150px) translateY(-150px) translateZ(-100px) rotateY(180deg);
+  transform: translateX(-125px) translateY(-150px) translateZ(-75px) rotateY(180deg);
   background:url('../Images/gods-pictures/Poseidon-image.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -191,7 +192,7 @@ opacity: 0.2;
 }
 
 .second-box-left{
-  transform: translateY(-150px) translateX(-250px) rotateY(270deg);
+  transform: translateY(-150px) translateX(-200px) rotateY(270deg);
   background:url('../Images/gods-pictures/apollo-image.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -206,7 +207,7 @@ opacity: 0.2;
 }
 
 .second-box-top{
-  transform: translateX(-150px) translateY(-250px) rotateX(90deg);
+  transform: translateX(-125px) translateY(-225px) rotateX(90deg);
   background:url('../Images/gods-pictures/hades-image.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -220,7 +221,7 @@ opacity: 0.2;
 }
 
 .second-box-bottom{
-  transform: translateX(-150px) translateY(-50px) rotateX(270deg);
+  transform: translateX(-125px) translateY(-75px) rotateX(270deg);
   background:url('../Images/gods-pictures/athena-image.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -234,15 +235,16 @@ opacity: 0.2;
 
 // Landing Page END
 
-// About Page START 
+// ! ABOUT PAGE START 
 .aboutpage-body{
 display: flex;
 justify-content: center;
 align-items: center;
 flex-wrap: wrap;
-background-image: url('../Images/statues.jpeg');
-background-size: cover;
-width: 100vw;
+background-image: url('../Images/Michelangelos-David-Wallpaper-96364\ 2.jpeg');
+background-position: top right;
+
+// width: 100vw;
 height: 100vh;
 }
 
@@ -268,9 +270,9 @@ height: 100vh;
 // }
 
 .container-about{
-  // position: relative;
   z-index:1;
-  margin-left: 20%;
+  margin-left: 40%;
+  margin-bottom: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -283,6 +285,7 @@ height: 100vh;
   height:350px;
   box-shadow: 0 0 10px rgb(255, 236, 194);
   border-radius: 15px;
+  margin-left:10%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -384,7 +387,7 @@ height: 100vh;
 } 
 
 
-// About Page END
+// ! About Page END
 
 
 
@@ -534,6 +537,162 @@ background-size: cover;
 
 
 
+// ! GOD BUSINESS START
+
+.business-container{
+  background-image: url('../Images/michel.jpeg');
+  background-position: center;
+}
+
+.business-brand{
+  margin-top: 5%;
+  margin-right: 48%;
+}
+
+.business-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 600px;
+  // margin-bottom: 15%;
+  
+}
+
+.god-brand, .grof-brand {
+  font-size: xx-large;
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+}
+
+.pilis{
+  color:white;
+  display: flex;
+  justify-content: center;
+}
+
+.business-login-register {
+  width: 700px;
+  margin-top: 20%;
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+
+.business-login-formfield, .business-register-formfield {
+  width: 200px;
+  height: 50px;
+}
+button.ui.button.business-login-formfield.business-login{
+  background-color:rgb(201, 225, 233);
+}
+
+button.ui.medium.button.business-register-formfield {
+  background-color: rgb(247, 239, 215);
+}
+
+.number-reviews{
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  height:300px;
+  background-color: rgb(250, 247, 243);
+}
+
+.first-number, .second-number, .third-number {
+  font-size: larger;
+}
+
+.customer-confidence {
+  height: 70vh;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.confidence-box{
+  width: 380px;
+  height: 300px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.button-confidence{
+  border:none;
+  border-radius: 5px;
+  padding: 18px;
+  background-color: white;
+  box-shadow: 0 10px 20px -10px rgba(175, 170, 140, 0.7);
+  transition: all 0.2s;
+}
+
+.button-confidence{
+  cursor: pointer;
+  display:inline-block;
+  position: relative;
+  transition: 0.2s;
+}
+.button-confidence:after{
+  content: '🏛';
+  position: absolute;
+  opacity: 0;
+  top:18px;
+  right: -10px;
+  transition: 0.6s;
+}
+
+.button-confidence:hover {
+  padding-right: 30px;
+  padding-left: 5px;
+}
+.button-confidence:hover:after{
+  opacity: 1;
+  right:7px;
+}
+
+.godcards-confidence{
+  width: 700px;
+  height: 600px;
+  margin-left: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.zeus-card-image{
+  width: 650px;
+  height: 490px;
+  background-image:linear-gradient((to bottom, rgba(42, 42, 46, 0.52), rgba(253, 253, 253, 0.73))), url('../Images/zeus-card.jpeg');
+  opacity: 1;
+  height: 450px;
+  background-repeat: no-repeat;
+  box-shadow: 0 14px 20px -10px rgba(58, 57, 55, 0.7); //if removing this one, the bottom border will dissapear and gradient above will make it look like it's fading
+  border-radius: 15px;
+  border-bottom: none;
+}
+.prometheus-card-image{
+  width:280px;
+  height: 280px;
+  background-image: url('../Images/prometheus-card.jpeg');
+  margin-left: 230px;
+  margin-top: 20px;
+  box-shadow: 0 14px 20px -10px rgba(58, 57, 55, 0.7);
+  border-radius: 10px;
+}
+
+// ! GOD BUSINESS END
+
+
+// ! SHOW ALL GODS START
+// .image-god{
+//   width: 600px;
+//   height: 1300px;
+//   margin-left: 50%;
+//   background-image: url('../Images/zeus-godspage.jpeg');
+// }
+
+// ! SHOW ALL GODS END
 
 
 
@@ -1934,10 +2093,34 @@ background-size: cover;
 }
 
 .body-color{
-  background-color: rgba(175, 175, 175, .2);
-  display: flex;
-  justify-content: center;
+  background-color: rgba(145, 89, 89, 0.2);
+
+  // background: linear-gradient(120deg, lightblue, green, brown);
+  // background-size: 1000% 1000%;
+  // -webkit-animation: AnimationName 39s ease infinite;
+  // -moz-animation: AnimationName 39s ease infinite;
+  // animation: AnimationName 39s ease infinite;
+  // display: flex;
+  // justify-content: center;
 }
+
+// @-webkit-keyframes AnimationName {
+//   0%{background-position:0% 65%}
+//   50%{background-position:100% 36%}
+//   100%{background-position:0% 65%}
+// }
+// @-moz-keyframes AnimationName {
+//   0%{background-position:0% 65%}
+//   50%{background-position:100% 36%}
+//   100%{background-position:0% 65%}
+// }
+// @keyframes AnimationName {
+//   0%{background-position:0% 65%}
+//   50%{background-position:100% 36%}
+//   100%{background-position:0% 65%}
+// }
+
+
 
 
 .inner-divider-width-one {
