@@ -38,7 +38,7 @@ export const deleteUser = async (req, res) => {
 // ! GET ONE USER
 export const getOneUser = async (req, res) => {
   try {
-    const individualUser = await User.findById(req.currentUser._id)
+    const individualUser = await User.findById(req.currentUser._id).populate('userComments').populate('createdGods')
     if (!individualUser) throw new Error()
     return res.status(200).json(individualUser)
   } catch (err) {

@@ -9,11 +9,16 @@ const userSchema = new mongoose.Schema({
 })
 
 userSchema.virtual('userComments', {
-  ref: 'God', 
+  ref: 'Comment', 
   localField: '_id',
-  foreignField: 'comments.owner'
+  foreignField: 'owner'
 })
 
+userSchema.virtual('createdGods', {
+  ref: 'God', 
+  localField: '_id',
+  foreignField: 'owner'
+})
 userSchema.set('toJSON', {
   virtuals: true,
   transform(_doc, json) {
