@@ -56,10 +56,10 @@ const Login = () => {
             <Form.Field>
               <input 
                 name="email" 
-                className="formfield" 
+                className="formfield hAgHjU" 
                 type="text" 
                 // rel="noreferrer"  
-                placeholder='Email' 
+                placeholder='Email'
                 value={dataFromLogin.email}
                 required 
                 onChange={handleLoginData}
