@@ -74,7 +74,6 @@ const GodsInfoPage = () => {
   }, [theosToLowerCase])
 
 
-
   return (
     
     <div>
@@ -180,7 +179,7 @@ const GodsInfoPage = () => {
                                     <Grid.Column><p>NUMBER OF REVIEWS</p></Grid.Column>
                                     <Grid.Column><p>LOCATION</p></Grid.Column>
 
-                                    {currentUserId ?
+                                    {currentUserId === comment.owner ?
 
                                       
                                       <Grid.Column>
