@@ -79,14 +79,14 @@ const GodsInfoPage = () => {
     <div>
       {theos, theosToLowerCase, setTheosCommentsLength, theosComments, jobs, nameWebsite ?
         <>
-          <div className='container'>
+          <div className='display-heading-poisition'>
             <div className='info-page-width top-categories-spacing'>
-              <h4 className='categories-species-subheading'>All &gt; Categories &gt; {theos.species} &gt; {theos.name}</h4>
+              <h4>All &gt; Categories &gt; {theos.species} &gt; {theos.name}</h4>
             </div>
           </div>
           {/*  */}
           {/* Middle Grid */}
-          <div className='container'>
+          <div className='display-heading-poisition'>
             <div className='info-page-width display-god-top-part-margin'>
               <Grid>
                 <Grid.Column>
@@ -122,11 +122,46 @@ const GodsInfoPage = () => {
                         </div>
                       </Grid.Column>
 
+                      {/* <Grid.Column>
+                        vanja
+                      </Grid.Column> */}
+
+
                     </Grid>
                   </Segment>
                 </Grid.Column>
+
                 <Grid.Column className='info-page-width-two'>
-                  <Image src='https://react.semantic-ui.com/images/wireframe/paragraph.png' />
+
+                  
+                  
+                  <Segment className='displaying-website'>
+                    <Link to={`/create-god/${name}`}>
+                      <Icon name='edit outline' />
+                    </Link>
+                  </Segment>               
+                  
+                  
+
+                  {
+                    <Link to={{ pathname: `${theos.website}` }} target='_blank'>
+                    
+                      <Segment className='displaying-website'>
+                        <div>
+                          <div className='positioning-website-link'>
+                            <Icon name='world icon' className='engraved' size='large'/>
+                            <div className='website-link-size engraved-two-normal-text'>
+                              {nameWebsite}
+                            </div>
+                          </div>
+                          <div><p className='website-text-color'>Visit this website</p></div>
+                        </div>
+                        <Icon name='chevron right' size='large' className='engraved-two-normal-text'/>
+                      </Segment>
+                    
+                    </Link>  
+                  }
+                  
                 </Grid.Column>
               </Grid>
             </div>

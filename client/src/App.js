@@ -34,13 +34,16 @@ const App = () => {
           <Comment />
         </Route>
 
+        <Route path='/create-god/:name'>
+          <EditDeleteGod />
+        </Route>
+
         <Route path="/categories/:category_name">
           <FilteredGodsByCategory />
         </Route>
 
         <Route path="/gods/:name">
           <GodsInfoPage />
-          <EditDeleteGod />
         </Route>
 
         <Route path="/deus_register">
