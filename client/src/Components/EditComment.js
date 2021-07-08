@@ -62,8 +62,18 @@ const CommentEdit = () => {
     }
   }
 
-
-
+  const deleteComment = async() => {
+    try {
+      await axios.delete(`/api/gods/${name}/comments/${commentId}`, {
+        headers: {
+          Authorization: `Bearer ${getTokenFromStorage()}` },
+      })
+      history.push(`/gods/${name}`)
+    } catch (err) {
+      console.log(err)
+    }
+  }
+  
 
 
   return (
@@ -131,7 +141,7 @@ const CommentEdit = () => {
                 </Form.Field>
 
                 <Button className='comment-submit-button' type='submit'>Submit</Button>
-                <Button className='comment-submit-button delete-button-color' type='submit'>Delete</Button>
+                <Button className='comment-submit-button delete-button-color' type='submit' onClick={deleteComment}>Delete</Button>
               </Form>
 
             </div>
