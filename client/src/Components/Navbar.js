@@ -81,9 +81,9 @@ const Navbar = () => {
               }
               {/* <Link to="/login" className="navbar-item engraved-two-normal-text">Login</Link> */}
 
-              <Link to="/register" className="navbar-item engraved-two-normal-text">Register</Link>
+              {/* <Link to="/register" className="navbar-item engraved-two-normal-text">Register</Link> */}
 
-              <Link to="/deus_register" className="navbar-item engraved-two-normal-text">Deus Register</Link>
+              {/* <Link to="/deus_register" className="navbar-item engraved-two-normal-text">Deus Register</Link> */}
 
               <Link to="/categories/:category_name" className="navbar-item engraved-two-normal-text">Gods filtered by category</Link>
               
