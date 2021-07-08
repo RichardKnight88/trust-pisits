@@ -15,6 +15,41 @@
 }
 
 a.hover-link-to-comment:hover {
-  
   text-decoration: underline;
+}
+
+.display-heading-poisition {
+  display: flex;
+  justify-content: center;
+}
+
+
+.displaying-website {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.website-link-size {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.positioning-website-link {
+  display: flex;
+  padding: .5rem;
+}
+
+.website-text-color {
+  color: black;
+  padding-left: .5rem;
+}
+
+.no-logo-present {
+  width: 10rem;
+  height: 10rem;
+}
+
+.gods-logo-postioning {
+  margin-left: 1rem;
 }

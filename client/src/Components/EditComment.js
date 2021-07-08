@@ -25,13 +25,13 @@ const CommentEdit = () => {
   useEffect(() => {
     const getData = async () => {
       const { data } = await axios.get(`/api/gods/${name}/comments/${commentId}`)
-      console.log('DATA >>>', data)
+      // console.log('DATA >>>', data)
       setCommentDataEdit(data)
     }
     getData()
   }, [commentId, name])
 
-  console.log('INCOMiNG DATA', commentDataEdit)
+  // console.log('INCOMiNG DATA', commentDataEdit)
 
   const handleTextChange = (event) => {
     const newCommentData = { ...commentDataEdit, [event.target.name]: event.target.value }
@@ -140,8 +140,8 @@ const CommentEdit = () => {
                   />
                 </Form.Field>
 
-                <Button className='comment-submit-button' type='submit'>Submit</Button>
-                <Button className='comment-submit-button delete-button-color' type='submit' onClick={deleteComment}>Delete</Button>
+                <Button type='submit'>Submit Changes</Button>
+                <Button className='comment-submit-button' type='submit' onClick={deleteComment}>Delete</Button>
               </Form>
 
             </div>
