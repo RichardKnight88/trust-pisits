@@ -32,14 +32,18 @@ const Navbar = () => {
     location.pathname
   }
 
+  const homeCheck = () => {
+    burger && toggleBurger()
+  }
+
   return (
 
     <header>
       <nav className='navbar is-fixed-top is-dark is-transparent'>
         <div className='container'>
           <div className='navbar-brand'>
-            <div className="navbar-item">
-              <Link to="/" className="navbar-item engraved-two-normal-text">LandingPage</Link>
+            <div className="navbar-item" onClick={homeCheck}>
+              <Link to="/" className="navbar-item engraved-two-normal-text">Landing Page</Link>
               <Link to="/home" className="navbar-item engraved-two-normal-text">Home</Link>
             </div>
             <div onClick={toggleBurger} className={`navbar-burger ${burger}`} data-target='theoi-navbar'>
@@ -50,10 +54,10 @@ const Navbar = () => {
           </div>
 
 
-          <div id='theoi-navbar' className={`navbar-menu ${burger} engraved-two-normal-text`}>
+          <div id='theoi-navbar' onClick={toggleBurger} className={`navbar-menu ${burger} engraved-two-normal-text`}>
           
             <div className='navbar-end'>
-              <Link to="/gods" className="navbar-item engraved-two-normal-text hover-effect-link">Gods</Link>
+              <Link to="/gods" className="navbar-item engraved-two-normal-text hover-effect-link" >Gods</Link>
 
               <Link to="/categories" className="navbar-item engraved-two-normal-text">Categories</Link>
 
