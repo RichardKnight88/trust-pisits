@@ -5,6 +5,8 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 import { definedRating } from '../sematinicElements/ratings.js'
 import Searchbar from './Searchbar'
+import { getTwoLetters } from './Authentification/auth'
+
 
 
 
@@ -154,7 +156,9 @@ const Home = () => {
                   <div key={item._id} className="comment-div">
 
                     <div className="comment-header">
-                      <div className="comment-profile-pic "></div>
+                      <div className='commentator-pic-background'>
+                        <h2 className='engraved'>{getTwoLetters(item.ownerUsername)}</h2>
+                      </div>
                       <div className="comment-rating">{definedRating(item.rating)}</div>
                     </div>
                     <div className="engraved comment-owner-text">

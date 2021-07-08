@@ -1,10 +1,15 @@
-
+.body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 10;
+}
 .user-summary-container {
   background-color: #ffe6cc;
   width: 100vw;
   height: 180px;
   display: flex;
   justify-content: center;
+  box-shadow:  2px 2px 2px rgba(102, 51, 0, 0.6);
 }
 
 .user-summary-content-container {
@@ -17,6 +22,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  .commentator-pic-background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    background-image: url('https://i.ibb.co/kDvfxhz/comentator-profile.png');
+    background-size: cover;
+
+    .engraved {
+      font-size: 2.5em;
+      opacity: .7;
+    }
+  }
 }
 
 .profile-pic {
@@ -57,4 +78,111 @@
   align-items: flex-end;
   font-size: 1em;
   font-weight: 700;
+
+  .ui.rating .active.icon {
+    background-color: rgba(102, 51, 0, 0.6);
+  }
+}
+
+.profile-body-section-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 10;
+  // width: 80%;
+  
+}
+
+
+.profile-body-container {
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.review-of-text {
+  margin: 50px 0 16px;
+}
+
+.review-card {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 24px;
+  box-shadow:  2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.review-card-header {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+
+  .profile-pic-in-card {
+    height: 45px;
+    width: 45px;
+  }
+
+  .commentator-pic-background {
+    height: 45px;
+    width: 45px;
+
+    .engraved {
+      font-size: 1.2em;
+      opacity: .7;
+    }
+  }
+
+  .review-header-username {
+    font-size: 1em;
+    font-weight: 700;
+    margin-left: 10px;
+  }
+}
+
+.review-card-body-container {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.commentator-pic-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height:5rem;
+  border-radius: 50%;
+  background-image: url('https://i.ibb.co/kDvfxhz/comentator-profile.png');
+  background-size: cover;
+}
+
+.review-card-body-rating-date {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  
+  .ui.rating .active.icon {
+    background-color: #ffae00;
+  }
+}
+
+.review-card-buttons-container {
+  display: flex;
+}
+
+.review-card-button {
+  padding: 4px 8px;
+  display: flex;
+  color: rgba(0, 0, 0, 0.4);
+  &:hover {
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  a {
+    display: flex;
+    color: rgba(0, 0, 0, 0.4);
+    &:hover {
+      color: rgba(0, 0, 0, 0.8);
+    }
+  }
 }

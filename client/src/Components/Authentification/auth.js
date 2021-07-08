@@ -44,7 +44,13 @@ export const getCurrentUser = async () => {
     }
   )
   console.log(data)
-  
+
   return data
 
+}
+
+export const getTwoLetters = (nameVariable) => {
+  const lettersArray = [nameVariable[0], nameVariable[1]]
+  const firstTwoLetters = lettersArray.join('')
+  return firstTwoLetters
 }
