@@ -126,7 +126,7 @@ const StandardRegister = () => {
 
               <Button className="button-sregister formfield" type='submit'>Create a free account</Button>
 
-              <Divider horizontal>or</Divider>
+              <Divider horizontal><div className="divider-word"></div>Or</Divider>
 
             </Form>
 

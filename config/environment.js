@@ -22,10 +22,10 @@ export const getUserIdFromName = (userNameVariable, arrayToFilter) => {
 
 export const matchGodToComment = (nameVariable, arrayToFilter) => {
   const arrayFilterValue = arrayToFilter.filter(item => {
-    console.log('nameVariable', nameVariable, item.name)
+    // console.log('nameVariable', nameVariable, item.name)
     // console.log('arrayToFilter', arrayToFilter)
     if (item.name === nameVariable ) {
-      console.log('YES')
+      // console.log('YES')
       return item
     } 
   })

@@ -87,7 +87,7 @@ const Login = () => {
           </Form>
           
         </div>
-        <Divider horizontal>Or</Divider>
+        <Divider horizontal><div className="divider-word"></div>Or</Divider>
         <Link to="/register">
           <Button className="wanttoregister" content='Want to register?' icon='signup' size='medium' />
         </Link>
