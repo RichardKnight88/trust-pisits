@@ -98,7 +98,7 @@ const Home = () => {
               </div>
 
 
-              <div className="categories-continer">
+              <div className="categories-container">
 
 
                 <div className="categories-tagline">

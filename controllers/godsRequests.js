@@ -157,6 +157,7 @@ export const editComment = async (req, res) => {
 
     const updatedComment = { ...commentToEdit._doc , owner: commentToEdit.owner, ...req.body, _id: commentToEdit._id } 
 
+    // eslint-disable-next-line eqeqeq
     if (updatedComment.owner == req.currentUser._id || req.currentUser.username === 'Admin') {
       console.log('AUTHORISED')
       await Comment.findOneAndUpdate({ _id: commentId }, { ...req.body }, { new: true }) 

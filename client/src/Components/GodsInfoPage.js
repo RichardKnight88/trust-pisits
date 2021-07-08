@@ -12,7 +12,7 @@ import { getPayload, checkUserIsAuthenticated } from './Authentification/auth'
 
 const GodsInfoPage = () => {
 
-  const [theos, setTheos] = useState([])
+  const [theos, setTheos] = useState(null)
   const [theosToLowerCase, setTheosToLowerCase] = useState()
   const [theosCommentsLength, setTheosCommentsLength] = useState([])
   const [theosComments, setTheosComments] = useState([])
@@ -34,8 +34,6 @@ const GodsInfoPage = () => {
     }
   }, [])
   
-  
-  console.log('currentUserId >>>', currentUserId) 
 
 
   useEffect(() => {
@@ -56,20 +54,22 @@ const GodsInfoPage = () => {
       
       } catch (err) {
         setHasError(true)
-        console.log('err.message >>', err.message)
+        console.log('i am not working properly >>', err.message)
       }
     }
     getData()
   }, [])
 
   useEffect(() => {
-    if (theosToLowerCase && theos.gender === 'Male') {
-      console.log('theos.name >>>', theos.name)
-      setNameWebsite(`${theosToLowerCase}.theos`)
-    } else if (theos.gender === 'Female') {
-      setNameWebsite(`${theosToLowerCase}.thea`)
-    } else {
-      setNameWebsite(`${theosToLowerCase}.theoi`)
+    if (theosToLowerCase) {
+      if (theos.gender === 'Male') {
+        console.log('theos.name >>>', theos.name)
+        setNameWebsite(`${theosToLowerCase}.theos`)
+      } else if (theos.gender === 'Female') {
+        setNameWebsite(`${theosToLowerCase}.thea`)
+      } else {
+        setNameWebsite(`${theosToLowerCase}.theoi`)
+      }
     }
   }, [theosToLowerCase])
 
@@ -77,16 +77,16 @@ const GodsInfoPage = () => {
   return (
     
     <div>
-      {theos, theosToLowerCase, setTheosCommentsLength, theosComments, jobs, nameWebsite ?
+      {theos ?
         <>
-          <div className='container'>
+          <div className='display-heading-poisition'>
             <div className='info-page-width top-categories-spacing'>
-              <h4 className='categories-species-subheading'>All &gt; Categories &gt; {theos.species} &gt; {theos.name}</h4>
+              <h4>All &gt; Categories &gt; {theos.species} &gt; {theos.name}</h4>
             </div>
           </div>
           {/*  */}
           {/* Middle Grid */}
-          <div className='container'>
+          <div className='display-heading-poisition'>
             <div className='info-page-width display-god-top-part-margin'>
               <Grid>
                 <Grid.Column>
@@ -94,7 +94,10 @@ const GodsInfoPage = () => {
                     <Grid columns={2} relaxed='very'>
 
                       <Grid.Column className='inner-divider-width-one'>
-                        <Image src={theos.logo} />
+                        <div className='no-logo-present'>
+                          <Image src={theos.logo} className='gods-logo-postioning' />
+                        </div>
+                        
                       </Grid.Column>
 
                       <Grid.Column className='inner-divider-width-two'>
@@ -122,11 +125,51 @@ const GodsInfoPage = () => {
                         </div>
                       </Grid.Column>
 
+                    
+
+
                     </Grid>
                   </Segment>
                 </Grid.Column>
+
                 <Grid.Column className='info-page-width-two'>
-                  <Image src='https://react.semantic-ui.com/images/wireframe/paragraph.png' />
+
+                  
+                  
+                                
+                  
+                  {currentUserId === theos.owner._id ?
+
+                                      
+                    <Segment className='displaying-website'>
+                      <Link to={`/create-god/${name}`}>
+                        <Icon name='edit outline' />
+                      </Link>
+                    </Segment> 
+                    :
+
+                    ''
+                  }
+
+                  {
+                    <Link to={{ pathname: `${theos.website}` }} target='_blank'>
+                    
+                      <Segment className='displaying-website'>
+                        <div>
+                          <div className='positioning-website-link'>
+                            <Icon name='world icon' className='engraved' size='large'/>
+                            <div className='website-link-size engraved-two-normal-text'>
+                              {nameWebsite}
+                            </div>
+                          </div>
+                          <div><p className='website-text-color'>Visit this website</p></div>
+                        </div>
+                        <Icon name='chevron right' size='large' className='engraved-two-normal-text'/>
+                      </Segment>
+                    
+                    </Link>  
+                  }
+                  
                 </Grid.Column>
               </Grid>
             </div>
@@ -270,9 +313,15 @@ const GodsInfoPage = () => {
           
         </> 
         :
-        <h2>
-          {hasError ? 'Something has gone wrong' : <img src='https://thumbs.gfycat.com/BareJoyousAsp.webp' alt='Rick And Morty'/>}
-        </h2> 
+
+        hasError ?
+          <h2>
+          Something has gone wrong
+          </h2> 
+
+          :
+
+          <img src='https://thumbs.gfycat.com/BareJoyousAsp.webp' alt='Rick And Morty'/>
       }
     </div>
   )
