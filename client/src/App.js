@@ -15,7 +15,8 @@ import About from './Components/About'
 import Footer from './Components/Footer'
 import Comment from './Components/Comment'
 import Business from './Components/Business'
-import EditComment from './Components/EditComment'
+import EditComment from './Components/EditDeleteComment'
+import EditDeleteGod from './Components/EditDeleteGod'
 
 
 const App = () => {
@@ -39,6 +40,7 @@ const App = () => {
 
         <Route path="/gods/:name">
           <GodsInfoPage />
+          <EditDeleteGod />
         </Route>
 
         <Route path="/deus_register">

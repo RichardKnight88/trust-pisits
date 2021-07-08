@@ -25,10 +25,17 @@ const GodsInfoPage = () => {
 
   console.log('getPayload >>>', getPayload())
 
-  // const [currentUser, setCurrentUser] = (null)
 
-  // const currentUserId = getPayload().sub
-  // console.log('currentUserId >>>', currentUserId) 
+  const [currentUserId, setCurrentUserId] = useState(null)
+
+  useEffect(() => {
+    if (getPayload()) {
+      setCurrentUserId(getPayload().sub)
+    }
+  }, [])
+  
+  
+  console.log('currentUserId >>>', currentUserId) 
 
 
   useEffect(() => {
@@ -173,11 +180,14 @@ const GodsInfoPage = () => {
                                     <Grid.Column><p>NUMBER OF REVIEWS</p></Grid.Column>
                                     <Grid.Column><p>LOCATION</p></Grid.Column>
 
-                                    {checkUserIsAuthenticated() ?
+                                    {currentUserId ?
 
                                       
                                       <Grid.Column>
-                                        <Icon name='edit outline' />
+                                        <Link to={`/gods/${theosToLowerCase}/comments/${comment._id}`}>
+                                          <Icon name='edit outline' />
+                                        </Link>
+                                        
                                       </Grid.Column>
 
                                       :
