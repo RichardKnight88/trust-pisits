@@ -27,11 +27,11 @@ const StandardRegister = () => {
     // console.log('LOCATION', lastLocation)
     if (location === '/deus_register') {
       const settingLocation = { ...registerData, isDeusUser: true }
-      console.log('TRUE>>>', settingLocation)
+      // console.log('TRUE>>>', settingLocation)
       setRegisterData(settingLocation)  
     } else {
       const settingLocation = { ...registerData, isDeusUser: false }
-      console.log('FALSE >>>', settingLocation)
+      // console.log('FALSE >>>', settingLocation)
       setRegisterData(settingLocation)  
     }
     setLocation(lastLocation)

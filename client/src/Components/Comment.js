@@ -1,13 +1,16 @@
-import React, { useState  } from 'react'
-import { useHistory, useLocation } from 'react-router-dom'
+import React, { useState, useEffect  } from 'react'
+import { useHistory, useParams, useLocation } from 'react-router-dom'
 import { Button, Form, Segment, Grid, Image, Rating } from 'semantic-ui-react'
 import { getTokenFromStorage } from './Authentification/auth'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
-import { comment } from 'postcss'
 
 
 const Comment = () => {
+
+  console.log('pageview >>>', location.pathName)
+
+  const params = useParams()
 
   const history = useHistory()
 
@@ -23,28 +26,31 @@ const Comment = () => {
 
   // Handling incoming data from comment section
   const handleCommentData = (event) => {
-    console.log('NAME OF THE COMMENT >>', event.target.name)
+    //console.log('NAME OF THE COMMENT >>', event.target.name)
     const getUserComment = { ...commentData, [event.target.name]: event.target.value }
-    console.log('getUserComment >>>', getUserComment)
+    //console.log('getUserComment >>>', getUserComment)
     const newError = { ...errors, [event.target.name]: '' }
     setCommentData(getUserComment)
     setErrors(newError)
   }
 
   // Submit data from comment to the backend
-  const setComment = async event => {
+  const setComment = async (event, data) => {
     try {
       event.preventDefault()
       const token = window.localStorage.getItem('token')
-      console.log('TOKEN >>>', token)
-      await axios.post('/api/gods/zeus/comments', commentData, 
+      // console.log('TOKEN >>>', token)
+      console.log('DATA >>>', data)
+      // console.log('EVENT.TARGET.NAME >>', event.target.target)
+      await axios.post(`/api/gods/${params.name}/comments`, commentData, 
         {
           headers: {
             Authorization: `Bearer ${token}` },
         }
       ) 
+      
   
-      history.push('/home')
+      history.push(`/gods/zeus`)
     } catch (err) {
       console.log(err)
       // setErrors(err.response.data.errors)
@@ -52,26 +58,19 @@ const Comment = () => {
     }
   }
 
-  // const [rating, setRating] = useState(0)
-
-  // function handleChangeOnRate(event, data, { rating }) {
-  //   event.preventDefault()
-  //   const getRatingNumber = { ...commentData, [data.name]: data.value }
-  //   setRating(rating)
-  // }
 
   const checkingRating = (event, data) => {
     const getRatingNumber = { ...commentData, [data.name]: data.rating }
     console.log('data >>>', data)
     // alert(data.rating)
-    console.log('event.target.rating >>>', data.rating)
+    // console.log('event.target.rating >>>', data.rating)
     const newError = { errors, [event.target.name]: '' }
     setCommentData(getRatingNumber)
     setErrors(newError)
-    console.log('DATA.VALUE >>', data.value)
+    // console.log('DATA.VALUE >>', data.value)
   }
-  console.log('RATING NUMBER >>', commentData)
-  console.log('TYPE OF RATING >>', typeof(commentData.rating))
+  // console.log('RATING NUMBER >>', commentData)
+  // console.log('TYPE OF RATING >>', typeof(commentData.rating))
 
   
 
@@ -140,7 +139,8 @@ const Comment = () => {
                 </Form.Field>
 
                 <Button className='comment-submit-button' type='submit'>Submit</Button>
-
+                <Button className='comment-submit-button' type='submit'>Edit</Button>
+                <Button className='comment-submit-button' type='submit'>Delete</Button>
               </Form>
 
             </div>

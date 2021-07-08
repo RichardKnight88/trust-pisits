@@ -3,9 +3,10 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
-import { Divider, Grid, Image, Segment, Icon, List, Popup, Label } from 'semantic-ui-react'
+import { Divider, Grid, Image, Segment, Icon, List, Popup, Label, Rating } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 import { definedRating } from '../sematinicElements/ratings.js'
+import { getPayload } from './Authentification/auth'
 
 // ! COMPONENT TO SHOW INDIVIDUAL THEOS (aka 'god' in Greek)
 
@@ -21,6 +22,17 @@ const GodsInfoPage = () => {
   const [nameWebsite, setNameWebsite] = useState(null)
 
   const { name } = useParams()
+
+  const checkUserIsAuthenticated = () => {
+
+    const payload = getPayload()
+
+    if (!payload) return
+    
+    const currentTime = Math.round(Date.now() / 1000)
+    return currentTime < payload.exp
+
+  }
 
   useEffect(() => {
     const getData = async () => {
@@ -124,14 +136,24 @@ const GodsInfoPage = () => {
                 <Grid.Row className='flexing-mobile'>
                   <Grid.Column>
                     <Segment>
-                      <div>
-                        <Image src='https://i.ibb.co/fHJphxZ/Comment-Picture.png' alt='comment-picture' />
-                        <p>Write review</p>
-                        
+                      <div className='write-review-box-positioning'>
+                        <div className='write-review-box-positioning-inner-box'>
+                          <div><Image className='comment-picture-size' src='https://i.ibb.co/fHJphxZ/Comment-Picture.png' alt='comment-picture' /></div>
+                          <div><Link className='hover-link-to-comment' to={`/comment/${theosToLowerCase}`}>Write review</Link></div>
+                        </div>
+                        <div>
+                          {<Rating 
+                            maxRating={5} 
+                            disabled
+                            icon='star' 
+                            size='massive'
+                            
+                          />}
+                        </div>
                       </div>
                       
                       
-                      Write Review</Segment>
+                    </Segment>
                     <Segment>
                   BIG REVIEWS 
                       <Image src='https://react.semantic-ui.com/images/wireframe/paragraph.png' />
@@ -144,7 +166,6 @@ const GodsInfoPage = () => {
                               <div className="comment-profile-pic "></div>
                             </Grid.Column>
       
-      
                             <Grid.Column>
                               <Grid.Column><p>{comment.ownerUsername}</p></Grid.Column>
                               <Grid.Column>
@@ -152,6 +173,19 @@ const GodsInfoPage = () => {
                                   <Grid.Row columns={2}>
                                     <Grid.Column><p>NUMBER OF REVIEWS</p></Grid.Column>
                                     <Grid.Column><p>LOCATION</p></Grid.Column>
+
+                                    {checkUserIsAuthenticated() ?
+
+                                      <Grid.Column>
+                                        <Icon name='edit outline' />
+                                      </Grid.Column>
+
+                                      :
+
+                                      ''
+                                    }
+                                    
+    
                                   </Grid.Row>
                                 </Grid>
                               </Grid.Column>
