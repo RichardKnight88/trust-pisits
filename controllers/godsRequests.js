@@ -93,6 +93,25 @@ export const updateGod = async (req, res) => {
   }
 }
 
+// ! GET COMMENT
+export const getOneComment = async (req, res) => {
+  try {
+    const { name, commentId } = req.params
+
+    const godToEditComment = await God.findOne({ name: caseInsensitiveName(name) })
+    if (!godToEditComment) throw new Error()
+
+    const commentToEdit = await Comment.findById(commentId)
+    console.log('COMMENT', commentToEdit)
+    if (!commentToEdit) throw new Error()
+
+    return res.status(200).json(commentToEdit)
+  } catch (err) {
+    console.log(err)
+    return res.status(404).json(err.message)
+  }
+}
+
 
 // ! ADDING COMMENT
 export const addComment = async (req, res) => {
@@ -102,14 +121,14 @@ export const addComment = async (req, res) => {
     const godToAddComment = await God.findOne({ name: caseInsensitiveName(name) })
 
     if (!godToAddComment) throw new Error('God does not exist')
-    // console.log('GOD ', godToAddComment)
+    console.log('GOD ', godToAddComment)
 
     const commentToAdd = { ...req.body, owner: req.currentUser._id, ownerUsername: req.currentUser.username, placeholderAboutGod: godToAddComment.name }
 
     const newComment = await Comment.create(commentToAdd)
     // maybe add picture?
-    // console.log('COMMENT TO ADD', commentToAdd)
-    // console.log('GOD COMMENTS', godToAddComment.comments)
+    console.log('COMMENT TO ADD', commentToAdd)
+    console.log('GOD COMMENTS', godToAddComment.comments)
     // console.log('GENDER', godToAddComment.gender)
 
     godToAddComment.comments.push(newComment)
@@ -138,7 +157,7 @@ export const editComment = async (req, res) => {
 
     const updatedComment = { ...commentToEdit._doc , owner: commentToEdit.owner, ...req.body, _id: commentToEdit._id } 
 
-    if (updatedComment.owner.equals(req.currentUser._id) || req.currentUser.username === 'Admin') {
+    if (updatedComment.owner == req.currentUser._id || req.currentUser.username === 'Admin') {
       console.log('AUTHORISED')
       await Comment.findOneAndUpdate({ _id: commentId }, { ...req.body }, { new: true }) 
     } else {

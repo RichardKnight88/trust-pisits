@@ -1,6 +1,6 @@
 import express from 'express'
 import { getAllUsers, deleteUser, getOneUser } from '../controllers/usersRequests.js'
-import { getAllGods, getOneGod, addComment, editComment, deleteComment, addGod, deleteGod, updateGod } from '../controllers/godsRequests.js'
+import { getAllGods, getOneGod, addComment, editComment, deleteComment, addGod, deleteGod, updateGod, getOneComment } from '../controllers/godsRequests.js'
 import { registerUser, loginUser } from '../controllers/auth.js'
 import { secureRoute, deusRoute } from './secureRoute.js'
 
@@ -31,6 +31,7 @@ router.route('/gods/:name/comments')
   .post(secureRoute, addComment)
 
 router.route('/gods/:name/comments/:commentId')
+  .get(getOneComment)
   .put(secureRoute, editComment)
   .delete(secureRoute, deleteComment)
 
