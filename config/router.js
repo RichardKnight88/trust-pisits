@@ -10,10 +10,11 @@ router.route('/users')
   .get(getAllUsers)
 
 router.route('/users/:id')
+  .get(secureRoute, getOneUser)
   .delete(secureRoute, deleteUser)
 
-router.route('/profile')
-  .get(secureRoute, getOneUser)
+// router.route('/profile')
+//   .get(secureRoute, getOneUser)
 
 router.route('/gods')
   .get(getAllGods)
