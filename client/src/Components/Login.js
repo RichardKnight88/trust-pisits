@@ -20,7 +20,7 @@ const Login = () => {
           </Form>
           <Button className="button-login formfield" type='submit'>Log in</Button>
         </div>
-        <Divider horizontal className="or">Or</Divider>
+        <Divider horizontal><div className="divider-word"></div>Or</Divider>
         <Link to="/register">
           <Button className="wanttoregister" content='Want to register?' icon='signup' size='medium' />
         </Link>
