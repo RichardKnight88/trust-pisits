@@ -51,7 +51,7 @@ body{
 }
 
 .landingbutton-position{
-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+// font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 position: absolute;
 margin-top: 20%;
 margin-left: 70%;
@@ -66,7 +66,7 @@ opacity: 0.2;
 }
 
 .cube-area{
-  position:absolute;
+  position:inherit;
   transform-style: preserve-3d;
   animation-name: rotate;
   animation-duration:40s;
@@ -76,7 +76,7 @@ opacity: 0.2;
 
 @keyframes rotate {
   0%{
-    transform: rotate3d(1,1,1,90deg);
+    transform: rotate3d(0,1,1,90deg);
   }
   10%{
     transition: rotate3d(1,0,1,100deg);
@@ -424,6 +424,9 @@ height: 100vh;
   margin-top: 100px;
   color:white
 }
+
+
+
 .formfield{
   height: 60px;
   width: 500px;
@@ -438,9 +441,9 @@ div .form .button {
   flex-direction: column;
 }
 
-.or {
-  color:white;
-}
+// .or {
+//   color:white;
+// }
 
 // ! REGISTER USER END
 
@@ -469,8 +472,9 @@ div .box-login{
   margin-top: 100px;
   margin-left:30%;
   margin-top: 10%;
-  color:white;
+  color:rgb(255, 255, 255);
 }
+
 
 .divider-word{
   color:white
