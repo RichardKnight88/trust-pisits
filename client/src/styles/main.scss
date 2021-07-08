@@ -4,6 +4,7 @@
 @import 'displayinfopage';
 @import 'profilepage';
 
+@import 'deleteEditComment';
 
 // Landing Page Start
 .landingcontainer{
@@ -1969,7 +1970,7 @@ background-size: cover;
 
 // ? Sorting top left side with Categories and species name
 .top-categories-spacing {
-  height: 28px;
+  height: 1rem;
   margin-bottom: .4%;
   margin-top: 1%;
 }
@@ -2170,9 +2171,10 @@ a.engraved-two-normal-text {
 
   }
 }
-// .inner-divider-width-one {
-//   max-width: 35%;
-// }
+.inner-divider-width-one {
+  max-width: 35%;
+
+}
 
 // // ? Got rid of predifined border around "company information"
 // .ui.segment.getting-rid-of-border {

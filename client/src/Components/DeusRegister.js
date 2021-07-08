@@ -66,6 +66,7 @@ const DeusCreation = () => {
     godOf: [],
     description: '',
     locationName: '',
+    image: '',
   }
   )
   // handling errors
@@ -130,6 +131,18 @@ const DeusCreation = () => {
                   required 
                   name='name'
                   value={godCreation.name}
+                  onChange={handleGodsData}
+                />
+              </Form.Field>
+
+              <Form.Field>
+                <input 
+                  label="Picture of god" 
+                  type="text" 
+                  placeholder='Picture of God' 
+                  required 
+                  name='image'
+                  value={godCreation.image}
                   onChange={handleGodsData}
                 />
               </Form.Field>

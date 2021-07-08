@@ -134,9 +134,7 @@ const Comment = () => {
                   />
                 </Form.Field>
 
-                <Button className='comment-submit-button' type='submit'>Submit</Button>
-                <Button className='comment-submit-button' type='submit'>Edit</Button>
-                <Button className='comment-submit-button' type='submit'>Delete</Button>
+                <Button type='submit'>Submit</Button>
               </Form>
 
             </div>
