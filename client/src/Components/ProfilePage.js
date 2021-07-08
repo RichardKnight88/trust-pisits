@@ -142,7 +142,7 @@ const ProfilePage = () => {
                                 if (window.confirm('Are you sure you want to delete?')) {
                                   await axios.delete(`/api/gods/${item.placeholderAboutGod}/comments/${item._id}`, {
                                     headers: {
-                                      Authorization: `Bearer ${getTokenFromStorage()}`
+                                      Authorization: `Bearer ${getTokenFromStorage()}`,
                                     },
                                   })
                                   history.go(0)

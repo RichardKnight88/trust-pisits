@@ -6,12 +6,6 @@ export default [
     placeholderAboutGod: 'Zeus'
   }, 
   {
-    text: 'Great god. Really helped me out with the Gorgons by letting me borrow those sweet winged sandals',
-    rating: 5,
-    placeholderOwner: 'Perseus', 
-    placeholderAboutGod: 'Hermes'
-  }, 
-  {
     text: 'Married her brother',
     rating: 2,
     placeholderOwner: 'Poseidon', 
