@@ -9,7 +9,7 @@ const ProfilePage = () => {
   useEffect(() => {
     const getCurrentUserData = async () => {
       const currentUserData = await getCurrentUser()
-      
+
       setCurrentUser(currentUserData)
     }
     getCurrentUserData()
@@ -22,34 +22,45 @@ const ProfilePage = () => {
   return (
     <>
 
-      < section className="user-summary-container">
+      <section className="user-summary-container">
+
         {currentUser &&
+          <>
+            <div className="user-summary-content-container engraved">
 
-          <div className="user-summary-content-container">
+              <div className="profile-pic-container">
 
-            <div className="profile-pic-container">
-              <div className="profile-pic"></div>
-            </div>
+                {currentUser.profilePicture
+                  ?
+                  <img className="profile-pic" src={currentUser.profilePicture} alt="blank avatar" />
+                  :
+                  <img className="profile-pic" src="https://i.ibb.co/fHJphxZ/Comment-Picture.png" alt="blank avatar" />
+                }
 
-            <div className="username-container">
-              <h1 className="username-text">{currentUser.username}</h1>
-            </div>
+              </div>
 
-            <div className="reviews-container">
 
-              <div className="review-content-container">
+              <div className="username-container">
+                <div className="username-text">{currentUser.username}</div>
+              </div>
 
-                <div className="review-number"></div>
-                <div className="review-text"></div>
+              <div className="reviews-container">
+
+                <div className="review-content-container">
+
+                  <div className="review-number">{currentUser.userComments.length}</div>
+                  <div className="review-text">Reviews</div>
+
+                </div>
 
               </div>
 
             </div>
+          </>
 
-          </div>
         }
 
-      </section>
+      </section >
     </>
   )
 }
