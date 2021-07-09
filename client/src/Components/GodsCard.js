@@ -69,7 +69,7 @@ const GodsCard = ({ name, avgRating, gender, comments }) => {
                         &nbsp;&nbsp;<span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                       </div>
                       <Divider></Divider>
-                      <Link to="/gods/:name/comments">Write a review</Link>
+                      <Link to={`/gods/${name.toLowerCase()}/comments`}>Write a review</Link>
                     </CardMeta>
                   </p>
                 </CardDescription>

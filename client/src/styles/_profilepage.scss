@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: column;
   flex-grow: 10;
+  background-color: #f3f3e1;
+  min-height: 100vh;
 }
 .user-summary-container {
   background-color: #ffe6cc;
@@ -99,6 +101,7 @@
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .gods-created-header {
