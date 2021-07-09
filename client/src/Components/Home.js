@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { definedRating } from '../sematinicElements/ratings.js'
 import Searchbar from './Searchbar'
 import { getTwoLetters } from './Authentification/auth'
@@ -16,6 +16,8 @@ const Home = () => {
   const [comments, setComments] = useState([])
   const [categories, setCategories] = useState([])
   const [errors, setErrors] = useState(false)
+
+  const history = useHistory()
 
 
   useEffect(() => {
@@ -153,24 +155,28 @@ const Home = () => {
 
               {comments.map(item =>
                 <>
+
                   <div key={item._id} className="comment-div">
 
-                    <div className="comment-header">
-                      <div className='commentator-pic-background'>
-                        <h2 className='engraved'>{getTwoLetters(item.ownerUsername)}</h2>
+                    <Link to={`/gods/${item.placeholderAboutGod}`}>
+
+                      <div className="comment-header">
+                        <div className='commentator-pic-background'>
+                          <h2 className='engraved'>{getTwoLetters(item.ownerUsername)}</h2>
+                        </div>
+                        <div className="comment-rating">{definedRating(item.rating)}</div>
                       </div>
-                      <div className="comment-rating">{definedRating(item.rating)}</div>
-                    </div>
-                    <div className="engraved comment-owner-text">
-                      <p>
-                        <span className="bold">{item.ownerUsername} </span>  reviewed  <span className="bold">{item.placeholderAboutGod}</span>
-                      </p>
-                    </div>
+                      <div className="engraved comment-owner-text">
+                        <p>
+                          <span className="bold">{item.ownerUsername} </span>  reviewed  <span className="bold">{item.placeholderAboutGod}</span>
+                        </p>
+                      </div>
 
-                    <div className="comment-text-body-container">
-                      <h4 className="engraved comment-text-body">{item.text}</h4>
-                    </div>
+                      <div className="comment-text-body-container">
+                        <h4 className="engraved comment-text-body">{item.text}</h4>
+                      </div>
 
+                    </Link>
                   </div>
                 </>
               )}
