@@ -1,6 +1,6 @@
 .ui.segment.comment-box {
-  height: 80%;
-  margin-top: 3%;
+  height: 60%;
+  margin-top: 3rem;
   width: 35rem;
 }
 
@@ -8,10 +8,7 @@
   justify-content: center;
 }
 
-.display-god-top-part-margin {
-  margin-top:2rem;
-  margin-bottom: 2rem;
-}
+
 
 .comment-background {
   height:80vh;
@@ -26,6 +23,8 @@
   margin-top: 1rem;
   color:black;
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .comment-heading {
@@ -48,3 +47,47 @@
   resize: none;
 }
 
+.comment-top-box {
+  background-color: black;
+}
+
+h1.comment-heading-component {
+  color: white;
+  margin-top: 2rem;
+}
+
+.ui.modal.transition.visible.active.modalHeight {
+  max-width: 30%;
+  height: 45%;
+  margin: 10rem auto;
+  // display:flex;
+  // justify-content: center;
+}
+
+div#modalHeight {
+  bottom: 50%;
+  left: 50%;
+  right: 50%;
+  top: 50%;
+}
+
+.ui.modal {
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .ui.segment.comment-box {
+    width: 80%
+  }
+  .comment-heading {
+    font-size: 1rem;
+  }
+  .ui.form textarea {
+    height: 5rem;
+  }
+  .paragrapgh-modal {
+    font-size: .8rem;
+    text-decoration: underline;
+  }
+  
+}

@@ -100,26 +100,144 @@ a.hover-link-to-comment:hover {
   margin: 1rem 0 2rem;
 }
 
-
+.comments-layout {
+  max-width: 600px;
+}
 
 
 
 @media only screen and (max-width: 1024px) {
 
   .ui.grid>.row.flexing-mobile {
+    position:relative;
     display: flex;
     flex-direction: column;
     align-items:center
   }
   
   div.column.flexing-ipad {
-    width: 30%;
+    // width: 40rem;
+    // height: 20rem;
   }
 
   
   .ui.grid>.row>.column.flexing-ipad {
-    width: 50%;
+    width: 75%;
   }
 
-
 }
+
+@media only screen and (max-width: 800px) {
+  .ui.grid>.row>.column.flexing-ipad {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .ui.grid>.row>.column.flexing-ipad {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .ui.grid>.row>.column.flexing-ipad {
+    width: 90%;
+  }
+}
+
+
+@media only screen and (max-width: 414px) {
+  .ui.grid>.row>.column.flexing-ipad {
+    width: 98%;
+    height: 40%;
+  }
+
+  .displaying-website {
+    flex-direction: row;
+  }
+  .mobile-friendly-positioning {
+    display: flex;
+  }
+
+  .hiding-text-content {
+    display: none;
+  }
+
+  .hiding-text-content {
+    display: none;
+    color: none;
+  }
+
+  i.world.icon.large.icon.engraved.icon-response-size {
+    font-size: 1rem;
+  }
+
+  i.chevron.right.large.icon.engraved-two-normal-text.icon-response-size {
+    font-size: 1rem;
+  }
+
+  .website-link-size {
+    font-size: 1.1rem;
+  }
+
+  .positioning-website-link {
+    align-items: baseline;
+  }
+
+  .ui.segment.displaying-website {
+    border: none;
+    background: none;
+  }
+  
+  .ui.grid.mobile-positioning-top {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  .ui.very.relaxed.two.column.grid {
+    display: flex;
+    align-items: flex-start;
+    padding: 0;
+    justify-content: space-evenly;
+  }
+
+  .info-page-width {
+    width: 80%;
+  }
+
+  .ui.segment.getting-rid-of-border.changing-background-color  {
+    display: flex;
+  }
+
+  .content-towards-logo {
+    margin-left: 0;
+  }
+}
+
+.positioning-display-information-page {
+  margin-bottom: 5rem;
+}
+
+.business-transparency {
+  display: flex;
+}
+
+.icon-business-size {
+  height: 2rem;
+}
+
+.pop-up-positioning-icon {
+  display: flex;
+}
+
+.ui.segment.displaying-website.getting-rid-of-border {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ui.segment.getting-rid-of-border-color {
+  background-color: #f3f3e1;
+}
+

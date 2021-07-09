@@ -1,10 +1,9 @@
 import React, { useState, useEffect  } from 'react'
 import { useHistory, useParams, useLocation } from 'react-router-dom'
-import { Button, Form, Segment, Grid, Image, Rating } from 'semantic-ui-react'
+import { Button, Form, Segment, Grid, Rating, Modal } from 'semantic-ui-react'
 import { getTokenFromStorage } from './Authentification/auth'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
-
 
 const Comment = () => {
 
@@ -67,25 +66,22 @@ const Comment = () => {
     setErrors(newError)
   }
 
-
+  const [open, setOpen] = React.useState(false)
   
 
   return (
 
     <>
       
-      <div className='display-god-top-part-margin'>
-        <Grid className='comment-top-part'>
-          <Grid.Column className='info-page-width-two'>
-            <Image src='https://react.semantic-ui.com/images/wireframe/paragraph.png' />
-          </Grid.Column>
-        </Grid>
+      <div className='comment-top-box'>
+        
       
-        <div className="comment-background">
+        <div className="main-login">
 
           <Segment className='comment-box'>
       
             <div className="container-area-text">
+              <h1 className='comment-heading'>{name}</h1>
               <h3 className='comment-heading'>Rate your recent experience</h3>
 
 
@@ -104,8 +100,6 @@ const Comment = () => {
 
                 <h3 className='comment-heading'>Tell us about your experience</h3>
 
-                <p className='comment-parahraph'>Read our Guidelines for Reviewers</p>
-
                 <div className='max-comment-form-width'>
                   <Form.TextArea
                     fluid 
@@ -119,9 +113,38 @@ const Comment = () => {
                   />
                 </div>
 
-                <p className='comment-parahraph'>How to write a useful review</p>
+               
 
-                <h3 className='comment-heading'>Tell us about your experience</h3>
+                <Modal
+                  onClose={() => setOpen(false)}
+                  onOpen={() => setOpen(true)}
+                  open={open}
+                  trigger={<p className='paragrapgh-modal'>How to write a useful review</p>}
+                  className='modalHeight'
+                >
+                  <Modal.Header>8 tips for writing great customer reviews</Modal.Header>
+                  <Modal.Content>
+        
+        
+          
+                    <p>1. Provide useful, constructive feedback</p>
+                    <p>2. Talk about a range of elements, including customer service</p>
+                    <p>3. Be detailed, specific, and honest</p>
+                    <p>4. Leave out links and personal information</p>
+                    <p>5. Keep it civil and friendly</p>
+                    <p>6. Feel free to update your review if needed</p>
+                    <p>7. Check you’ve got the right domain name or company</p>
+                    <p>8. Proofread your review</p>
+        
+                  </Modal.Content>
+                  <Modal.Actions>
+                    <Button color='black' onClick={() => setOpen(false)}>
+          Ok
+                    </Button>
+                  </Modal.Actions>
+                </Modal>
+
+                <h3 className='comment-heading'>Give your review a title</h3>
                 
                 <Form.Field>
                   <input

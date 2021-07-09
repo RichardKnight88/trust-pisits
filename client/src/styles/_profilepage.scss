@@ -14,7 +14,7 @@
 
 .user-summary-content-container {
   display: flex;
-  width: 80%
+  width: 1000px;
 }
 
 .profile-pic-container {
@@ -97,6 +97,14 @@
   margin-bottom: 50px;
   display: flex;
   flex-direction: column-reverse;
+  align-items: center;
+}
+
+.review-block-container {
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
 }
 
 .review-of-text {
@@ -107,6 +115,7 @@
   background-color: rgba(255, 255, 255, 0.5);
   padding: 24px;
   box-shadow:  2px 2px 2px rgba(0, 0, 0, 0.2);
+  width: 85%;
 }
 
 .review-card-header {
@@ -185,4 +194,65 @@
       color: rgba(0, 0, 0, 0.8);
     }
   }
+}
+
+@media screen and (max-width: 1024px) {
+
+  .user-summary-content-container {
+    width: 90%;
+  }
+
+  .review-block-container {
+    width: 100%;
+    align-items: center;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+
+  .user-summary-container {
+    height:fit-content;
+  }
+
+  .user-summary-content-container {
+    flex-direction: column;
+  }
+
+  .profile-pic-container {
+    margin: 20px 0;
+
+    .commentator-pic-background {
+      height: 100px;
+      width: 100px;
+    }
+  }
+
+  .username-container {
+    display: flex;
+    justify-content: center;
+
+    .username-text {
+      text-align: center;
+      margin: 10px;
+    }
+  }
+
+  .reviews-container {
+    margin: 20px 0;
+  }
+
+  .review-content-container {
+    flex-direction: row;
+  }
+
+  .review-number {
+    font-size: 2em;
+    padding: 10px 5px;
+  }
+
+  .review-card {
+    width: 90%;
+  }
+
 }
