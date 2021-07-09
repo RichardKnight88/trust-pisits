@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useHistory, useLocation } from 'react-router-dom'
 import { getPayload } from './Authentification/auth'
+import { Image } from 'semantic-ui-react'
 
 const Navbar = () => {
 
@@ -54,10 +55,12 @@ const Navbar = () => {
     <header>
       <nav className='navbar is-fixed-top is-dark is-transparent' id={hideNavbar}>
         <div className='container'>
-          <div className='navbar-brand'>
+          <div className='navbar-brand' id="start-icon">
             <div className="navbar-item" onClick={homeCheck}>
               {/* <Link to="/" className="navbar-item engraved-two-normal-text">Landing Page</Link> */}
-              <Link to="/home" className="navbar-item engraved-two-normal-text">Home</Link>
+              <Link to="/home" className="navbar-item engraved-two-normal-text">
+                <Image src='https://i.ibb.co/878JXTf/Logo-Image.png' alt='Logo-Image' />
+              </Link>
             </div>
             <div onClick={toggleBurger} className={`navbar-burger ${burger}`} data-target='theoi-navbar'>
               <span aria-hidden="true"></span>

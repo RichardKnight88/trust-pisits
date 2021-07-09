@@ -8,6 +8,9 @@
 .write-review-box-positioning-inner-box {
   display: flex;
   align-items: center;
+  .disabled .rating {
+    cursor: pointer;
+  }
 }
 
 .comment-picture-size {
@@ -15,7 +18,7 @@
 }
 
 a.hover-link-to-comment:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .display-heading-poisition {
@@ -216,12 +219,16 @@ a.hover-link-to-comment:hover {
   }
 }
 
-.positioning-display-information-page {
-  margin-bottom: 5rem;
-}
+// .positioning-display-information-page {
+//   margin-bottom: 5rem;
+// }
 
 .business-transparency {
   display: flex;
+
+  p {
+    margin-bottom: 1.5rem;
+  }
 }
 
 .icon-business-size {
@@ -237,7 +244,7 @@ a.hover-link-to-comment:hover {
   justify-content: flex-end;
 }
 
-.ui.segment.getting-rid-of-border-color {
-  background-color: #f3f3e1;
-}
+// .ui.segment.getting-rid-of-border-color {
+//   background-color: #f3f3e1;
+// }
 

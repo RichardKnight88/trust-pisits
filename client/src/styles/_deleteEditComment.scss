@@ -1,6 +1,9 @@
 button.ui.button.comment-submit-button {
-  background-color: rgb(201, 0, 0);
-  color: white;
+  background: none;
+  // background-color: rgb(201, 0, 0);
+  border: 1px solid rgb(201, 0, 0);
+  // color: white;
+  color: rgb(201, 0, 0);
 }
 
 // button.delete-button-color {

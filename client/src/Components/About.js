@@ -2,7 +2,7 @@ import React from 'react'
 import Tilt from 'react-tilt'
 
 import Adrian from '../Images/Developers/Adrian.jpeg'
-import Vanja from '../Images/Developers/Vanja.jpeg'
+import Vanja from '../Images/Developers/Vanja.png'
 import Richard from '../Images/Developers/Richard.png'
 
 

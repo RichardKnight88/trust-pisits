@@ -92,6 +92,9 @@ const DeleteEditGod = () => {
     }
   }
 
+  const goBack = () => {
+    history.goBack()
+  }
 
   // ! Deleting God
 
@@ -215,6 +218,7 @@ const DeleteEditGod = () => {
               
               <div className='spacing-buttons-update-delete-god'>
                 <Button className='button-width-god' type='submit'>Submit</Button>
+                <Button className='button-width-god' type='submit' onClick={goBack}>Cancel</Button>
                 <Button className='comment-submit-button button-width-god' type='submit' onClick={deleteGod}>Delete</Button>
               </div>
               {/* </Link> */}

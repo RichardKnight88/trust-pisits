@@ -187,7 +187,7 @@ const GodsInfoPage = () => {
                 <Grid.Row className='flexing-mobile'>
                   <Grid.Column className='flexing-ipad'>
                       
-                    <Segment className='comments-layout'>
+                  <Link className='hover-link-to-comment' to={`/gods/${theosToLowerCase}/comments`}><Segment className='comments-layout'>
                       <div className='write-review-box-positioning'>
                         <div className='write-review-box-positioning-inner-box'>
                           <div><Image className='comment-picture-size' src='https://i.ibb.co/fHJphxZ/Comment-Picture.png' alt='comment-picture' /></div>
@@ -216,7 +216,7 @@ const GodsInfoPage = () => {
                       </div>
                       
                       
-                    </Segment>
+                    </Segment></Link>
                     {/* <Segment>
                   BIG REVIEWS 
                       <Image src='https://react.semantic-ui.com/images/wireframe/paragraph.png' />
@@ -385,7 +385,9 @@ const GodsInfoPage = () => {
 
           :
 
-          <img src='https://thumbs.gfycat.com/BareJoyousAsp.webp' alt='Rick And Morty'/>
+          <h2>
+          Loading....
+          </h2> 
       }
     </div>
   )

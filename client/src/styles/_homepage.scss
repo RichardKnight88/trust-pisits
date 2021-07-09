@@ -458,6 +458,22 @@ body ::-webkit-scrollbar-track {
   .trust h2 {
     width: 100%;
   }
+
+  #start-icon {
+
+    .navbar-item {
+      a {
+        height: 100%;
+        width:fit-content;
+      }
+      
+    }
+    .navbar-item img {
+      max-height: 30px;
+      max-width: 30px;
+      padding: 0;
+    }
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -549,3 +565,14 @@ body ::-webkit-scrollbar-track {
   margin-top: -49px;
 }
 
+
+.gods-cards-display-all {
+  margin-bottom: 20px;
+}
+
+.display-god-cards-categories {
+
+  h1 {
+    margin: 20px 0;
+  }
+}

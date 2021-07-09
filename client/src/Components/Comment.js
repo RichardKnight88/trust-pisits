@@ -1,6 +1,6 @@
 import React, { useState, useEffect  } from 'react'
 import { useHistory, useParams, useLocation } from 'react-router-dom'
-import { Button, Form, Segment, Grid, Rating, Modal } from 'semantic-ui-react'
+import { Button, Form, Segment, Rating, Modal } from 'semantic-ui-react'
 import { getTokenFromStorage } from './Authentification/auth'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
@@ -22,6 +22,10 @@ const Comment = () => {
 
   // Handling error
   const [errors, setErrors] = useState('')
+
+
+  const [open, setOpen] = React.useState(false)
+
 
   // Handling incoming data from comment section
   const handleCommentData = (event) => {
@@ -66,7 +70,6 @@ const Comment = () => {
     setErrors(newError)
   }
 
-  const [open, setOpen] = React.useState(false)
   
 
   return (
@@ -81,7 +84,7 @@ const Comment = () => {
           <Segment className='comment-box'>
       
             <div className="container-area-text">
-              <h1 className='comment-heading'>{name}</h1>
+              <h1 className='comment-heading'>{name.toUpperCase()}</h1>
               <h3 className='comment-heading'>Rate your recent experience</h3>
 
 

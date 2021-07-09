@@ -12,7 +12,8 @@
   width: 100vw;
   height: 100vh;
   // background-image: linear-gradient(rgb(252, 252, 252), rgb(197, 185, 146));
-  background-image: url('../Images/about-page.jpeg');
+  background: linear-gradient( rgba(255,255, 255, 0.6), rgba(255,255, 255, 0.6)), url('../Images/about-page.jpeg');
+  // background-image: url('../Images/about-page.jpeg');
   background-size: cover;
 }
 
@@ -25,6 +26,7 @@ body{
   width: 280px;
   height: 50px;
   cursor: pointer;
+  // background-color: blue;
 }
 
 .fade-in {
@@ -44,12 +46,12 @@ body{
 
 .landingpage-button:before {
   content: '';
-  background: linear-gradient(45deg, beige, white);
+  // background: linear-gradient(45deg, beige, white);
   position: absolute;
   top: -2px;
   left:-2px;
-  z-index: -1;
-  filter: blur(25px);
+  // z-index: -1;
+  // filter: blur(25px);
   width: calc(100% + 4px);
   height: calc(100% + 4px);
   opacity: 0.9;
@@ -60,7 +62,13 @@ body{
 position: absolute;
 margin-top: 20%;
 margin-left: 55%;
-opacity: 0.2;
+opacity: 1;
+}
+
+#overriding {
+  background-color: #fff;
+  opacity: .6;
+  z-index: 5;
 }
 
 .wrapper{ 
@@ -521,10 +529,10 @@ align-items: center;
   // margin-top: 10%;
 }
 
-// .container-creategod{
-//   // margin-top: 100px;
-//   color:white;
-// }
+.container-creategod{
+  // margin-top: 100px;
+  color:white;
+}
 
 .formfield{
   height: 60px;
@@ -693,7 +701,7 @@ button.ui.medium.button.business-register-formfield {
 
 .gods-cards{
   width: 100vw;
-  height:390vh;
+  // height:390vh;
   // color:#e66464;
   display: flex;
   justify-content: center;
@@ -2142,7 +2150,7 @@ button.ui.medium.button.business-register-formfield {
 }
 
 .body-color{
-  background-color: rgba(145, 89, 89, 0.2);
+  background-color: rgba(245, 245, 220, 0.3);
 
   // background: linear-gradient(120deg, lightblue, green, brown);
   // background-size: 1000% 1000%;
@@ -2151,7 +2159,8 @@ button.ui.medium.button.business-register-formfield {
   // animation: AnimationName 39s ease infinite;
   display: flex;
   justify-content: center;
-  margin-bottom: 3rem;
+  // margin-bottom: 3rem;
+  padding-bottom: 3rem;
 }
 
 // @-webkit-keyframes AnimationName {
@@ -2183,9 +2192,9 @@ button.ui.medium.button.business-register-formfield {
   border: none;
 }
 
-.ui.segment.changing-background-color {
-  background-color: rgb(243, 243, 225);
-}
+// .ui.segment.changing-background-color {
+//   background-color: rgb(243, 243, 225);
+// }
 
 
 // ? Centering god/goddess picture on the right side
@@ -2284,6 +2293,22 @@ button.ui.medium.button.business-register-formfield {
 
 .navbar {
   color: white;
+  max-height: 49px;
+}
+#start-icon {
+
+  .navbar-item {
+    a {
+      height: 100%;
+      width:fit-content;
+    }
+    
+  }
+  .navbar-item img {
+    max-height: 40px;
+    max-width: 40px;
+    padding: 0;
+  }
 }
 
 // ! RESULT BOX COMPONENT

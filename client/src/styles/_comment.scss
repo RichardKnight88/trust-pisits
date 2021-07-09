@@ -1,7 +1,9 @@
 .ui.segment.comment-box {
-  height: 60%;
+  // height: 60%;
+  height: fit-content;
   margin-top: 3rem;
   width: 35rem;
+  background-color: #f3f3e1;
 }
 
 .comment-top-part {
@@ -75,6 +77,10 @@ div#modalHeight {
   font-size: 1rem;
 }
 
+.paragrapgh-modal {
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 600px) {
   .ui.segment.comment-box {
     width: 80%
@@ -88,6 +94,7 @@ div#modalHeight {
   .paragrapgh-modal {
     font-size: .8rem;
     text-decoration: underline;
+
   }
   
 }
