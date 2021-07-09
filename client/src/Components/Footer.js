@@ -14,7 +14,7 @@ const Footer = () => {
       }
     }
     toggleNavbar()
-  }, [location])
+  }, [])
   
   return (
 
