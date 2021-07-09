@@ -6,13 +6,8 @@ import CategoriesCard from './CategoriesCard'
 const FilteredGodsByCategory = () => {
 
   const [allData, setAllData] = useState([])
-  const [filteredData, setFilteredData] = useState(allData)
-
   const { categoryName } = useParams()
   
-
-
-
   useEffect(() => {
 
     const getData = async () => {
@@ -38,8 +33,7 @@ const FilteredGodsByCategory = () => {
 
   return (
     <>
-      <h1>Show filtered gods</h1>
-      <h1>Show all gods</h1>
+      <h1>{categoryName}</h1>
       <div>
         <div className='container'>
           

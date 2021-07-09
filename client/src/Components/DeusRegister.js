@@ -49,7 +49,7 @@ const sacredAnimals = [
 
 const species = [
   { text: '...', value: 'nil' },
-  { text: 'Primamordial Deity', value: 'primordial' },
+  { text: 'Protogenoi', value: 'protogenoi' },
   { text: 'Olympian', value: 'god' },
   { text: 'Giant', value: 'giant' },
   { text: 'Titan', value: 'titan' }
@@ -62,6 +62,7 @@ const DeusCreation = () => {
   const [godCreation, setGodCreationData] = useState({
     name: '',
     gender: '',
+    logo: 'http://www.navaraj.com.np/wp-content/uploads/2020/04/lorem-ipsum.png',
     species: '',
     godOf: [],
     description: '',

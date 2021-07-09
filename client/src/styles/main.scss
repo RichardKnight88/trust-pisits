@@ -2105,8 +2105,9 @@ button.ui.medium.button.business-register-formfield {
   // -webkit-animation: AnimationName 39s ease infinite;
   // -moz-animation: AnimationName 39s ease infinite;
   // animation: AnimationName 39s ease infinite;
-  // display: flex;
-  // justify-content: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
 }
 
 // @-webkit-keyframes AnimationName {
@@ -2157,7 +2158,6 @@ button.ui.medium.button.business-register-formfield {
 .top-categories-spacing {
   height: 1rem;
   margin-bottom: .4%;
-  margin-top: 1%;
 }
 
 

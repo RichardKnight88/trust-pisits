@@ -82,17 +82,16 @@ const GodsInfoPage = () => {
     
     <div>
       {theos ?
-        <>
+        <div className='positioning-display-information-page'>
           <div className='display-heading-poisition'>
             <div className='info-page-width top-categories-spacing'>
-              <h4>All &gt; Categories &gt; {theos.species} &gt; {theos.name}</h4>
             </div>
           </div>
           {/*  */}
           {/* Middle Grid */}
           <div className='display-heading-poisition'>
             <div className='info-page-width display-god-top-part-margin'>
-              <Grid>
+              <Grid className='mobile-positioning-top'>
                 <Grid.Column>
                   <Segment className='getting-rid-of-border changing-background-color'>
                     <Grid columns={2} relaxed='very'>
@@ -145,9 +144,9 @@ const GodsInfoPage = () => {
                   {currentUserId === theos.owner._id ?
 
                                       
-                    <Segment className='displaying-website'>
+                    <Segment className='displaying-website getting-rid-of-border getting-rid-of-border-color'>
                       <Link to={`/create-god/${name}`}>
-                        <Icon name='edit outline' />
+                        <Icon name='cog' size='large'/>
                       </Link>
                     </Segment> 
                     :
@@ -159,16 +158,16 @@ const GodsInfoPage = () => {
                     <Link to={{ pathname: `${theos.website}` }} target='_blank'>
                     
                       <Segment className='displaying-website'>
-                        <div>
+                        <div className='mobile-friendly-positioning'>
                           <div className='positioning-website-link'>
-                            <Icon name='world icon' className='engraved' size='large'/>
+                            <Icon name='world icon' className='engraved icon-response-size' size='large'/>
                             <div className='website-link-size engraved-two-normal-text'>
                               {nameWebsite}
                             </div>
                           </div>
-                          <div><p className='website-text-color'>Visit this website</p></div>
+                          <div><p className='hiding-text-content website-text-color'>Visit this website</p></div>
                         </div>
-                        <Icon name='chevron right' size='large' className='engraved-two-normal-text'/>
+                        <Icon name='chevron right' size='large' className='engraved-two-normal-text icon-response-size'/>
                       </Segment>
                     
                     </Link>  
@@ -187,11 +186,23 @@ const GodsInfoPage = () => {
               <Grid>
                 <Grid.Row className='flexing-mobile'>
                   <Grid.Column className='flexing-ipad'>
-                    <Segment>
+                      
+                    <Segment className='comments-layout'>
                       <div className='write-review-box-positioning'>
                         <div className='write-review-box-positioning-inner-box'>
                           <div><Image className='comment-picture-size' src='https://i.ibb.co/fHJphxZ/Comment-Picture.png' alt='comment-picture' /></div>
-                          <div><Link className='hover-link-to-comment' to={`/gods/${theosToLowerCase}/comments`}>Write review</Link></div>
+                          
+                          {checkUserIsAuthenticated ?
+                          
+                            <div><Link className='hover-link-to-comment' to={`/gods/${theosToLowerCase}/comments`}>Write review</Link></div>
+
+                            :
+
+                            <h1>Something went wrong</h1>
+                        
+                          }
+                          
+                          
                         </div>
                         <div>
                           {<Rating 
@@ -206,13 +217,13 @@ const GodsInfoPage = () => {
                       
                       
                     </Segment>
-                    <Segment>
+                    {/* <Segment>
                   BIG REVIEWS 
                       <Image src='https://react.semantic-ui.com/images/wireframe/paragraph.png' />
-                    </Segment>
+                    </Segment> */}
                     {theosComments.map(comment => {
                       return (
-                        <Segment key={comment._id}>
+                        <Segment className='comments-layout' key={comment._id}>
                           <Grid>
                             <Grid.Column>
                               {/* <div className='position-commentator'>
@@ -269,7 +280,7 @@ const GodsInfoPage = () => {
                             <p className='engraved-two-normal-text size-date'>{getUseableDate(comment.createdAt)}</p>
 
                           </div>
-                               
+
                           <div className='text-comment-area'>
                             <h6 className='engraved text-header-bold'>{comment.textHeader}</h6>
                             <p className="engraved-two-normal-text">{comment.text}</p>
@@ -280,11 +291,30 @@ const GodsInfoPage = () => {
                     })}
                   </Grid.Column>
               
-                  <Grid.Column className='info-page-width-two'>
+                  <Grid.Column className='info-page-width-two flexing-ipad'>
                     <Segment>
-                      <div>
-                        Specialized in
+                      <h4>
+                        Business Transparency
+                      </h4>
+                      <div className='business-transparency'>
+                        <Icon name='calendar alternate outline' />
+                        <p>Claimed their Pilis Trust profile:</p>
                       </div>
+                      <div className='pop-up-positioning-icon'>
+                        <p>{getUseableDate(theos.createdAt)}</p>
+                        <Popup trigger={<Icon name='info circle' />}>
+                          <span className='popup-information-style engraved-two-normal-text'>
+                              Claiming a profile allows the God/Goddess to do things like reply to reviews, invite customers to write reviews, and more. 
+                          </span>
+                        </Popup>
+                      </div>
+
+
+                    </Segment>
+                    <Segment>
+                      <h4>
+                        Specialized in
+                      </h4>
                   
                       <div className='flexing-jobs-board'>
                         {jobs.map(job => {
@@ -299,7 +329,8 @@ const GodsInfoPage = () => {
                       </div>
                     </Segment>
 
-                    <Segment>{theos.name}
+                    <Segment>
+                      <h4>{theos.name}</h4>
                       <br />
                       <Segment className='getting-rid-of-border'>
                         <div>
@@ -312,8 +343,8 @@ const GodsInfoPage = () => {
                       <Divider />
 
                       <Segment className='getting-rid-of-border'>
-                        <Icon name='address card' />
-                      Contact
+                        <Icon name='address card outline' />
+                        <strong>Contact</strong>
                         <Segment className='getting-rid-of-border'>
                           <List>
                             <List.Item icon='map marker alternate' content={theos.locationName} />
@@ -330,16 +361,21 @@ const GodsInfoPage = () => {
 
                       <Divider />
 
-                      <Segment>Categories</Segment>
+                      <Segment className='getting-rid-of-border'>
+                        
+
+                        <Link to={`/gods/categories/${theos.species}`}>Category &gt; {theos.species}</Link>
+
+                      </Segment>
                     </Segment>
-                    <Segment>About PilisTrust</Segment>
+                    {/* <Segment>About PilisTrust</Segment> */}
                   </Grid.Column>
                 </Grid.Row>
               </Grid>
             </div>
           </div>
           
-        </> 
+        </div> 
         :
 
         hasError ?
