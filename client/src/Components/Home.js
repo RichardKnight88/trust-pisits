@@ -125,11 +125,11 @@ const Home = () => {
 
                   }
 
-                  <Link to="/categories">
+                  {/* <Link to="/categories">
                     <div className="category-button">
                       ...
                     </div>
-                  </Link>
+                  </Link> */}
 
                 </div>
 

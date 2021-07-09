@@ -10,12 +10,12 @@ const Searchbar = ({ godsData }) => {
 
   // const [searchValue, setSeachValue] = useState(null)
 
-  console.log('GODS DATA', godsData)
+  // console.log('GODS DATA', godsData)
 
   const godNames = godsData.map(item => item.name)
   godNames.sort()
 
-  console.log('GOD NAMES', godNames)
+  // console.log('GOD NAMES', godNames)
 
   const godSpecies = []
 
@@ -27,7 +27,7 @@ const Searchbar = ({ godsData }) => {
     }
   })
   godSpecies.sort()
-  console.log('GOD SPECIES', godSpecies)
+  // console.log('GOD SPECIES', godSpecies)
 
 
   const godOptions = godNames.map((item, index) => {
@@ -46,7 +46,7 @@ const Searchbar = ({ godsData }) => {
     })
   })
 
-  console.log('GOD OPTIONS', godOptions)
+  // console.log('GOD OPTIONS', godOptions)
 
   const handleSubmit = (event, data) => {
     console.log('VALUE', event.target)
