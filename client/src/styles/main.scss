@@ -16,10 +16,10 @@
   background-size: cover;
 }
 
-body{ 
-  padding-top: 49px;
-  background: #f3f3e1;
-}
+// body{ 
+//   padding-top: 49px;
+//   background: #ffffff;
+// }
 
 .landingpage-button {
   width: 280px;
@@ -74,7 +74,7 @@ opacity: 0.2;
   position:inherit;
   transform-style: preserve-3d;
   animation-name: rotate;
-  animation-duration:100s;
+  animation-duration:50s;
   animation-timing-function:linear;
   animation-iteration-count: infinite;
 }
@@ -182,7 +182,7 @@ opacity: 0.2;
 }
 
 .second-box-right{
-  transform: translateY(-112.5px) translateX(-37.5px) rotateY(90deg);
+  transform: translateY(-150px) translateX(-50px) rotateY(90deg);
   background:url('../Images/gods-pictures/ares-image.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -690,13 +690,57 @@ button.ui.medium.button.business-register-formfield {
 
 
 // ! SHOW ALL GODS START
-// .image-god{
-//   width: 600px;
-//   height: 1300px;
-//   margin-left: 50%;
-//   background-image: url('../Images/zeus-godspage.jpeg');
-// }
 
+.gods-cards{
+  width: 100vw;
+  height:390vh;
+  // color:#e66464;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-right: 10px;
+  margin-top: 30px;
+}
+
+.card-foreachgod{
+  max-width:280px;
+  height: 150px;
+  border: none;
+  box-shadow: 0 16px 20px -10px rgba(58, 57, 55, 0.7); //if removing this one, the bottom border will dissapear and gradient above will make it look like it's fading
+  border-radius: 20px;
+  }
+
+.ui.cards{
+  margin:20px;
+  // max-width: 300px;
+  width:330px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   // border:none;
+  border-radius: 15px;
+  // padding: 18px;
+  // box-shadow: 0 10px 20px -10px rgba(121, 77, 57, 0.7);
+  transition: all 0.5s;
+  &:hover{
+  padding-right: 30px;
+  padding-left: 5px;
+}
+
+}
+.header-godname {
+  text-align: center;
+}
+
+.rating-stars{
+  text-align: center;
+  margin-top: 10px;
+}
+
+.number-of-reviews{
+  // max-width: 250px;
+  margin:10px;
+}
 // ! SHOW ALL GODS END
 
 
@@ -2089,13 +2133,13 @@ button.ui.medium.button.business-register-formfield {
 // ! VANIA'S 'QUEENDOOM'
 // ? Sorting single god display page
 
-.info-page-width {
-  width: 1000px;
-}
+// .info-page-width {
+//   width: 1000px;
+// }
 
-.info-page-width-two {
-  max-width: 400px;
-}
+// .info-page-width-two {
+//   max-width: 400px;
+// }
 
 .body-color{
   background-color: rgba(145, 89, 89, 0.2);
@@ -2169,7 +2213,7 @@ button.ui.medium.button.business-register-formfield {
 }
 
 .engraved-two-normal-text {
-  background-color: rgba(102, 51, 0, 0.6);
+  background-color: rgba(148, 77, 20, 0.6);
   // background-color: rgba(153, 77, 0, 0.6);
   color: transparent;
     background-clip: text;
@@ -2201,14 +2245,14 @@ button.ui.medium.button.business-register-formfield {
   text-shadow: 1px 1px 1px hsla(0,0%,255%,0.4);
 }
 
-.start-rating-info-positioning {
-  display: flex;
-}
+// .start-rating-info-positioning {
+//   display: flex;
+// }
 
-.start-rating-info-positioning-padding {
-  padding: 1%;
-  padding-left: 0%;
-}
+// .start-rating-info-positioning-padding {
+//   padding: 1%;
+//   padding-left: 0%;
+// }
 
 .ui.label.positioning-job-tags {
   margin: .2857em .4285em;
@@ -2244,9 +2288,9 @@ button.ui.medium.button.business-register-formfield {
 
 // ! RESULT BOX COMPONENT
 
-h3.result-box-heading-margin:last-child {
-  margin-bottom: -1.5rem;
-}
+// h3.result-box-heading-margin:last-child {
+//   margin-bottom: -1.5rem;
+// }
 
 .engraved-box-heading:hover {
   text-decoration: underline;
@@ -2269,7 +2313,8 @@ a.engraved-two-normal-text {
 }
 
 .info-page-container-margin {
-  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  padding:10px;
 }
 
 
