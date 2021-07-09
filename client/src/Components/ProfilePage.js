@@ -192,9 +192,9 @@ const ProfilePage = () => {
 
                             <div className="review-card-header">
                               <>
-                                {currentUser.image
+                                {item.logo
                                   ?
-                                  <img className="profile-pic-in-card" src={item.image} alt={item.name} />
+                                  <img className="profile-pic-in-card" src={item.logo} alt={item.name} />
                                   :
                                   <div className='commentator-pic-background'>
                                     <h2 className='engraved'>{getTwoLetters(item.name)}</h2>
