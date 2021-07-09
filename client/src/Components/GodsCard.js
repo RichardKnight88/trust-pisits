@@ -26,66 +26,66 @@ const GodsCard = ({ name, avgRating, gender, comments }) => {
 
     <div className='container info-page-container-margin '>
 
-      {/* <div className='info-page-width-two'> */}
+      <div className='info-page-width-two'>
 
-      {/* <Grid> */}
-      {/* <Grid.Row> */}
+        {/* <Grid> */}
+        {/* <Grid.Row> */}
 
 
-      <CardGroup className="card-foreachgod">
+        <CardGroup className="card-foreachgod">
 
-        <CardContent >
-          <CardHeader className="header-godname">
-            {/* <h3 className='result-box-heading-margin'> */}
-            <Link to={`/gods/${name.toLowerCase()}`}>
-              <CardMeta className="engraved-two-normal-text">
-                {name}&nbsp;
-                &nbsp;&nbsp;<span>|</span>&nbsp;&nbsp;&nbsp;&nbsp;
-                {nameWebsite}
-              </CardMeta>
-            </Link>
+          <CardContent >
+            <CardHeader className="header-godname">
+              {/* <h3 className='result-box-heading-margin'> */}
+              <Link to={`/gods/${name.toLowerCase()}`}>
+                <CardMeta className="engraved-two-normal-text">
+                  {name}&nbsp;
+                  &nbsp;&nbsp;<span>|</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                  {nameWebsite}
+                </CardMeta>
+              </Link>
 
-            {/* </h3> */}
-          </CardHeader>
-          {/* </Grid.Row> */}
+              {/* </h3> */}
+            </CardHeader>
+            {/* </Grid.Row> */}
 
-          {/* <Grid.Row className='result-box-bottom-margin'> */}
-          {/* <> */}
+            {/* <Grid.Row className='result-box-bottom-margin'> */}
+            {/* <> */}
 
-          <CardMeta>
-            {avgRating &&
-              <div className='start-rating-info-positioning'>
+            <CardMeta>
+              {avgRating &&
+                <div className='start-rating-info-positioning'>
 
-                <CardDescription className="rating-stars">{definedRating(Math.round(avgRating))}
-                  {/* <Card.Meta> */}
+                  <CardDescription className="rating-stars">{definedRating(Math.round(avgRating))}
+                    {/* <Card.Meta> */}
 
-                  <p>
+                    <p>
 
-                    {/* &nbsp;&nbsp; */}
-                    <CardMeta>
-                      <div className="number-of-reviews">
-                        {comments.length} reviews&nbsp;&nbsp;
-                        {avgRating !== 'No ratings' ? `|  TheioScore ${avgRating}` : ''}
-                        &nbsp;&nbsp;<span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      </div>
-                      <Divider></Divider>
-                      <Link to="/gods/:name/comments">Write a review</Link>
-                    </CardMeta>
-                  </p>
-                </CardDescription>
-                {/* </Card.Meta> */}
-              </div>
-            }
-          </CardMeta>
-          {/* <Divider></Divider> */}
-          {/* </> */}
-          {/* </Grid.Row> */}
-          {/* </Grid> */}
-        </CardContent>
+                      {/* &nbsp;&nbsp; */}
+                      <CardMeta>
+                        <div className="number-of-reviews">
+                          {comments.length} reviews&nbsp;&nbsp;
+                          {avgRating !== 'No ratings' ? `|  TheioScore ${avgRating}` : ''}
+                          &nbsp;&nbsp;<span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </div>
+                        <Divider></Divider>
+                        <Link to={`/gods/${name.toLowerCase()}/comments`}>Write a review</Link>
+                      </CardMeta>
+                    </p>
+                  </CardDescription>
+                  {/* </Card.Meta> */}
+                </div>
+              }
+            </CardMeta>
+            {/* <Divider></Divider> */}
+            {/* </> */}
+            {/* </Grid.Row> */}
+            {/* </Grid> */}
+          </CardContent>
 
-      </CardGroup>
+        </CardGroup>
+      </div>
     </div>
-    // </div>
 
   )
 }
