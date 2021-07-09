@@ -1,11 +1,24 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 const Footer = () => {
+
+  const [hideNavbar, setHideNavbar] = useState('')
+
+  useEffect(() => {
+    const toggleNavbar = () => {
+      if (location.pathname === '/' || location.pathname === '/create-god') {
+        setHideNavbar('hidenav')
+      } else {
+        setHideNavbar('')
+      }
+    }
+    toggleNavbar()
+  }, [])
   
   return (
 
-    <footer className="footer footer-color footer-footer">
+    <footer className="footer footer-color footer-footer" id={hideNavbar}>
       <div className="has-text-centered">
         <p className='engraved-two-normal-text'>
           © PILIS TRUST by&nbsp;

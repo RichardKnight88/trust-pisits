@@ -71,14 +71,14 @@ const ProfilePage = () => {
 
             <section className="profile-body-section-container columns is-full">
 
-              <div className="profile-body-container column is-half is-offset-2">
+              <div className="profile-body-container column">
 
                 <div className="review-block-container">
                   <>
                     {currentUser.userComments.map(item => {
                       return (
                         <>
-                          {console.log(item._id)}
+                          {/* {console.log(item._id)} */}
                           <div key="item._id" className="review-of-text">
 
                             Review of <Link to={`/gods/${item.placeholderAboutGod.toLowerCase()}`}>{item.placeholderAboutGod}</Link>
@@ -142,7 +142,7 @@ const ProfilePage = () => {
                                 if (window.confirm('Are you sure you want to delete?')) {
                                   await axios.delete(`/api/gods/${item.placeholderAboutGod}/comments/${item._id}`, {
                                     headers: {
-                                      Authorization: `Bearer ${getTokenFromStorage()}`
+                                      Authorization: `Bearer ${getTokenFromStorage()}`,
                                     },
                                   })
                                   history.go(0)

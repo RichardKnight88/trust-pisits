@@ -436,8 +436,9 @@ body ::-webkit-scrollbar-track {
   }
   
   .review-content {
-    padding: 56px 40px;
+    padding: 25px 20px;
     font-size: larger;
+    height: 300px;
   }
 }
 
@@ -539,3 +540,12 @@ body ::-webkit-scrollbar-track {
     background-size: contain;
   }
 }
+
+#hidenav {
+  display: none;
+}
+
+.landingcontainer, .main-creategod {
+  margin-top: -49px;
+}
+
