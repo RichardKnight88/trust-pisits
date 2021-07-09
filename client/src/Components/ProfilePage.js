@@ -53,14 +53,15 @@ const ProfilePage = () => {
 
                 <div className="reviews-container">
 
-                  <div className="review-content-container">
+                  {currentUser.isDeusUser &&
+                    <div className="review-content-container">
 
-                    <div className="review-number">{currentUser.createdGods.length}</div>
-                    <div className="review-text">
-                  Gods created</div>
+                      <div className="review-number">{currentUser.createdGods.length}</div>
+                      <div className="review-text">
+                        Gods created</div>
 
-                  </div>
-
+                    </div>
+                  }
                   <div className="review-content-container">
 
                     <div className="review-number">{currentUser.userComments.length}</div>
@@ -214,9 +215,9 @@ const ProfilePage = () => {
                                 <div className="review-card-rating">
                                   {definedRating(item.avgRating)}
                                 </div>
-                                
+
                                 <div className="review-card-date">
-                                Average Rating
+                                  Average Rating
                                 </div>
 
                               </div>
