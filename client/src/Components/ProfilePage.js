@@ -55,6 +55,14 @@ const ProfilePage = () => {
 
                   <div className="review-content-container">
 
+                    <div className="review-number">{currentUser.createdGods.length}</div>
+                    <div className="review-text">
+                  Gods created</div>
+
+                  </div>
+
+                  <div className="review-content-container">
+
                     <div className="review-number">{currentUser.userComments.length}</div>
                     <div className="review-text"><Rating defaultRating={1} maxRating={1} size='huge' disabled />
                   Reviews</div>
@@ -74,12 +82,18 @@ const ProfilePage = () => {
               <div className="profile-body-container column">
 
                 <div className="review-block-container">
+
+                  {currentUser.userComments.length > 0 &&
+                    <div className="gods-created-header">
+                      Your reviews
+                    </div>
+                  }
                   <>
                     {currentUser.userComments.map(item => {
                       return (
                         <>
                           {/* {console.log(item._id)} */}
-                          <div key="item._id" className="review-of-text">
+                          <div key={item._id} className="review-of-text">
 
                             Review of <Link to={`/gods/${item.placeholderAboutGod.toLowerCase()}`}>{item.placeholderAboutGod}</Link>
                           </div>
@@ -141,6 +155,96 @@ const ProfilePage = () => {
                               <div className="review-card-button" onClick={async () => {
                                 if (window.confirm('Are you sure you want to delete?')) {
                                   await axios.delete(`/api/gods/${item.placeholderAboutGod}/comments/${item._id}`, {
+                                    headers: {
+                                      Authorization: `Bearer ${getTokenFromStorage()}`,
+                                    },
+                                  })
+                                  history.go(0)
+                                }
+                              }}>
+                                <Icon name='trash alternate outline' />
+                                <p>Delete</p>
+                              </div>
+
+
+                            </div>
+
+
+                          </div>
+                        </>
+                      )
+                    })
+                    }
+
+                    {currentUser.createdGods.length > 0 &&
+                      <div className="gods-created-header">
+                        Gods you have created
+                      </div>
+                    }
+
+                    {currentUser.createdGods && currentUser.createdGods.map(item => {
+                      return (
+                        <>
+
+
+
+                          <div className="review-card gods-created-subclass" key={item._id} >
+
+                            <div className="review-card-header">
+                              <>
+                                {currentUser.image
+                                  ?
+                                  <img className="profile-pic-in-card" src={item.image} alt={item.name} />
+                                  :
+                                  <div className='commentator-pic-background'>
+                                    <h2 className='engraved'>{getTwoLetters(item.name)}</h2>
+                                  </div>
+                                }
+
+                                <div className="review-header-username">{item.name}</div>
+
+                              </>
+
+                            </div>
+
+                            <div className="review-card-body-container">
+
+                              <div className="review-card-body-rating-date-gods">
+
+                                <div className="review-card-rating">
+                                  {definedRating(item.avgRating)}
+                                </div>
+                                
+                                <div className="review-card-date">
+                                Average Rating
+                                </div>
+
+                              </div>
+
+                              {/* <div className="review-text-container">
+
+                                {item.heading &&
+                                  <div className="review-heading">{item.heading}</div>
+                                }
+
+                                <div className="review-card-text">{item.text}</div>
+
+                              </div> */}
+
+                            </div>
+
+                            <div className="review-card-buttons-container">
+
+                              <div className="review-card-button">
+                                <Link to={`/create-god/${item.name.toLowerCase()}`}>
+                                  <Icon name='edit outline' />
+                                  <p>Edit</p>
+                                </Link>
+                              </div>
+
+                              <div className="review-card-button" onClick={async () => {
+                                if (window.confirm('Are you sure you want to delete?')) {
+                                  await axios.delete(`/api/gods/${item.name.toLowerCase()}`, {
                                     headers: {
                                       Authorization: `Bearer ${getTokenFromStorage()}`,
                                     },

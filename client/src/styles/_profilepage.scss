@@ -58,7 +58,7 @@
   flex-grow: 1;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .review-content-container {
@@ -88,6 +88,7 @@
   display: flex;
   flex-direction: column;
   flex-grow: 10;
+  color: #664400;
   // width: 80%;
   
 }
@@ -100,6 +101,12 @@
   align-items: center;
 }
 
+.gods-created-header {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin: 30px 0;
+}
+
 .review-block-container {
   width: 800px;
   display: flex;
@@ -108,7 +115,7 @@
 }
 
 .review-of-text {
-  margin: 50px 0 16px;
+  margin-bottom: 16px;
 }
 
 .review-card {
@@ -116,7 +123,12 @@
   padding: 24px;
   box-shadow:  2px 2px 2px rgba(0, 0, 0, 0.2);
   width: 85%;
+  margin-bottom: 20px;
 }
+
+// .gods-created-subclass {
+//   margin-bottom: 20px;
+// }
 
 .review-card-header {
   display: flex;
@@ -172,6 +184,10 @@
   .ui.rating .active.icon {
     background-color: #ffae00;
   }
+}
+
+.review-card-body-rating-date-gods {
+  justify-content: flex-start;
 }
 
 .review-card-buttons-container {
