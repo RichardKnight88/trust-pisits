@@ -67,4 +67,4 @@ const CategoriesCard = ( { name, image, logo, species, avgRating, locationName }
   ) 
 }
 
-export default GodsCard
+export default CategoriesCard
