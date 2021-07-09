@@ -17,20 +17,21 @@ const ShowAllGods = () => {
 
   return (
     <>
-      <h1>Show all gods</h1>
-      <div>
-        <div className='container'>
-          <div className='info-page-width top-categories-spacing'>
-            <h4 className='categories-species-subheading'>All &gt; Categories &gt; {gods.species}</h4>
+      <section className="wtf">
+        {/* <h1>Show all gods</h1> */}
+        {/* <div>
+          <div className='container all-categories'>
+            <div className='info-page-width top-categories-spacing '>
+              <h4 className="categories-species-subheading allcategories">All &gt; Categories &gt; {gods.species}</h4>
+            </div>
           </div>
+        </div> */}
+        <div className="gods-cards">
+          {gods.map(item => {
+            return <GodsCard className="card-foreachgod" key={item._id} {...item} />
+          })}
         </div>
-      </div>
-      <div>
-        {gods.map(item => {
-          return <GodsCard key={item._id} {... item} />
-        })}
-      </div>
-
+      </section>
     </>
   )
 }

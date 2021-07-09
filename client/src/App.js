@@ -5,7 +5,7 @@ import Home from './Components/Home'
 import ShowAllGods from './Components/ShowAllGods'
 import Navbar from './Components/Navbar'
 import Categories from './Components/Categories'
-import FilteredGodsByCategory from './Components/FilteredGods'
+import CategoriesCard from './Components/FilteredGods'
 import DeusRegister from './Components/DeusRegister'
 import StandardRegister from './Components/Authentification/StandardRegister'
 import Login from './Components/Authentification/Login'
@@ -38,8 +38,8 @@ const App = () => {
           <EditDeleteGod />
         </Route>
 
-        <Route path="/categories/:category_name">
-          <FilteredGodsByCategory />
+        <Route path="/categories/:categoryName">
+          <CategoriesCard />
         </Route>
 
         <Route path="/gods/:name">

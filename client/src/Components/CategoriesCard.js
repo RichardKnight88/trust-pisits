@@ -6,16 +6,9 @@ import { definedRating } from '../sematinicElements/ratings.js'
 
 // COMPONENT SHOWING FILTERED GODS
 
-const CategoriesCard = ( { name, image, logo, species, avgRating, locationName }) => {
+const CategoriesCard = ( { name, logo, species, avgRating, locationName }) => {
   
   return (
-  // <div>
-  //   <Link  to={`/gods/${name.toLowerCase()}`}>
-        
-  //     <h3 className="color">{name}</h3>
-  //     {/* <img src={image} alt={name} title={name}/> */}
-  //   </Link>
-  // </div>
 
     <div>
       <Link to={`/gods/${name.toLowerCase()}`}>
@@ -67,4 +60,4 @@ const CategoriesCard = ( { name, image, logo, species, avgRating, locationName }
   ) 
 }
 
-export default GodsCard
+export default CategoriesCard
