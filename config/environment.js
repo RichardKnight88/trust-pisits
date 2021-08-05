@@ -1,8 +1,10 @@
-export const port = 4000
+import dotenv from 'dotenv'
+dotenv.config()
 
 
-export const dbURI = 'mongodb://localhost/godpilot-db-api'
-
+export const dbURI = process.env.MONGODB_URI || 'mongodb://localhost/godpilot-db-api'
+export const port = process.env.PORT || 4000
+export const secret = process.env.SECRET || 'ldn-56-supergroup'
 
 export const caseInsensitiveName = (variable) => {
   return new RegExp(`^${variable}$`, 'i')
@@ -34,5 +36,5 @@ export const matchGodToComment = (nameVariable, arrayToFilter) => {
 }
 
 
-export const secret = 'ldn-56-supergroup'
+
 
