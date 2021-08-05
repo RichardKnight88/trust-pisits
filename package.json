@@ -14,7 +14,7 @@
   },
   "type": "module",
   "scripts": {
-    "serve": "node index.js",
+    "start": "node index.js",
     "seed": "node database/seed.js",
     "build": "cd client && yarn && yarn build"
   }
