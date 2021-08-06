@@ -1,9 +1,8 @@
-import React, { Component, useState, useEffect } from 'react'
-import { useParams, useHistory, Redirect, Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { useParams, useHistory } from 'react-router-dom'
 import axios from 'axios'
 import { getTokenFromStorage } from './Authentification/auth'
-import { Button, Form, Divider } from 'semantic-ui-react'
-import { faGenderless } from '@fortawesome/free-solid-svg-icons'
+import { Button, Form } from 'semantic-ui-react'
 
 
 const options = [

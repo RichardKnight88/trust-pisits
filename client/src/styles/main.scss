@@ -19,7 +19,7 @@
 
 body{ 
   padding-top: 49px;
-  background: #ffffff;
+  background: #f3f3e1;
 }
 
 .landingpage-button {
@@ -2189,12 +2189,12 @@ button.ui.medium.button.business-register-formfield {
 // ? Got rid of predifined border around "company information"
 .ui.segment.getting-rid-of-border {
   box-shadow: none;
-  border: none;
+  border: none; 
 }
 
-// .ui.segment.changing-background-color {
-//   background-color: rgb(243, 243, 225);
-// }
+.ui.segment.changing-background-color {
+  background-color: #f3f3e1;
+}
 
 
 // ? Centering god/goddess picture on the right side

@@ -1,8 +1,6 @@
-import React, { useState, useEffect  } from 'react'
-import { useHistory, useParams, useLocation } from 'react-router-dom'
+import React, { useState } from 'react'
+import { useHistory, useParams } from 'react-router-dom'
 import { Button, Form, Segment, Rating, Modal } from 'semantic-ui-react'
-import { getTokenFromStorage } from './Authentification/auth'
-import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 const Comment = () => {
@@ -116,7 +114,7 @@ const Comment = () => {
                   />
                 </div>
 
-               
+              
 
                 <Modal
                   onClose={() => setOpen(false)}

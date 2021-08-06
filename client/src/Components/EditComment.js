@@ -7,8 +7,10 @@ import { Button, Form, Segment, Rating, Modal } from 'semantic-ui-react'
 
 const CommentEdit = () => {
 
+
   const history = useHistory()
   const { name, commentId } = useParams()
+
 
   const [commentDataEdit, setCommentDataEdit] = useState({
     text: '',
@@ -16,13 +18,13 @@ const CommentEdit = () => {
     textHeader: '',
   })
 
+
   const [errors, setErrors] = useState({
     text: '',
     rating: '',
     textHeader: '',
   })
 
-  const [open, setOpen] = React.useState(false)
 
   useEffect(() => {
     const getData = async () => {
@@ -33,7 +35,7 @@ const CommentEdit = () => {
     getData()
   }, [commentId, name])
 
-  // console.log('INCOMiNG DATA', commentDataEdit)
+
 
   const handleTextChange = (event) => {
     const newCommentData = { ...commentDataEdit, [event.target.name]: event.target.value }
@@ -42,6 +44,7 @@ const CommentEdit = () => {
     setErrors(newErrors)
   }
 
+
   const handleRatingChange = (event, data) => {
     const getRatingNumber = { ...commentDataEdit, [data.name]: data.rating }
     const newError = { errors, [event.target.name]: '' }
@@ -49,6 +52,7 @@ const CommentEdit = () => {
     setErrors(newError)
   }
 
+  
   const handleSubmit = async (event) => {
     event.preventDefault()
     try {
@@ -89,11 +93,7 @@ const CommentEdit = () => {
     <>
 
       <div className='display-god-top-part-margin'>
-        {/* <Grid className='comment-top-part'>
-          <Grid.Column className='info-page-width-two'>
-            <Image src='https://react.semantic-ui.com/images/wireframe/paragraph.png' />
-          </Grid.Column>
-        </Grid> */}
+      
 
         <div className="comment-background">
 
@@ -134,34 +134,7 @@ const CommentEdit = () => {
                   />
                 </div>
 
-                <Modal
-                  onClose={() => setOpen(false)}
-                  onOpen={() => setOpen(true)}
-                  open={open}
-                  trigger={<p className='paragrapgh-modal'>How to write a useful review</p>}
-                  className='modalHeight'
-                >
-                  <Modal.Header>8 tips for writing great customer reviews</Modal.Header>
-                  <Modal.Content>
-
-
-
-                    <p>1. Provide useful, constructive feedback</p>
-                    <p>2. Talk about a range of elements, including customer service</p>
-                    <p>3. Be detailed, specific, and honest</p>
-                    <p>4. Leave out links and personal information</p>
-                    <p>5. Keep it civil and friendly</p>
-                    <p>6. Feel free to update your review if needed</p>
-                    <p>7. Check you’ve got the right domain name or company</p>
-                    <p>8. Proofread your review</p>
-
-                  </Modal.Content>
-                  <Modal.Actions>
-                    <Button color='black' onClick={() => setOpen(false)}>
-                      Ok
-                    </Button>
-                  </Modal.Actions>
-                </Modal>
+              
 
                 <h3 className='comment-heading'>Give your review a title</h3>
 
@@ -190,11 +163,6 @@ const CommentEdit = () => {
   )
 
 }
-
-
-
-
-
 
 
 export default CommentEdit
