@@ -58,8 +58,8 @@ const Navbar = () => {
           <div className='navbar-brand' id="start-icon">
             <div className="navbar-item" onClick={homeCheck}>
               {/* <Link to="/" className="navbar-item engraved-two-normal-text">Landing Page</Link> */}
-              <Link to="/home" className="navbar-item engraved-two-normal-text">
-                <Image src='https://i.ibb.co/878JXTf/Logo-Image.png' alt='Logo-Image' />
+              <Link to="/home" className="navbar-item engraved-two-normal-text home-icon">
+                <Image src='https://i.ibb.co/878JXTf/Logo-Image.png' alt='Trust Pistis Logo' className="home-icon"/>Trust Pistis
               </Link>
             </div>
             <div onClick={toggleBurger} className={`navbar-burger ${burger}`} data-target='theoi-navbar'>
@@ -70,40 +70,12 @@ const Navbar = () => {
           </div>
 
 
-          <div id='theoi-navbar' onClick={toggleBurger} className={`navbar-menu ${burger} engraved-two-normal-text`}>
+          <div id='theoi-navbar' onClick={toggleBurger} className={`navbar-menu ${burger} is-dark engraved-two-normal-text`}>
 
             <div className='navbar-end'>
               <Link to="/gods" className="navbar-item engraved-two-normal-text hover-effect-link" >Search All Gods</Link>
 
-              {/* <Link to="/categories" className="navbar-item engraved-two-normal-text">Categories</Link> */}
 
-              {/* <Link to="/profile" className="navbar-item engraved-two-normal-text">Profile</Link> */}
-
-              {/* {checkUserIsAuthenticated() ?
-
-                <Link
-                  to='/home'
-                  className="navbar-item engraved-two-normal-text"
-                  onClick={handleLogout}
-                >
-
-                  Log out
-
-                </Link>
-
-                :
-
-                <Link to="/login" className="navbar-item engraved-two-normal-text">Login</Link>
-              } */}
-              {/* <Link to="/login" className="navbar-item engraved-two-normal-text">Login</Link> */}
-
-              {/* <Link to="/register" className="navbar-item engraved-two-normal-text">Register</Link> */}
-
-              {/* <Link to="/deus_register" className="navbar-item engraved-two-normal-text">Deus Register</Link> */}
-
-              {/* <Link to="/categories/:category_name" className="navbar-item engraved-two-normal-text">Gods filtered by category</Link> */}
-
-              {/* <Link to="/about" className="navbar-item engraved-two-normal-text">This is the about page</Link> */}
               <Link to="/business" className="navbar-item engraved-two-normal-text">Are you a God?</Link>
 
               {checkUserIsAuthenticated() ?
@@ -131,50 +103,8 @@ const Navbar = () => {
       </nav>
     </header>
 
-    // <nav className="navbar is-fixed-top is-dark">
-    //   <div className="container">
-    //     <div className="navbar-brand">
-    //       <Link to="/" className="navbar-item">LandingPage</Link>
-    //     </div>
 
-    //     <div className="navbar-brand">
-    //       <Link to="/home" className="navbar-item">Home</Link>
-    //     </div>
 
-    //     <div className="navbar-brand">
-    //       <Link to="/gods" className="navbar-item">Gods</Link>
-    //     </div>
-
-    //     <div className="navbar-brand">
-    //       <Link to="/categories" className="navbar-item">Categories</Link>
-    //     </div>
-
-    //     <div className="navbar-brand">
-    //       <Link to="/profile" className="navbar-item">Profile</Link>
-    //     </div>
-
-    //     <div className="navbar-brand">
-    //       <Link to="/login" className="navbar-item">Login</Link>
-    //     </div>
-
-    //     <div className="navbar-brand">
-    //       <Link to="/register" className="navbar-item">Register</Link>
-    //     </div>
-
-    //     <div className="navbar-brand">
-    //       <Link to="/deus_register" className="navbar-item">Deus Register</Link>
-    //     </div>
-
-    //     <div className="navbar-brand">
-    //       <Link to="/categories/:category_name" className="navbar-item">Gods filtered by category</Link>
-    //     </div>
-
-    //     <div className="navbar-brand">
-    //       <Link to="/about" className="navbar-item">This is the about page</Link>
-    //     </div>
-
-    //   </div>
-    // </nav>
 
   )
 }

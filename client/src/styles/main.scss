@@ -2293,23 +2293,35 @@ button.ui.medium.button.business-register-formfield {
 
 .navbar {
   color: white;
-  max-height: 49px;
-}
-#start-icon {
+  height: 49px;
 
-  .navbar-item {
-    a {
-      height: 100%;
-      width:fit-content;
-    }
-    
-  }
-  .navbar-item img {
-    max-height: 40px;
-    max-width: 40px;
-    padding: 0;
+  .navbar-end {
+    background-color: #363636;
   }
 }
+
+.home-icon {
+  padding: 0;
+}
+
+.navbar-menu {
+  padding: 0;
+}
+// #start-icon {
+
+//   .navbar-item {
+//     a {
+//       height: 100%;
+//       width:fit-content;
+//     }
+    
+//   }
+//   .navbar-item img {
+//     max-height: 40px;
+//     max-width: 40px;
+//     padding: 0;
+//   }
+// }
 
 // ! RESULT BOX COMPONENT
 
@@ -2358,7 +2370,7 @@ a.engraved-two-normal-text {
     width: 100px;
     height:100px;
   }
-   
+  
   .box-front{
     transform: translateX(-100px) translateY(-100px) translateZ(100px);
   }
@@ -2431,11 +2443,11 @@ a.engraved-two-normal-text {
   margin-left: -3rem;
 }
 
-.navbar.is-dark .navbar-end > .navbar-item, 
-.navbar.is-dark .navbar-end .navbar-link {
-  background-color: rgba(102, 51, 0, 0.6);
-  color: transparent;
-    background-clip: text;
-  margin-left: 3;
-  text-shadow: 1px 1px 1px hsla(0,0%,255%,0.6);
-}
+// .navbar.is-dark .navbar-end > .navbar-item, 
+// .navbar.is-dark .navbar-end .navbar-link {
+//   background-color: rgba(102, 51, 0, 0.6);
+//   color: transparent;
+//     background-clip: text;
+//   margin-left: 3;
+//   text-shadow: 1px 1px 1px hsla(0,0%,255%,0.6);
+// }
