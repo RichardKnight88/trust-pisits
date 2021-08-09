@@ -298,7 +298,7 @@ const GodsInfoPage = () => {
                       </h4>
                       <div className='business-transparency'>
                         <Icon name='calendar alternate outline' />
-                        <p>Claimed their Pilis Trust profile:</p>
+                        <p>Claimed their Trust Pistis profile:</p>
                       </div>
                       <div className='pop-up-positioning-icon'>
                         <p>{getUseableDate(theos.createdAt)}</p>
