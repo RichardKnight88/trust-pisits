@@ -1,5 +1,6 @@
 import mongoose from 'mongoose'
-import { dbURI, getUserIdFromName, matchGodToComment } from '../config/environment.js'
+import { dbURI } from '../config/environment.js'
+import { getUserIdFromName, matchGodToComment } from '../config/helpers.js'
 import usersSeed from './seedData/usersSeed.js'
 import godsSeed from './seedData/godsSeed.js'
 import commentsSeed from './seedData/commentsSeed.js'

@@ -1,6 +1,6 @@
 import God from '../models/gods.js'
 import Comment from '../models/comments.js'
-import { caseInsensitiveName } from '../config/environment.js'
+import { caseInsensitiveName } from '../config/helpers.js'
 
 // ! GET ALL GODS
 export const getAllGods = async (_req, res) => {
