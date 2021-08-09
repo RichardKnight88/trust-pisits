@@ -24,18 +24,15 @@ const StandardRegister = () => {
   const lastLocation = useLocation().pathname
 
   useEffect(() => {
-    // console.log('LOCATION', lastLocation)
     if (location === '/deus_register') {
       const settingLocation = { ...registerData, isDeusUser: true }
-      // console.log('TRUE>>>', settingLocation)
       setRegisterData(settingLocation)  
     } else {
       const settingLocation = { ...registerData, isDeusUser: false }
-      // console.log('FALSE >>>', settingLocation)
       setRegisterData(settingLocation)  
     }
     setLocation(lastLocation)
-  }, [location, lastLocation]) 
+  }, [location, lastLocation, registerData]) 
 
   // Handling error
   const [errors, setErrors] = useState('')

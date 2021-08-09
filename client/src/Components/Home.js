@@ -28,9 +28,6 @@ const Home = () => {
 
         const { data } = await axios.get('/api/gods')
 
-        // console.log('GET RQST DATA', data)
-
-        // console.log('DATA', data.filter(item => item.comments.length > 0))
 
         setGodsData(data)
 
@@ -41,14 +38,11 @@ const Home = () => {
         const categoriesArray = []
 
         data.map(item => {
-          // console.log(item.species)
           if (categoriesArray.indexOf(item.species) < 0) {
-            // console.log('INDEX', categoriesArray.indexOf(item.species))
             categoriesArray.push(item.species)
           }
         })
 
-        // console.log('COMMENTS', godsWithActiveComments.map(item => item.comments))
 
         const commentsFromGods = godsWithActiveComments.map(item => item.comments)
 
@@ -56,13 +50,10 @@ const Home = () => {
           commentsArray.push(comment)
         }))
 
-        // console.log('COMMENTS ARRAY', commentsArray)
-        // console.log('COMMENTS ARRAY', commentsArray.map(item => item.text))
 
         setComments(commentsArray)
         setCategories(categoriesArray)
 
-        // setComments(data.map(item => item.comments.map(item => item)))
 
       } catch (err) {
         console.log('COMMENTS ERROR', err.message)
@@ -74,7 +65,6 @@ const Home = () => {
 
   }, [])
 
-  // console.log('CATEGORIES', categories)
 
   return (
     <>
@@ -90,14 +80,7 @@ const Home = () => {
               <h2 className="search-subheader">Read reviews. Write reviews. Find gods.</h2>
 
               <div className="searchBar-container">
-                {/* <form className="home-searchbar">
-                  <input className="searchbar" placeholder="God or god types" />
 
-                  <div className="button-container">
-                    <button className="hero-search-button">search</button>
-                  </div>
-                </form> */}
-                {/* {console.log('GODS DATA BEFORE', godsData)} */}
                 <Searchbar godsData={godsData} />
               </div>
 
@@ -105,7 +88,7 @@ const Home = () => {
               <div className="categories-container">
 
 
-                <div className="categories-tagline">
+                <div className="categories-tagline" key="categories-tagline">
                   Browse gods by category
                 </div>
 
@@ -113,25 +96,22 @@ const Home = () => {
 
                   {categories.length > 0 &&
 
-                    categories.map(item => {
+                    categories.map((item, index) => {
+                      <div key={item.name}></div>
                       return (
-                        <div key={item}>
-                          <Link to={`/categories/${item}`}>
-                            <div className="category-button">
-                              {item}
-                            </div>
-                          </Link>
-                        </div>
+                        <>
+                          <div key={index}>
+                            <Link to={`/categories/${item}`}>
+                              <div className="category-button">
+                                {item}
+                              </div>
+                            </Link>
+                          </div>
+                        </>
                       )
                     })
 
                   }
-
-                  {/* <Link to="/categories">
-                    <div className="category-button">
-                      ...
-                    </div>
-                  </Link> */}
 
                 </div>
 
@@ -151,12 +131,12 @@ const Home = () => {
 
           {comments.length > 0 &&
 
-            <div className='scrolling-comments-container'>
+            <div className='scrolling-comments-container' key="scrolling-comments-container">
 
               {comments.map(item =>
-                <>
+                <div key={item._id} className="comment-div">
+                  <>
 
-                  <div key={item._id} className="comment-div">
 
                     <Link to={`/gods/${item.placeholderAboutGod}`}>
 
@@ -177,8 +157,8 @@ const Home = () => {
                       </div>
 
                     </Link>
-                  </div>
-                </>
+                  </>
+                </div>
               )}
             </div>
           }

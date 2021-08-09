@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useParams, useHistory } from 'react-router-dom'
 import axios from 'axios'
 import { getTokenFromStorage } from './Authentification/auth'
-import { Button, Form, Segment, Rating, Modal } from 'semantic-ui-react'
+import { Button, Form, Segment, Rating } from 'semantic-ui-react'
 
 
 const CommentEdit = () => {
@@ -59,7 +59,7 @@ const CommentEdit = () => {
       await axios.put(`/api/gods/${name}/comments/${commentId}`, commentDataEdit,
         {
           headers: {
-            Authorization: `Bearer ${getTokenFromStorage()}`
+            Authorization: `Bearer ${getTokenFromStorage()}`,
           },
         }
       )
@@ -73,7 +73,7 @@ const CommentEdit = () => {
     try {
       await axios.delete(`/api/gods/${name}/comments/${commentId}`, {
         headers: {
-          Authorization: `Bearer ${getTokenFromStorage()}`
+          Authorization: `Bearer ${getTokenFromStorage()}`,
         },
       })
       history.push(`/gods/${name}`)
