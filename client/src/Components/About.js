@@ -41,7 +41,7 @@ const About = () => {
       image: Richard,
       content: 'Junior Full-Stack Developer',
       social: {
-        linkedin: 'https://www.linkedin.com/in/richard-knight-0094ba91/',
+        linkedin: 'https://www.linkedin.com/in/richard-knight-software/',
         github: 'https://github.com/RichardKnight88',
       },
     }
@@ -68,9 +68,11 @@ const About = () => {
                     <li styles="--i:2">
                       <a className="linkedin" href={creator.social.github} rel="noreferrer" target="_blank"><FontAwesomeIcon icon={['fab', 'github']} /></a>
                     </li>
-                    <li styles="--i:3">
-                      <a className="twitter" href={creator.social.twitter} rel="noreferrer" target="_blank"><FontAwesomeIcon icon={['fab', 'twitter']} /></a>
-                    </li>
+                    {creator.social.twitter &&
+                      <li styles="--i:3">
+                        <a className="twitter" href={creator.social.twitter} rel="noreferrer" target="_blank"><FontAwesomeIcon icon={['fab', 'twitter']} /></a>
+                      </li>
+                    }
                   </ul>
                 </div>
               </div>
