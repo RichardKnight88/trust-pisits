@@ -10,20 +10,6 @@ An app based on 'Trust Pilot' that allows users the ability to rate and create G
 </p>
  
 [Trust Pistis - Deployed App](https://bit.ly/trust-pistis)
-
-## Installation
-
-- Clone the repo
-- In route add/install ```pipenv```
-- Move into shell with ```pipenv shell``` 
-- Make Migrations with ```python manage.py makemigrations```
-- Migrate with ```python manage.py migrate```
-- Load user seeds with ```python manage.py loaddata jwt_auth/seeds.json```
-- Load transaction seeds with ```python manage.py loaddata transactions/seeds.json```
-- Split Terminal window and move into ```client``` folder with ```cd client```
-- Install all frontend packages (from package.json) by running ```yarn```
-- IN ROOT, start server with ```python manage.py runserver```
-- IN CLIENT, start frontend with ```yarn start```
  
  
 ## Table of Contents
