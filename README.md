@@ -6,7 +6,7 @@ Software Engineering Immersive Course || Project-3 || Group Project - 3 Members 
 An app based on 'Trust Pilot' that allows users the ability to rate and create Greek Gods. Named after the Greek God of trust - Pistis.
  
 <p align="center" >
- <img width="80%" src="./client/src/images/trust-pistis-hero-screenshot.png" alt="Trust Pistis Hero Screenshot"/>
+ <img width="80%" src="./client/src/Images/trust-pistis-hero-screenshot.png" alt="Trust Pistis Hero Screenshot"/>
 </p>
  
 [Trust Pistis - Deployed App](https://bit.ly/trust-pistis)
