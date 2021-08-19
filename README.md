@@ -10,6 +10,17 @@ An app based on 'Trust Pilot' that allows users the ability to rate and create G
 </p>
  
 [Trust Pistis - Deployed App](https://bit.ly/trust-pistis)
+
+## Installation
+
+- Clone the repo
+- In Terminal run to connect the database```mongod --dbpath ~/data/db```
+- At root directory install backend packages with  ```yarn```
+- Still in root, seed database with ```yarn seed```
+- Split Terminal window and move into ```client``` folder with ```cd client```
+- Install all frontend packages (from package.json) by running ```yarn```
+- IN ROOT, start server with ```yarn serve```
+- IN CLIENT, start frontend with ```yarn start```
  
  
 ## Table of Contents
@@ -56,10 +67,18 @@ Initially working on the Searchbar where I spent some time trying to include the
 
 The main reason I wanted to work on the homepage was the scrolling comments section. I wanted to explore how this could be achieved and try and style them to look like carved stone tablets.
 
+<p align="center" >
+ <img width="80%" src="./client/src/images/comments-gif.gif" alt="Scrolling Comments gif"/>
+</p>
+
 I am very satisfied with the style here. I used it for the profile page while other team members also used the 'engraved' class to style some of their components.
 
 With the profile page I wanted to apply a clean and elegant style, similar to the Trust Pilot profile page.
 
+
+<p align="center" >
+ <img width="80%" src="./client/src/images/profile-screenshot.png" alt="Profile Screenshot"/>
+</p>
 
 
 Here I used simple conditions to decide on what to display depending on the tupe of user and information available.
@@ -92,6 +111,18 @@ Here I used simple conditions to decide on what to display depending on the tupe
 ## Wins
 
 While building my components I was concurrently styling them and spent great care to ensure they would be reactive to different device sizes. I am proud of how the home and profile pages look at all device sizes.
+
+<p align="center" >
+ <img width="80%" src="./client/src/images/homepage-desktop-gif.gif" alt="Home page desktop gif"/>
+</p>
+
+<p align="center" >
+ <img width="30%" src="./client/src/images/homepage-mobile-gif.gif" alt="Home page mobile gif"/>
+</p>
+
+<p align="center" >
+ <img width="30%" src="./client/src/images/profile-mobile-screenshot.png" alt="profile page mobile screenshot"/>
+</p>
 
 Working as a group brought invaluable insight into seeing how other people work and think. We would mostly work individually but on a group video call. I really enjoyed being able to support and problem solve my colleagues' code. I feel explaining my understanding of concepts to them further strengthened my communication skills and my own understanding of these concepts.
 
@@ -130,6 +161,8 @@ if (location === '/deus_register') {
 
 ```
 
+I really enjoyed creating a Fullstack application and exploring the backend. I felt I intuitively grasped a lot of the concepts of having the client and server talk to one another.
+
 
 ## Challenges
 
@@ -150,7 +183,7 @@ With experience gained since this project I would also revisit the scrolling com
 
 ## Key Learnings
 
-I think trying to implement a more formal heirarchy to the group may have been useful. Ensuring the Trello board was being used to assign tasks could have avoided scope creep.
+I think trying to implement a more formal hierarchy to the group may have been useful. Ensuring the Trello board was being used to assign tasks could have avoided scope creep.
 
 We wanted to ensure our seed files populated enough Gods to make the site appear more complete. In practice this left some Gods with very little information to display.
 
