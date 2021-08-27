@@ -57,6 +57,10 @@ We each had a day where we would code while the others supported. This was incre
 
 We used the Trello board as a Kanban for the frontend, where each member would assign the task to themselves and move it into the 'In Progress' column.
 
+<p align="center" >
+ <img width="80%" src="./client/src/Images/trello-board.jpg" alt="Trust Pistis Trello Board"/>
+</p>
+
 An important part of the Trust Pilot website is the comments. These have a relationship with both the 'Gods' and the 'User'. As I had expressed a desire to work on the homepage - which has comments scrolling across the page - I revisited the backend to add this functionality and created a third schema, comments.
 
 This facilitated seeding the database with users, comments and gods.
@@ -81,7 +85,7 @@ With the profile page I wanted to apply a clean and elegant style, similar to th
 </p>
 
 
-Here I used simple conditions to decide on what to display depending on the tupe of user and information available.
+Here I used simple conditions to decide on what to display depending on the type of user and information available.
 
 
 ```js
@@ -126,7 +130,7 @@ While building my components I was concurrently styling them and spent great car
 
 Working as a group brought invaluable insight into seeing how other people work and think. We would mostly work individually but on a group video call. I really enjoyed being able to support and problem solve my colleagues' code. I feel explaining my understanding of concepts to them further strengthened my communication skills and my own understanding of these concepts.
 
-I am also proud of my idea of utilising the User model for both 'standard' and 'deus' users. Allowing different functionality for each and having the 'deus' user assigned by the location the location a user registers from.
+I am also proud of my idea of utilising the User model for both 'standard' and 'deus' users. Allowing different functionality for each and having the 'deus' user assigned by the location a user registers from.
 
 ```js
 
@@ -166,7 +170,7 @@ I really enjoyed creating a Fullstack application and exploring the backend. I f
 
 ## Challenges
 
-Using git as a team was a challenge. This was the first time we had utilised branches and some members were less confident with the process of merging and pushing. To combat this we looked to have the whole team present for these moments.
+Using Git as a team was a challenge. This was the first time we had utilised branches and some members were less confident with the process of merging and pushing. To combat this we looked to have the whole team present for these moments.
 
 
 
