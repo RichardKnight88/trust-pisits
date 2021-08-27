@@ -72,7 +72,7 @@ Initially working on the Searchbar where I spent some time trying to include the
 The main reason I wanted to work on the homepage was the scrolling comments section. I wanted to explore how this could be achieved and try and style them to look like carved stone tablets.
 
 <p align="center" >
- <img width="80%" src="./client/src/images/comments-gif.gif" alt="Scrolling Comments gif"/>
+ <img width="80%" src="./client/src/Images/comments-gif.gif" alt="Scrolling Comments gif"/>
 </p>
 
 I am very satisfied with the style here. I used it for the profile page while other team members also used the 'engraved' class to style some of their components.
@@ -81,7 +81,7 @@ With the profile page I wanted to apply a clean and elegant style, similar to th
 
 
 <p align="center" >
- <img width="80%" src="./client/src/images/profile-screenshot.png" alt="Profile Screenshot"/>
+ <img width="80%" src="./client/src/Images/profile-screenshot.png" alt="Profile Screenshot"/>
 </p>
 
 
@@ -117,15 +117,15 @@ Here I used simple conditions to decide on what to display depending on the type
 While building my components I was concurrently styling them and spent great care to ensure they would be reactive to different device sizes. I am proud of how the home and profile pages look at all device sizes.
 
 <p align="center" >
- <img width="80%" src="./client/src/images/homepage-desktop-gif.gif" alt="Home page desktop gif"/>
+ <img width="80%" src="./client/src/Images/homepage-desktop-gif.gif" alt="Home page desktop gif"/>
 </p>
 
 <p align="center" >
- <img width="30%" src="./client/src/images/homepage-mobile-gif.gif" alt="Home page mobile gif"/>
+ <img width="30%" src="./client/src/Images/homepage-mobile-gif.gif" alt="Home page mobile gif"/>
 </p>
 
 <p align="center" >
- <img width="30%" src="./client/src/images/profile-mobile-screenshot.png" alt="profile page mobile screenshot"/>
+ <img width="30%" src="./client/src/Images/profile-mobile-screenshot.png" alt="profile page mobile screenshot"/>
 </p>
 
 Working as a group brought invaluable insight into seeing how other people work and think. We would mostly work individually but on a group video call. I really enjoyed being able to support and problem solve my colleagues' code. I feel explaining my understanding of concepts to them further strengthened my communication skills and my own understanding of these concepts.
